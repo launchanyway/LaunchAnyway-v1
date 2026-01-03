@@ -723,10 +723,10 @@ export default function Home() {
                     </p>
                   </>
                 ) : (
-                  <div className="bg-black text-[#D4E845] p-4 rounded-xl text-center">
-                    <p className="text-[14px] font-bold tracking-tight mb-1">you're in</p>
-                    <p className="text-[11px] font-medium text-[#D4E845]/80">
-                      we'll hit you up within 24hrs
+                  <div className="bg-white/50 backdrop-blur-sm border border-black/[0.06] p-4 rounded-xl text-center">
+                    <p className="text-[14px] font-semibold tracking-tight text-gray-900 mb-1">You're In</p>
+                    <p className="text-[11px] font-medium text-gray-500">
+                      We'll Hit You Up Within 24hrs
                     </p>
                   </div>
                 )}
