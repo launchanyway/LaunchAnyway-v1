@@ -309,7 +309,10 @@ export default function Home() {
             <div className="bg-[#eeede8] border border-black/5 rounded-3xl p-6 space-y-8 shadow-sm">
               <div className="space-y-1">
                 <p className="text-[11px] font-bold font-mono text-blue-600 uppercase tracking-widest">Next Intake</p>
-                <p className="text-[20px] font-medium text-gray-900 font-inter tracking-tight">January 20th, 2026</p>
+                <div className="flex justify-between items-baseline">
+                  <p className="text-[20px] font-medium text-gray-900 font-inter tracking-tight">January 20th, 2026</p>
+                  <p className="text-[20px] font-bold text-gray-900 font-inter tracking-tight">₹5,999</p>
+                </div>
               </div>
 
               <div className="grid grid-cols-2 gap-6">
