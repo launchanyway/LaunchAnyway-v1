@@ -89,7 +89,7 @@ async function initializeApp() {
   return app;
 }
 
-export default async (req: any, res: any) => {
-  const expressApp = await initializeApp();
-  return expressApp(req, res);
-};
+export default async function handler(req: any, res: any) {
+  await initializeApp();
+  return app(req, res);
+}
