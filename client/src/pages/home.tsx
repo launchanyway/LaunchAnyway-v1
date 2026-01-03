@@ -276,7 +276,7 @@ export default function Home() {
                   </div>
                 </div>
                 <p className="text-[14px] text-gray-400 italic font-inter pt-2">
-                  Two real-world products. One week. No excuses.
+                  Two real-world products. Two weeks. No excuses.
                 </p>
               </div>
             </div>
@@ -299,7 +299,7 @@ export default function Home() {
                 </div>
                 <div className="space-y-1">
                   <p className="text-[10px] font-bold font-mono text-gray-400 uppercase tracking-widest">Duration</p>
-                  <p className="text-[15px] font-semibold text-gray-800 font-inter">1 Week Sprint</p>
+                  <p className="text-[15px] font-semibold text-gray-800 font-inter">2 Week Sprint</p>
                 </div>
               </div>
 
