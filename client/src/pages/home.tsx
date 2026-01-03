@@ -651,7 +651,7 @@ export default function Home() {
                 </div>
                 <div className="space-y-1 col-span-2">
                   <p className="text-[10px] font-bold font-mono text-gray-400 uppercase tracking-widest">Daily missions</p>
-                  <p className="text-[15px] font-semibold text-gray-800 font-inter">14 tasks ( < 1 hr/day )</p>
+                  <p className="text-[15px] font-semibold text-gray-800 font-inter">14 tasks ( {"<"} 1 hr/day )</p>
                 </div>
               </div>
 
