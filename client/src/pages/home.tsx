@@ -79,7 +79,7 @@ const EnrollmentModal = ({ isOpen, onClose }: { isOpen: boolean, onClose: () => 
                 <X className="w-5 h-5 text-black" />
               </button>
               <div className="relative z-10">
-                <h2 className="text-3xl font-bold font-inter text-black mb-2 tracking-tight">Apply for LaunchAnyway</h2>
+                <h2 className="text-3xl font-medium font-instrument text-black mb-2">Apply for LaunchAnyway</h2>
                 <p className="text-black/60 text-sm font-medium">Batch starts Jan 18th • 13 seats left</p>
               </div>
             </div>
@@ -610,8 +610,8 @@ export default function Home() {
       </main>
 
       {/* Footer */}
-      <footer className="p-6 md:p-8 flex justify-between items-center text-[11px] font-bold font-mono text-gray-400 border-t border-black/5 mt-12">
-        <div>
+      <footer className="fixed bottom-0 left-0 right-0 p-6 md:p-8 flex justify-between items-end text-[11px] font-bold font-mono text-gray-400 pointer-events-none bg-gradient-to-t from-[#FAF9F2] via-[#FAF9F2] via-60% to-transparent h-24 z-40">
+        <div className="pointer-events-auto">
           <button 
             onClick={() => document.getElementById('enrollment')?.scrollIntoView({ behavior: 'smooth' })}
             className="tracking-[0.2em] uppercase cursor-pointer hover:text-black transition-colors"
@@ -620,7 +620,7 @@ export default function Home() {
           </button>
         </div>
         
-        <div>
+        <div className="pointer-events-auto">
           <button 
             onClick={() => document.getElementById('journey')?.scrollIntoView({ behavior: 'smooth' })}
             className="flex items-center gap-2.5 cursor-pointer hover:text-black transition-colors tracking-[0.2em] group uppercase"
