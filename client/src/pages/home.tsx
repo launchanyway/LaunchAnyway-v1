@@ -248,7 +248,7 @@ export default function Home() {
                           </div>
                         </div>
                         <div className="flex gap-4">
-                          <span className="text-[10px] font-black font-mono text-black bg-[#E895C9] w-6 h-6 rounded flex items-center justify-center shrink-0">10-</span>
+                          <span className="text-[10px] font-black font-mono text-black bg-[#E895C9] w-6 h-6 rounded flex items-center justify-center shrink-0">10-14</span>
                           <div className="space-y-1">
                             <p className="text-[15px] text-gray-900 font-bold leading-none">Build & refine</p>
                             <p className="text-[14px] text-[#5a5a5a] leading-relaxed">Daily assignments focused on building a complete mobile app. You'll design habit flows, streaks, and nudges — and end with a fully working app.</p>
