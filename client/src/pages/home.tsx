@@ -186,44 +186,40 @@ export default function Home() {
             </div>
           </div>
 
-          {/* Right Sidebar Column - Cohorts */}
+          {/* Right Sidebar Column - Cohort Card */}
           <div className="w-full lg:w-[35%] lg:pl-12">
             <div className="sticky top-32">
-              <h2 className="text-[13px] font-bold font-mono text-gray-500 uppercase tracking-[0.3em] mb-10">Cohorts</h2>
+              <h2 className="text-[13px] font-bold font-mono text-gray-500 uppercase tracking-[0.3em] mb-10">Enrollment</h2>
               
-              <div className="space-y-2">
-                <CaseItem 
-                  icon={Zap}
-                  color="bg-[#1a1a1a]"
-                  title="Cohort #01: The Pioneers"
-                  date="Starts 5/23/25"
-                  tag="WAITLIST"
-                  isLocked={true}
-                />
-                
-                <CaseItem 
-                  icon={Flower2}
-                  color="bg-[#F472B6]"
-                  title="Cohort #02: Building in Public"
-                  date="Planned 7/22/25"
-                  tag="SOON"
-                  isLocked={true}
-                />
-                
-                <CaseItem 
-                  icon={Asterisk}
-                  color="bg-[#8B5CF6]"
-                  title="Vibe Coding Workshop"
-                  date="Online"
-                  tag="LIVE"
-                  isLocked={false}
-                />
-              </div>
+              <div className="bg-[#eeede8] border border-black/5 rounded-3xl p-6 space-y-8 shadow-sm">
+                <div className="space-y-1">
+                  <p className="text-[11px] font-bold font-mono text-blue-600 uppercase tracking-widest">Next Intake</p>
+                  <p className="text-[20px] font-medium text-gray-900 font-inter tracking-tight">January 20th, 2026</p>
+                </div>
 
-              <div className="mt-10">
-                <button className="w-full py-4.5 rounded-2xl bg-black text-white text-[14px] font-bold hover:bg-gray-800 transition-all uppercase tracking-[0.15em] shadow-xl shadow-black/5 hover:scale-[1.02] active:scale-[0.98]">
+                <div className="grid grid-cols-2 gap-6">
+                  <div className="space-y-1">
+                    <p className="text-[10px] font-bold font-mono text-gray-400 uppercase tracking-widest">Availability</p>
+                    <p className="text-[15px] font-semibold text-gray-800 font-inter">9 / 20 Seats</p>
+                  </div>
+                  <div className="space-y-1">
+                    <p className="text-[10px] font-bold font-mono text-gray-400 uppercase tracking-widest">Duration</p>
+                    <p className="text-[15px] font-semibold text-gray-800 font-inter">1 Week Sprint</p>
+                  </div>
+                </div>
+
+                <div className="space-y-1 pt-2 border-t border-black/5">
+                  <p className="text-[10px] font-bold font-mono text-gray-400 uppercase tracking-widest">Live Sessions</p>
+                  <p className="text-[15px] font-semibold text-gray-800 font-inter">8:00 PM IST (x3)</p>
+                </div>
+
+                <button className="w-full py-4 rounded-2xl bg-black text-white text-[14px] font-bold hover:bg-gray-800 transition-all uppercase tracking-[0.15em] shadow-xl shadow-black/5 hover:scale-[1.02] active:scale-[0.98]">
                   Secure Your Spot
                 </button>
+                
+                <p className="text-[10px] text-center text-gray-400 font-medium font-inter">
+                  Limited cohort size for personalized feedback.
+                </p>
               </div>
             </div>
           </div>
