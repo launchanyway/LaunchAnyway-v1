@@ -124,9 +124,9 @@ const CaseItem = ({
 );
 
 // Tool Icon Component
-const ToolIcon = ({ label, bg, text = "text-white" }: { label: string, bg: string, text?: string }) => (
-  <span className={`inline-flex items-center justify-center px-1.5 min-w-[24px] h-6 rounded-md mx-1 align-text-bottom ${bg} ${text} text-[11px] font-bold font-mono translate-y-[1px] shadow-sm`}>
-    {label}
+const ToolIcon = ({ src, alt, className }: { src: string, alt: string, className?: string }) => (
+  <span className={`inline-flex items-center justify-center w-6 h-6 rounded-md mx-1 align-text-bottom translate-y-[1px] bg-white border border-black/5 p-1 shadow-sm ${className}`}>
+    <img src={src} alt={alt} className="w-full h-full object-contain" />
   </span>
 );
 
@@ -179,12 +179,16 @@ export default function Home() {
               <div className="space-y-4 max-w-xl">
                 <h2 className="text-[13px] font-bold font-mono text-gray-500 uppercase tracking-[0.3em]">The Vibe</h2>
                 <p className="text-[16px] md:text-[17px] leading-[1.6] text-[#5a5a5a] font-inter">
-                  Stop watching tutorials and start shipping. We use modern tools like Cursor 
-                  <ToolIcon label="C" bg="bg-black" />, Replit 
-                  <ToolIcon label="R" bg="bg-[#F24E1E]" />, and LLMs 
+                  Stop watching tutorials and start shipping. We use modern tools like
+                  Replit <ToolIcon src="/logos/replit.png" alt="Replit" />,
+                  Lovable <ToolIcon src="/logos/lovable.png" alt="Lovable" />,
+                  LLMs 
                   <span className="inline-flex items-center justify-center w-4.5 h-4.5 rounded-full bg-[#10A37F] mx-1 align-text-bottom translate-y-[1px] shadow-sm">
                     <span className="w-2.5 h-2.5 border-[1.5px] border-white rounded-full"></span>
-                  </span>
+                  </span>,
+                  Supabase <ToolIcon src="/logos/supabase.png" alt="Supabase" />,
+                  Vercel <ToolIcon src="/logos/vercel.png" alt="Vercel" />,
+                  and Github <ToolIcon src="https://www.vectorlogo.zone/logos/github/github-icon.svg" alt="Github" className="invert brightness-0" />
                   to turn founders into builders. No CS degree required 
                   <IconPill icon={Asterisk} color="bg-[#8B5CF6]" iconColor="text-white" />.
                 </p>
@@ -210,9 +214,9 @@ export default function Home() {
                 <h2 className="text-[13px] font-bold font-mono text-gray-500 uppercase tracking-[0.3em]">Info</h2>
                 <p className="text-[16px] md:text-[17px] leading-[1.6] text-[#5a5a5a] font-inter">
                   Fluent in English, I work as an individual entrepreneur with a Georgian residence permit. I use tools like Notion 
-                  <ToolIcon label="N" bg="bg-black" />, Framer 
-                  <ToolIcon label="F" bg="bg-black" />, Figma 
-                  <ToolIcon label="F" bg="bg-[#F24E1E]" />, SEO platforms, and ChatGPT 
+                  <ToolIcon src="https://www.vectorlogo.zone/logos/notion/notion-icon.svg" alt="Notion" />, Framer 
+                  <ToolIcon src="https://www.vectorlogo.zone/logos/framer/framer-icon.svg" alt="Framer" />, Figma 
+                  <ToolIcon src="https://www.vectorlogo.zone/logos/figma/figma-icon.svg" alt="Figma" />, SEO platforms, and ChatGPT 
                   <span className="inline-flex items-center justify-center w-4.5 h-4.5 rounded-full bg-[#10A37F] mx-1 align-text-bottom translate-y-[1px] shadow-sm">
                     <span className="w-2.5 h-2.5 border-[1.5px] border-white rounded-full"></span>
                   </span>
