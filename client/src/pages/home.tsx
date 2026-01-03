@@ -101,7 +101,7 @@ export default function Home() {
       {/* Navbar */}
       <header className="fixed top-0 left-0 right-0 p-6 md:p-8 flex justify-between items-start z-50 pointer-events-none">
         <div className="flex items-center pointer-events-auto">
-          <span className="text-[20px] md:text-[24px] font-normal tracking-tight text-gray-900 font-inter">
+          <span className="text-[16px] md:text-[18px] font-medium tracking-tight text-gray-900 font-inter">
             LaunchAnyway.
           </span>
         </div>
