@@ -72,7 +72,7 @@ const EnrollmentModal = ({ isOpen, onClose }: { isOpen: boolean, onClose: () => 
               </div>
               <div className="relative z-10 space-y-1">
                 <h2 className="text-3xl md:text-4xl font-medium tracking-tight font-instrument text-black">
-                  Start Your Application
+                  Apply for LaunchAnyway
                 </h2>
               </div>
             </div>
@@ -80,7 +80,7 @@ const EnrollmentModal = ({ isOpen, onClose }: { isOpen: boolean, onClose: () => 
             <div className="p-8 space-y-8 -mt-6 relative z-10 bg-[#FAF9F2] rounded-t-2xl">
               <div className="space-y-6">
                 <p className="text-[16px] text-gray-600 leading-relaxed font-inter">
-                  LaunchAnyway is intentional. We review every applicant to ensure the best fit for the cohort.
+                  We review each application to make sure it’s the right fit for everyone involved.
                 </p>
 
                 <div className="relative space-y-0">
@@ -113,7 +113,7 @@ const EnrollmentModal = ({ isOpen, onClose }: { isOpen: boolean, onClose: () => 
 
               <div className="pt-2">
                 <button className="w-full py-5 rounded-2xl bg-black text-[#D4E845] text-[15px] font-bold hover:bg-gray-900 transition-all uppercase tracking-[0.2em] shadow-xl flex items-center justify-center gap-3 group">
-                  Apply for LaunchAnyway →
+                  Apply Now
                 </button>
               </div>
             </div>
