@@ -107,29 +107,29 @@ export default function Home() {
         </div>
       </header>
 
-      <main className="max-w-[1400px] mx-auto px-6 md:px-16 pt-36 md:pt-48 pb-32 overflow-hidden">
-        <div className="flex flex-col lg:flex-row gap-20 lg:gap-32 items-start">
+      <main className="max-w-[1200px] mx-auto px-6 md:px-12 pt-32 md:pt-40 pb-32 overflow-hidden">
+        <div className="flex flex-col lg:flex-row gap-16 lg:gap-24 items-start">
           
           {/* Left Content Column */}
-          <div className="w-full lg:w-2/3 space-y-14">
+          <div className="w-full lg:w-[65%] space-y-12">
             
             {/* Course Header Chip */}
             <div className="flex items-center">
-              <div className="inline-flex items-center bg-[#E5E4DE] rounded-full p-1 pr-4 gap-3 shadow-sm border border-black/5 group cursor-default">
-                <div className="w-7 h-7 rounded-full bg-blue-600 flex items-center justify-center shadow-sm">
-                  <Zap className="w-3.5 h-3.5 text-white fill-current" />
+              <div className="inline-flex items-center bg-[#E5E4DE] rounded-full p-1 pr-3 gap-2.5 shadow-sm border border-black/5 group cursor-default">
+                <div className="w-6 h-6 rounded-full bg-blue-600 flex items-center justify-center shadow-sm">
+                  <Zap className="w-3 h-3 text-white fill-current" />
                 </div>
-                <span className="text-[11px] font-bold font-mono text-gray-900 tracking-[0.2em] uppercase">LIVE COURSE</span>
+                <span className="text-[10px] font-bold font-mono text-gray-900 tracking-[0.2em] uppercase">LIVE COURSE</span>
               </div>
             </div>
 
             {/* Title / Hero Intro */}
-            <div className="space-y-8">
-              <h1 className="text-[52px] md:text-[84px] leading-[0.95] font-medium text-gray-900 tracking-tight font-instrument">
+            <div className="space-y-6">
+              <h1 className="text-[44px] md:text-[68px] leading-[1.0] font-medium text-gray-900 tracking-tight font-instrument">
                 You have an idea? <br />
                 Are you going to ship it?
               </h1>
-              <div className="text-[20px] md:text-[24px] leading-[1.5] text-[#4a4a4a] font-normal max-w-2xl font-inter tracking-tight">
+              <div className="text-[18px] md:text-[21px] leading-[1.5] text-[#4a4a4a] font-normal max-w-xl font-inter tracking-tight">
                 <p>
                   LaunchAnyway is a live, hands-on course for accidental founders to learn vibe coding 
                   <IconPill icon={Zap} color="bg-[#D4E845]" iconColor="text-black" /> 
@@ -139,15 +139,15 @@ export default function Home() {
             </div>
 
             {/* Sections Wrapper */}
-            <div className="space-y-16 pt-8">
+            <div className="space-y-12 pt-6">
               {/* Why This Course */}
-              <div className="space-y-5 max-w-2xl">
-                <h2 className="text-[12px] font-bold font-mono text-gray-400 uppercase tracking-[0.3em]">The Vibe</h2>
-                <p className="text-[18px] md:text-[20px] leading-[1.6] text-[#5a5a5a] font-inter">
+              <div className="space-y-4 max-w-xl">
+                <h2 className="text-[11px] font-bold font-mono text-gray-400 uppercase tracking-[0.3em]">The Vibe</h2>
+                <p className="text-[16px] md:text-[17px] leading-[1.6] text-[#5a5a5a] font-inter">
                   Stop watching tutorials and start shipping. We use modern tools like Cursor 
                   <ToolIcon label="C" bg="bg-black" />, Replit 
                   <ToolIcon label="R" bg="bg-[#F24E1E]" />, and LLMs 
-                  <span className="inline-flex items-center justify-center w-5 h-5 rounded-full bg-[#10A37F] mx-1 align-text-bottom translate-y-[1px] shadow-sm">
+                  <span className="inline-flex items-center justify-center w-4.5 h-4.5 rounded-full bg-[#10A37F] mx-1 align-text-bottom translate-y-[1px] shadow-sm">
                     <span className="w-2.5 h-2.5 border-[1.5px] border-white rounded-full"></span>
                   </span>
                   to turn founders into builders. No CS degree required 
@@ -156,9 +156,9 @@ export default function Home() {
               </div>
 
               {/* Curriculum / Journey */}
-              <div className="space-y-5 max-w-2xl">
-                <h2 className="text-[12px] font-bold font-mono text-gray-400 uppercase tracking-[0.3em]">The Journey</h2>
-                <p className="text-[18px] md:text-[20px] leading-[1.6] text-[#5a5a5a] font-inter">
+              <div className="space-y-4 max-w-xl">
+                <h2 className="text-[11px] font-bold font-mono text-gray-400 uppercase tracking-[0.3em]">The Journey</h2>
+                <p className="text-[16px] md:text-[17px] leading-[1.6] text-[#5a5a5a] font-inter">
                   From your first prompt to a live domain 
                   <IconPill icon={Globe} color="bg-[#E895C9]" iconColor="text-black" />. 
                   We cover content architecture, interface design at Cyper Island 
@@ -170,14 +170,14 @@ export default function Home() {
               </div>
 
               {/* Info Section */}
-              <div className="space-y-5 max-w-2xl">
-                <h2 className="text-[12px] font-bold font-mono text-gray-400 uppercase tracking-[0.3em]">Info</h2>
-                <p className="text-[18px] md:text-[20px] leading-[1.6] text-[#5a5a5a] font-inter">
+              <div className="space-y-4 max-w-xl">
+                <h2 className="text-[11px] font-bold font-mono text-gray-400 uppercase tracking-[0.3em]">Info</h2>
+                <p className="text-[16px] md:text-[17px] leading-[1.6] text-[#5a5a5a] font-inter">
                   Fluent in English, I work as an individual entrepreneur with a Georgian residence permit. I use tools like Notion 
                   <ToolIcon label="N" bg="bg-black" />, Framer 
                   <ToolIcon label="F" bg="bg-black" />, Figma 
                   <ToolIcon label="F" bg="bg-[#F24E1E]" />, SEO platforms, and ChatGPT 
-                  <span className="inline-flex items-center justify-center w-5 h-5 rounded-full bg-[#10A37F] mx-1 align-text-bottom translate-y-[1px] shadow-sm">
+                  <span className="inline-flex items-center justify-center w-4.5 h-4.5 rounded-full bg-[#10A37F] mx-1 align-text-bottom translate-y-[1px] shadow-sm">
                     <span className="w-2.5 h-2.5 border-[1.5px] border-white rounded-full"></span>
                   </span>
                   to build structured content systems and lead editorial teams.
@@ -187,9 +187,9 @@ export default function Home() {
           </div>
 
           {/* Right Sidebar Column - Cohorts */}
-          <div className="w-full lg:w-1/3 lg:pl-16">
-            <div className="sticky top-40">
-              <h2 className="text-[12px] font-bold font-mono text-gray-400 uppercase tracking-[0.3em] mb-12">Cohorts</h2>
+          <div className="w-full lg:w-[35%] lg:pl-12">
+            <div className="sticky top-32">
+              <h2 className="text-[11px] font-bold font-mono text-gray-400 uppercase tracking-[0.3em] mb-10">Cohorts</h2>
               
               <div className="space-y-2">
                 <CaseItem 
@@ -220,8 +220,8 @@ export default function Home() {
                 />
               </div>
 
-              <div className="mt-12">
-                <button className="w-full py-5 rounded-2xl bg-black text-white text-[15px] font-bold hover:bg-gray-800 transition-all uppercase tracking-[0.15em] shadow-xl shadow-black/5 hover:scale-[1.02] active:scale-[0.98]">
+              <div className="mt-10">
+                <button className="w-full py-4.5 rounded-2xl bg-black text-white text-[14px] font-bold hover:bg-gray-800 transition-all uppercase tracking-[0.15em] shadow-xl shadow-black/5 hover:scale-[1.02] active:scale-[0.98]">
                   Secure Your Spot
                 </button>
               </div>
