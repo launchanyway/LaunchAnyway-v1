@@ -331,13 +331,29 @@ export default function Home() {
           <aside id="enrollment" className="w-full lg:w-[35%] lg:pl-12 lg:sticky lg:top-28 self-start scroll-mt-32">
             <h2 className="text-[13px] font-bold font-mono text-gray-500 uppercase tracking-[0.3em] mb-10">Enrollment</h2>
             
-            <div className="bg-[#eeede8] border border-black/5 rounded-3xl p-6 space-y-8 shadow-sm">
-              <div className="space-y-1">
+            <div 
+              className="bg-[#eeede8] border-2 border-black/5 p-6 space-y-8 shadow-sm relative"
+              style={{
+                clipPath: `polygon(40px 0%, calc(100% - 40px) 0%, 100% 40px, 100% 100%, calc(100% - 40px) 100%, 40px 100%, 0 100%, 0 0)`,
+              }}
+            >
+              {/* Folder accent line */}
+              <span
+                className="absolute block origin-top-right rotate-45 bg-black/5"
+                style={{
+                  right: -2,
+                  top: 38,
+                  width: Math.sqrt(3200),
+                  height: 2
+                }}
+              />
+
+              <div className="space-y-1 relative z-10">
                 <p className="text-[11px] font-bold font-mono text-blue-600 uppercase tracking-widest">Next Intake</p>
                 <p className="text-[20px] font-medium text-gray-900 font-inter tracking-tight">January 20th, 2026</p>
               </div>
 
-              <div className="grid grid-cols-2 gap-6">
+              <div className="grid grid-cols-2 gap-6 relative z-10">
                 <div className="space-y-1">
                   <p className="text-[10px] font-bold font-mono text-gray-400 uppercase tracking-widest">Availability</p>
                   <p className="text-[15px] font-semibold text-gray-800 font-inter">13 / 20 Seats</p>
@@ -356,7 +372,7 @@ export default function Home() {
                 </div>
               </div>
 
-              <div className="space-y-3">
+              <div className="space-y-3 relative z-10">
                 <button className="w-full py-4 rounded-2xl bg-black text-white text-[14px] font-bold hover:bg-gray-800 transition-all uppercase tracking-[0.15em] shadow-xl shadow-black/5 hover:scale-[1.02] active:scale-[0.98]">
                   Secure Your Spot
                 </button>
@@ -365,7 +381,7 @@ export default function Home() {
                 </p>
               </div>
               
-              <p className="text-[10px] text-center text-gray-400 font-medium font-inter">
+              <p className="text-[10px] text-center text-gray-400 font-medium font-inter relative z-10">
                 Limited cohort size for personalized feedback.
               </p>
             </div>
