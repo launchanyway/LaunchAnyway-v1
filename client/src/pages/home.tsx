@@ -101,13 +101,13 @@ const EnrollmentModal = ({ isOpen, onClose }: { isOpen: boolean, onClose: () => 
   return (
     <AnimatePresence>
       {isOpen && (
-        <div className="fixed inset-0 z-[100] flex items-center justify-center p-4 md:p-6 overflow-y-auto">
+        <div className="fixed inset-0 z-[100] flex items-center justify-center p-0 md:p-6 overflow-y-auto">
           <motion.div
             initial={{ opacity: 0 }}
             animate={{ opacity: 1 }}
             exit={{ opacity: 0 }}
             onClick={onClose}
-            className="fixed inset-0 bg-black/60 backdrop-blur-md"
+            className="fixed inset-0 bg-black/60 backdrop-blur-md hidden md:block"
           />
           <motion.div
             initial={{ opacity: 0, scale: 0.95, y: 20 }}
@@ -118,10 +118,10 @@ const EnrollmentModal = ({ isOpen, onClose }: { isOpen: boolean, onClose: () => 
               transition: { type: "spring", damping: 25, stiffness: 300 }
             }}
             exit={{ opacity: 0, scale: 0.95, y: 20 }}
-            className="relative w-full max-w-xl bg-[#FAF9F2] rounded-3xl overflow-hidden shadow-2xl border-none pointer-events-auto my-8"
+            className="relative w-full h-full md:h-auto md:max-w-xl bg-[#FAF9F2] md:rounded-3xl overflow-hidden shadow-2xl border-none pointer-events-auto"
           >
             {/* Header */}
-            <div className="bg-[#D4E845] p-8 pb-10 relative overflow-hidden">
+            <div className="bg-[#D4E845] p-8 pb-10 relative overflow-hidden shrink-0">
               <button 
                 onClick={onClose}
                 className="absolute top-6 right-6 w-10 h-10 rounded-full bg-black/10 hover:bg-black/20 flex items-center justify-center transition-colors z-20"
@@ -134,7 +134,7 @@ const EnrollmentModal = ({ isOpen, onClose }: { isOpen: boolean, onClose: () => 
               </div>
             </div>
 
-            <div className="p-8 -mt-6 relative z-10 bg-[#FAF9F2] rounded-t-3xl max-h-[70vh] overflow-y-auto custom-scrollbar">
+            <div className="p-8 -mt-6 relative z-10 bg-[#FAF9F2] rounded-t-3xl h-full md:max-h-[70vh] overflow-y-auto custom-scrollbar">
               <form className="space-y-8" onSubmit={handleSubmit}>
                 {/* Section 1: Basic Info */}
                 <div className="space-y-6">
