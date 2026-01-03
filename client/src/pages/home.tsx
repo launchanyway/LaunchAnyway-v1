@@ -1,4 +1,4 @@
-import React, { useState } from "react";
+import React, { useState, useRef } from "react";
 import { 
   Box, 
   Twitter, 
@@ -28,25 +28,51 @@ import {
 import { StaggerTestimonials } from "@/components/ui/stagger-testimonials";
 import { motion, AnimatePresence } from "framer-motion";
 import { StardustButton } from "@/components/ui/stardust-button";
+import { cn } from "@/lib/utils";
 
 // Enrollment Modal Component
 const EnrollmentModal = ({ isOpen, onClose }: { isOpen: boolean, onClose: () => void }) => {
-  const [step, setStep] = useState(1);
   const [formData, setFormData] = useState({
     fullName: "",
     email: "",
     phone: "",
-    country: "",
     role: "",
     goal: "",
     reason: "",
     commitment: ""
   });
+  const [errors, setErrors] = useState<Record<string, string>>({});
+  const emailRef = useRef<HTMLInputElement>(null);
 
   const roles = ["Designer", "Developer", "Product Manager", "Founder / Solo Builder", "Student", "Other"];
   const goals = ["Mobile app (iOS / Android)", "SaaS / Web app", "Internal tool / Automation", "I’m still exploring"];
   const reasons = ["I want to ship my first real product", "I’ve ideas but never launched", "I want to learn vibe coding properly", "I want accountability & momentum"];
   const commitments = ["I can give 5–7 hrs/week", "I can give 8–10 hrs/week", "I’m all-in for 2 weeks"];
+
+  const validateEmail = (email: string) => {
+    return /^[^\s@]+@[^\s@]+\.[^\s@]+$/.test(email);
+  };
+
+  const handleSubmit = (e: React.FormEvent) => {
+    e.preventDefault();
+    const newErrors: Record<string, string> = {};
+
+    if (!validateEmail(formData.email)) {
+      newErrors.email = "Invalid email format";
+    }
+
+    if (Object.keys(newErrors).length > 0) {
+      setErrors(newErrors);
+      if (newErrors.email && emailRef.current) {
+        emailRef.current.scrollIntoView({ behavior: 'smooth', block: 'center' });
+        emailRef.current.focus();
+      }
+      return;
+    }
+
+    alert("Application Submitted! We'll be in touch within 4 hours.");
+    onClose();
+  };
 
   return (
     <AnimatePresence>
@@ -85,7 +111,7 @@ const EnrollmentModal = ({ isOpen, onClose }: { isOpen: boolean, onClose: () => 
             </div>
 
             <div className="p-8 -mt-6 relative z-10 bg-[#FAF9F2] rounded-t-3xl max-h-[70vh] overflow-y-auto custom-scrollbar">
-              <form className="space-y-8" onSubmit={(e) => e.preventDefault()}>
+              <form className="space-y-8" onSubmit={handleSubmit}>
                 {/* Section 1: Basic Info */}
                 <div className="space-y-6">
                   <h3 className="text-[11px] font-bold font-mono text-gray-400 uppercase tracking-widest border-b border-black/5 pb-2">Basic Information</h3>
@@ -105,13 +131,23 @@ const EnrollmentModal = ({ isOpen, onClose }: { isOpen: boolean, onClose: () => 
                     <div className="space-y-2">
                       <label className="text-[13px] font-bold text-gray-700 ml-1">Email Address</label>
                       <input 
+                        ref={emailRef}
                         type="email" 
                         required
                         placeholder="john@example.com"
-                        className="w-full px-4 py-3 rounded-xl bg-black/5 border-none focus:ring-2 focus:ring-[#D4E845] transition-all text-sm font-inter"
+                        className={cn(
+                          "w-full px-4 py-3 rounded-xl bg-black/5 border-none focus:ring-2 transition-all text-sm font-inter",
+                          errors.email ? "ring-2 ring-red-500 bg-red-50" : "focus:ring-[#D4E845]"
+                        )}
                         value={formData.email}
-                        onChange={(e) => setFormData({...formData, email: e.target.value})}
+                        onChange={(e) => {
+                          setFormData({...formData, email: e.target.value});
+                          if (errors.email) setErrors({...errors, email: ""});
+                        }}
                       />
+                      {errors.email && (
+                        <p className="text-[10px] text-red-500 font-bold ml-1 uppercase tracking-wider">{errors.email}</p>
+                      )}
                     </div>
                     <div className="space-y-2">
                       <label className="text-[13px] font-bold text-gray-700 ml-1">Phone / WhatsApp (Preferred)</label>
@@ -137,6 +173,7 @@ const EnrollmentModal = ({ isOpen, onClose }: { isOpen: boolean, onClose: () => 
                       {roles.map((role) => (
                         <button
                           key={role}
+                          type="button"
                           onClick={() => setFormData({...formData, role})}
                           className={`px-3 py-2.5 rounded-xl text-[12px] font-bold transition-all border ${
                             formData.role === role 
@@ -156,6 +193,7 @@ const EnrollmentModal = ({ isOpen, onClose }: { isOpen: boolean, onClose: () => 
                       {goals.map((goal) => (
                         <button
                           key={goal}
+                          type="button"
                           onClick={() => setFormData({...formData, goal})}
                           className={`px-4 py-3 rounded-xl text-[12px] font-bold text-left transition-all border ${
                             formData.goal === goal 
@@ -180,6 +218,7 @@ const EnrollmentModal = ({ isOpen, onClose }: { isOpen: boolean, onClose: () => 
                       {reasons.map((reason) => (
                         <button
                           key={reason}
+                          type="button"
                           onClick={() => setFormData({...formData, reason})}
                           className={`w-full px-4 py-3 rounded-xl text-[12px] font-bold text-left transition-all border ${
                             formData.reason === reason 
@@ -199,6 +238,7 @@ const EnrollmentModal = ({ isOpen, onClose }: { isOpen: boolean, onClose: () => 
                       {commitments.map((commitment) => (
                         <button
                           key={commitment}
+                          type="button"
                           onClick={() => setFormData({...formData, commitment})}
                           className={`w-full px-4 py-3 rounded-xl text-[12px] font-bold text-left transition-all border ${
                             formData.commitment === commitment 
@@ -217,10 +257,6 @@ const EnrollmentModal = ({ isOpen, onClose }: { isOpen: boolean, onClose: () => 
                   <StardustButton 
                     type="submit"
                     disabled={!formData.fullName || !formData.email || !formData.phone || !formData.role || !formData.goal || !formData.reason || !formData.commitment}
-                    onClick={() => {
-                      alert("Application Submitted! We'll be in touch within 4 hours.");
-                      onClose();
-                    }}
                   >
                     Submit Application
                   </StardustButton>
