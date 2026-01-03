@@ -31,92 +31,207 @@ import { StardustButton } from "@/components/ui/stardust-button";
 
 // Enrollment Modal Component
 const EnrollmentModal = ({ isOpen, onClose }: { isOpen: boolean, onClose: () => void }) => {
+  const [step, setStep] = useState(1);
+  const [formData, setFormData] = useState({
+    fullName: "",
+    email: "",
+    phone: "",
+    country: "",
+    role: "",
+    goal: "",
+    reason: "",
+    commitment: ""
+  });
+
+  const roles = ["Designer", "Developer", "Product Manager", "Founder / Solo Builder", "Student", "Other"];
+  const goals = ["Mobile app (iOS / Android)", "SaaS / Web app", "Internal tool / Automation", "I’m still exploring"];
+  const reasons = ["I want to ship my first real product", "I’ve ideas but never launched", "I want to learn vibe coding properly", "I want accountability & momentum"];
+  const commitments = ["I can give 5–7 hrs/week", "I can give 8–10 hrs/week", "I’m all-in for 2 weeks"];
+
   return (
     <AnimatePresence>
       {isOpen && (
-        <div className="fixed inset-0 z-[100] flex items-center justify-center p-4 md:p-6">
+        <div className="fixed inset-0 z-[100] flex items-center justify-center p-4 md:p-6 overflow-y-auto">
           <motion.div
             initial={{ opacity: 0 }}
             animate={{ opacity: 1 }}
             exit={{ opacity: 0 }}
             onClick={onClose}
-            className="absolute inset-0 bg-black/40 backdrop-blur-sm"
+            className="fixed inset-0 bg-black/60 backdrop-blur-md"
           />
           <motion.div
-            initial={{ opacity: 0, scale: 0.9, y: 20 }}
+            initial={{ opacity: 0, scale: 0.95, y: 20 }}
             animate={{ 
               opacity: 1, 
               scale: 1, 
               y: 0,
-              transition: {
-                type: "spring",
-                damping: 25,
-                stiffness: 300
-              }
+              transition: { type: "spring", damping: 25, stiffness: 300 }
             }}
-            exit={{ opacity: 0, scale: 0.9, y: 20 }}
-            className="relative w-full max-w-md bg-[#FAF9F2] rounded-2xl overflow-hidden shadow-2xl border-none pointer-events-auto"
+            exit={{ opacity: 0, scale: 0.95, y: 20 }}
+            className="relative w-full max-w-xl bg-[#FAF9F2] rounded-3xl overflow-hidden shadow-2xl border-none pointer-events-auto my-8"
           >
-            {/* Header / Banner */}
+            {/* Header */}
             <div className="bg-[#D4E845] p-8 pb-10 relative overflow-hidden">
-              <div className="absolute top-0 right-0 p-6 z-20">
-                <button 
-                  onClick={(e) => {
-                    e.stopPropagation();
-                    onClose();
-                  }}
-                  className="w-10 h-10 rounded-full bg-black/10 hover:bg-black/20 flex items-center justify-center transition-colors pointer-events-auto cursor-pointer"
-                  aria-label="Close modal"
-                >
-                  <X className="w-5 h-5 text-black" />
-                </button>
-              </div>
-              <div className="relative z-10 space-y-1">
-                <h2 className="text-3xl md:text-4xl font-medium tracking-tight font-instrument text-black">
-                  Apply for LaunchAnyway
-                </h2>
+              <button 
+                onClick={onClose}
+                className="absolute top-6 right-6 w-10 h-10 rounded-full bg-black/10 hover:bg-black/20 flex items-center justify-center transition-colors z-20"
+              >
+                <X className="w-5 h-5 text-black" />
+              </button>
+              <div className="relative z-10">
+                <h2 className="text-3xl font-medium font-instrument text-black mb-2">Apply for LaunchAnyway</h2>
+                <p className="text-black/60 text-sm font-medium">Batch starts Jan 18th • 13 seats left</p>
               </div>
             </div>
 
-            <div className="p-8 space-y-8 -mt-6 relative z-10 bg-[#FAF9F2] rounded-t-2xl">
-              <div className="space-y-6">
-                <p className="text-[16px] text-gray-600 leading-relaxed font-inter">
-                  We review each application to make sure it’s the right fit for everyone involved.
-                </p>
-
-                <div className="relative space-y-0">
-                  {/* Timeline line */}
-                  <div className="absolute left-[11px] top-3 bottom-3 w-[1.5px] bg-black/5" />
-
-                  {/* Step 1 */}
-                  <div className="relative flex gap-6 pb-8">
-                    <div className="relative z-10 w-[24px] h-[24px] rounded-full bg-[#D4E845] border-4 border-[#FAF9F2] flex-shrink-0" />
-                    <div className="space-y-1">
-                      <h3 className="font-bold text-[11px] uppercase tracking-[0.15em] text-gray-400 font-mono leading-none pt-1">Step 01</h3>
-                      <p className="text-gray-900 leading-tight text-[17px] font-medium">
-                        Fill out a short application.
-                      </p>
+            <div className="p-8 -mt-6 relative z-10 bg-[#FAF9F2] rounded-t-3xl max-h-[70vh] overflow-y-auto custom-scrollbar">
+              <form className="space-y-8" onSubmit={(e) => e.preventDefault()}>
+                {/* Section 1: Basic Info */}
+                <div className="space-y-6">
+                  <h3 className="text-[11px] font-bold font-mono text-gray-400 uppercase tracking-widest border-b border-black/5 pb-2">Basic Information</h3>
+                  
+                  <div className="grid grid-cols-1 md:grid-cols-2 gap-6">
+                    <div className="space-y-2">
+                      <label className="text-[13px] font-bold text-gray-700 ml-1">Full Name</label>
+                      <input 
+                        type="text" 
+                        placeholder="John Doe"
+                        className="w-full px-4 py-3 rounded-xl bg-black/5 border-none focus:ring-2 focus:ring-[#D4E845] transition-all text-sm font-inter"
+                        value={formData.fullName}
+                        onChange={(e) => setFormData({...formData, fullName: e.target.value})}
+                      />
                     </div>
-                  </div>
-
-                  {/* Step 2 */}
-                  <div className="relative flex gap-6">
-                    <div className="relative z-10 w-[24px] h-[24px] rounded-full bg-blue-600 border-4 border-[#FAF9F2] flex-shrink-0" />
-                    <div className="space-y-1">
-                      <h3 className="font-bold text-[11px] uppercase tracking-[0.15em] text-gray-400 font-mono leading-none pt-1">Step 02</h3>
-                      <p className="text-gray-900 leading-tight text-[17px] font-medium">
-                        We'll get in touch within 4 hours.
-                      </p>
+                    <div className="space-y-2">
+                      <label className="text-[13px] font-bold text-gray-700 ml-1">Email Address</label>
+                      <input 
+                        type="email" 
+                        placeholder="john@example.com"
+                        className="w-full px-4 py-3 rounded-xl bg-black/5 border-none focus:ring-2 focus:ring-[#D4E845] transition-all text-sm font-inter"
+                        value={formData.email}
+                        onChange={(e) => setFormData({...formData, email: e.target.value})}
+                      />
+                    </div>
+                    <div className="space-y-2">
+                      <label className="text-[13px] font-bold text-gray-700 ml-1">Phone / WhatsApp</label>
+                      <input 
+                        type="text" 
+                        placeholder="+1 234 567 890"
+                        className="w-full px-4 py-3 rounded-xl bg-black/5 border-none focus:ring-2 focus:ring-[#D4E845] transition-all text-sm font-inter"
+                        value={formData.phone}
+                        onChange={(e) => setFormData({...formData, phone: e.target.value})}
+                      />
+                    </div>
+                    <div className="space-y-2">
+                      <label className="text-[13px] font-bold text-gray-700 ml-1">Country</label>
+                      <input 
+                        type="text" 
+                        placeholder="e.g. India, USA"
+                        className="w-full px-4 py-3 rounded-xl bg-black/5 border-none focus:ring-2 focus:ring-[#D4E845] transition-all text-sm font-inter"
+                        value={formData.country}
+                        onChange={(e) => setFormData({...formData, country: e.target.value})}
+                      />
                     </div>
                   </div>
                 </div>
-              </div>
 
-              <div className="pt-2">
-                <StardustButton onClick={() => {}}>
-                  Apply Now
-                </StardustButton>
-              </div>
+                {/* Section 2: Role & Goals */}
+                <div className="space-y-6">
+                  <h3 className="text-[11px] font-bold font-mono text-gray-400 uppercase tracking-widest border-b border-black/5 pb-2">Your Profile</h3>
+                  
+                  <div className="space-y-4">
+                    <label className="text-[14px] font-bold text-gray-800 ml-1">What is your primary role?</label>
+                    <div className="grid grid-cols-2 md:grid-cols-3 gap-2">
+                      {roles.map((role) => (
+                        <button
+                          key={role}
+                          onClick={() => setFormData({...formData, role})}
+                          className={`px-3 py-2.5 rounded-xl text-[12px] font-bold transition-all border ${
+                            formData.role === role 
+                            ? "bg-black text-[#D4E845] border-black" 
+                            : "bg-white border-black/10 text-gray-600 hover:border-black/30"
+                          }`}
+                        >
+                          {role}
+                        </button>
+                      ))}
+                    </div>
+                  </div>
+
+                  <div className="space-y-4">
+                    <label className="text-[14px] font-bold text-gray-800 ml-1">What do you want to build?</label>
+                    <div className="grid grid-cols-1 md:grid-cols-2 gap-2">
+                      {goals.map((goal) => (
+                        <button
+                          key={goal}
+                          onClick={() => setFormData({...formData, goal})}
+                          className={`px-4 py-3 rounded-xl text-[12px] font-bold text-left transition-all border ${
+                            formData.goal === goal 
+                            ? "bg-black text-[#D4E845] border-black" 
+                            : "bg-white border-black/10 text-gray-600 hover:border-black/30"
+                          }`}
+                        >
+                          {goal}
+                        </button>
+                      ))}
+                    </div>
+                  </div>
+                </div>
+
+                {/* Section 3: Motivation & Commitment */}
+                <div className="space-y-6">
+                  <h3 className="text-[11px] font-bold font-mono text-gray-400 uppercase tracking-widest border-b border-black/5 pb-2">Commitment</h3>
+                  
+                  <div className="space-y-4">
+                    <label className="text-[14px] font-bold text-gray-800 ml-1">Why are you applying right now?</label>
+                    <div className="space-y-2">
+                      {reasons.map((reason) => (
+                        <button
+                          key={reason}
+                          onClick={() => setFormData({...formData, reason})}
+                          className={`w-full px-4 py-3 rounded-xl text-[12px] font-bold text-left transition-all border ${
+                            formData.reason === reason 
+                            ? "bg-black text-[#D4E845] border-black" 
+                            : "bg-white border-black/10 text-gray-600 hover:border-black/30"
+                          }`}
+                        >
+                          {reason}
+                        </button>
+                      ))}
+                    </div>
+                  </div>
+
+                  <div className="space-y-4">
+                    <label className="text-[14px] font-bold text-gray-800 ml-1">Your current commitment level</label>
+                    <div className="space-y-2">
+                      {commitments.map((commitment) => (
+                        <button
+                          key={commitment}
+                          onClick={() => setFormData({...formData, commitment})}
+                          className={`w-full px-4 py-3 rounded-xl text-[12px] font-bold text-left transition-all border ${
+                            formData.commitment === commitment 
+                            ? "bg-black text-[#D4E845] border-black" 
+                            : "bg-white border-black/10 text-gray-600 hover:border-black/30"
+                          }`}
+                        >
+                          {commitment}
+                        </button>
+                      ))}
+                    </div>
+                  </div>
+                </div>
+
+                <div className="pt-6 sticky bottom-0 bg-[#FAF9F2] pb-2">
+                  <StardustButton onClick={() => {
+                    alert("Application Submitted! We'll be in touch within 4 hours.");
+                    onClose();
+                  }}>
+                    Submit Application
+                  </StardustButton>
+                  <p className="text-[10px] text-center text-gray-400 mt-4 uppercase tracking-widest font-bold">
+                    100% Secure • No Payment Required Yet
+                  </p>
+                </div>
+              </form>
             </div>
           </motion.div>
         </div>
