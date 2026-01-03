@@ -142,7 +142,7 @@ export default function Home() {
             <div className="space-y-12 pt-6">
               {/* Why This Course */}
               <div className="space-y-4 max-w-xl">
-                <h2 className="text-[11px] font-bold font-mono text-gray-400 uppercase tracking-[0.3em]">The Vibe</h2>
+                <h2 className="text-[13px] font-bold font-mono text-gray-500 uppercase tracking-[0.3em]">The Vibe</h2>
                 <p className="text-[16px] md:text-[17px] leading-[1.6] text-[#5a5a5a] font-inter">
                   Stop watching tutorials and start shipping. We use modern tools like Cursor 
                   <ToolIcon label="C" bg="bg-black" />, Replit 
@@ -157,7 +157,7 @@ export default function Home() {
 
               {/* Curriculum / Journey */}
               <div className="space-y-4 max-w-xl">
-                <h2 className="text-[11px] font-bold font-mono text-gray-400 uppercase tracking-[0.3em]">The Journey</h2>
+                <h2 className="text-[13px] font-bold font-mono text-gray-500 uppercase tracking-[0.3em]">The Journey</h2>
                 <p className="text-[16px] md:text-[17px] leading-[1.6] text-[#5a5a5a] font-inter">
                   From your first prompt to a live domain 
                   <IconPill icon={Globe} color="bg-[#E895C9]" iconColor="text-black" />. 
@@ -171,7 +171,7 @@ export default function Home() {
 
               {/* Info Section */}
               <div className="space-y-4 max-w-xl">
-                <h2 className="text-[11px] font-bold font-mono text-gray-400 uppercase tracking-[0.3em]">Info</h2>
+                <h2 className="text-[13px] font-bold font-mono text-gray-500 uppercase tracking-[0.3em]">Info</h2>
                 <p className="text-[16px] md:text-[17px] leading-[1.6] text-[#5a5a5a] font-inter">
                   Fluent in English, I work as an individual entrepreneur with a Georgian residence permit. I use tools like Notion 
                   <ToolIcon label="N" bg="bg-black" />, Framer 
@@ -189,7 +189,7 @@ export default function Home() {
           {/* Right Sidebar Column - Cohorts */}
           <div className="w-full lg:w-[35%] lg:pl-12">
             <div className="sticky top-32">
-              <h2 className="text-[11px] font-bold font-mono text-gray-400 uppercase tracking-[0.3em] mb-10">Cohorts</h2>
+              <h2 className="text-[13px] font-bold font-mono text-gray-500 uppercase tracking-[0.3em] mb-10">Cohorts</h2>
               
               <div className="space-y-2">
                 <CaseItem 
