@@ -30,14 +30,14 @@ const IconPill = ({
   iconColor?: string,
   className?: string 
 }) => (
-  <span className={`inline-flex items-center justify-center w-5 h-5 rounded-full ${color} mx-1 align-text-bottom ${className} translate-y-[1px]`}>
-    <Icon className={`w-3 h-3 ${iconColor}`} />
+  <span className={`inline-flex items-center justify-center w-4 h-4 rounded-full ${color} mx-1 align-text-bottom ${className} translate-y-[1px]`}>
+    <Icon className={`w-2.5 h-2.5 ${iconColor}`} />
   </span>
 );
 
 // Circled Text Component
 const CircledText = ({ children }: { children: React.ReactNode }) => (
-  <span className="inline-block border-[1.5px] border-blue-600/60 rounded-full px-2 py-0 mx-0.5 text-inherit leading-normal">
+  <span className="inline-block border-[1px] border-blue-600/40 rounded-full px-1.5 py-0 mx-0.5 text-inherit leading-normal">
     {children}
   </span>
 );
@@ -68,19 +68,19 @@ const CaseItem = ({
   tag: string, 
   isLocked?: boolean 
 }) => (
-  <div className="flex gap-4 mb-8 group cursor-pointer">
-    <div className={`w-10 h-10 rounded-xl flex items-center justify-center shrink-0 ${color} text-white transition-transform group-hover:scale-105 shadow-sm`}>
-      <Icon className="w-5 h-5" />
+  <div className="flex gap-3 mb-6 group cursor-pointer">
+    <div className={`w-8 h-8 rounded-lg flex items-center justify-center shrink-0 ${color} text-white transition-transform group-hover:scale-105 shadow-sm`}>
+      <Icon className="w-4 h-4" />
     </div>
-    <div className="flex flex-col pt-0.5">
-      <h3 className="text-sm font-medium leading-snug text-gray-900 mb-1.5 group-hover:text-gray-600 transition-colors">
+    <div className="flex flex-col pt-0">
+      <h3 className="text-[12px] font-semibold leading-snug text-gray-800 mb-0.5 group-hover:text-gray-500 transition-colors">
         {title}
       </h3>
-      <div className="flex items-center text-[10px] text-gray-400 font-mono gap-2 tracking-wide">
+      <div className="flex items-center text-[9px] text-gray-400 font-mono gap-1 tracking-tighter">
         <span>{date}</span>
         <span className="w-0.5 h-0.5 rounded-full bg-gray-300"></span>
         <div className="flex items-center gap-1">
-          {isLocked && <Lock className="w-2.5 h-2.5" />}
+          {isLocked && <Lock className="w-2 h-2" />}
           <span className="uppercase">{tag}</span>
         </div>
       </div>
@@ -90,7 +90,7 @@ const CaseItem = ({
 
 // Tool Icon Component
 const ToolIcon = ({ label, bg, text = "text-white" }: { label: string, bg: string, text?: string }) => (
-  <span className={`inline-flex items-center justify-center w-5 h-5 rounded mx-1 align-text-bottom ${bg} ${text} text-[10px] font-bold font-mono translate-y-[1px]`}>
+  <span className={`inline-flex items-center justify-center w-4 h-4 rounded-sm mx-1 align-text-bottom ${bg} ${text} text-[9px] font-bold font-mono translate-y-[1px]`}>
     {label}
   </span>
 );
@@ -99,19 +99,19 @@ export default function Home() {
   return (
     <div className="min-h-screen bg-[#FAFAF9] text-[#1a1a1a] font-sans selection:bg-[#D4E845] selection:text-black">
       {/* Navbar */}
-      <header className="fixed top-0 left-0 right-0 p-6 md:p-8 flex justify-between items-start z-50 pointer-events-none mix-blend-multiply">
-        <div className="flex gap-5 pointer-events-auto">
-          <button className="text-gray-400 hover:text-black transition-colors"><Box className="w-5 h-5" strokeWidth={1.5} /></button>
-          <button className="text-gray-400 hover:text-black transition-colors"><Twitter className="w-5 h-5" strokeWidth={1.5} /></button>
-          <button className="text-gray-400 hover:text-black transition-colors"><Instagram className="w-5 h-5" strokeWidth={1.5} /></button>
+      <header className="fixed top-0 left-0 right-0 p-5 md:p-6 flex justify-between items-start z-50 pointer-events-none mix-blend-multiply">
+        <div className="flex gap-4 pointer-events-auto">
+          <button className="text-gray-400 hover:text-black transition-colors"><Box className="w-4 h-4" strokeWidth={1.5} /></button>
+          <button className="text-gray-400 hover:text-black transition-colors"><Twitter className="w-4 h-4" strokeWidth={1.5} /></button>
+          <button className="text-gray-400 hover:text-black transition-colors"><Instagram className="w-4 h-4" strokeWidth={1.5} /></button>
         </div>
         
-        <div className="flex gap-8 text-[11px] font-mono text-gray-400 pointer-events-auto tracking-wide">
-          <a href="#" className="flex items-center gap-2 hover:text-black transition-colors">
-            <Download className="w-3.5 h-3.5" /> CV
+        <div className="flex gap-6 text-[10px] font-mono text-gray-400 pointer-events-auto tracking-tight">
+          <a href="#" className="flex items-center gap-1.5 hover:text-black transition-colors">
+            <Download className="w-3 h-3" /> CV
           </a>
-          <a href="#" className="flex items-center gap-2 hover:text-black transition-colors">
-            <Mail className="w-3.5 h-3.5" /> HELLO@TMPL.DIGITAL
+          <a href="#" className="flex items-center gap-1.5 hover:text-black transition-colors">
+            <Mail className="w-3 h-3" /> HELLO@TMPL.DIGITAL
           </a>
         </div>
       </header>
@@ -123,18 +123,18 @@ export default function Home() {
           <div className="lg:col-span-8 space-y-20">
             
             {/* Profile Header */}
-            <div className="flex items-center gap-5">
-              <div className="w-14 h-14 rounded-2xl overflow-hidden bg-gray-200 shadow-inner">
+            <div className="flex items-center gap-4">
+              <div className="w-12 h-12 rounded-xl overflow-hidden bg-gray-200 shadow-inner">
                 <img src={profileImage} alt="Sasha Mozdir" className="w-full h-full object-cover" />
               </div>
-              <div className="flex flex-col gap-0.5">
-                <h1 className="text-base font-medium text-gray-900">Sasha Mozdir</h1>
-                <span className="text-[10px] font-mono text-gray-400 tracking-widest uppercase">ENTREPRENEUR</span>
+              <div className="flex flex-col">
+                <h1 className="text-[13px] font-bold text-gray-900 leading-tight">Sasha Mozdir</h1>
+                <span className="text-[10px] font-mono text-gray-400 tracking-widest uppercase font-semibold">ENTREPRENEUR</span>
               </div>
             </div>
 
             {/* Intro */}
-            <div className="text-xl md:text-[22px] leading-[1.6] text-[#4a4a4a] font-light max-w-3xl">
+            <div className="text-[14px] md:text-[15px] leading-[1.6] text-[#4a4a4a] font-normal max-w-xl">
               <p>
                 I'm Sasha Mozdir. I build editorial systems and content-first websites. I run Chemimedia 
                 <IconPill icon={Zap} color="bg-[#D4E845]" iconColor="text-black" /> 
@@ -145,9 +145,9 @@ export default function Home() {
             </div>
 
             {/* Study Section */}
-            <div className="space-y-6 max-w-3xl">
-              <h2 className="text-[10px] font-mono text-gray-400 uppercase tracking-widest">Study</h2>
-              <p className="text-[17px] leading-relaxed text-[#5a5a5a]">
+            <div className="space-y-3 max-w-xl">
+              <h2 className="text-[9px] font-mono text-gray-400 uppercase tracking-[0.2em] font-semibold">Study</h2>
+              <p className="text-[13px] leading-[1.6] text-[#5a5a5a]">
                 I studied Philosophy and Design at Marsons 
                 <IconPill icon={Flower2} color="bg-[#D93F3F]" iconColor="text-white" /> 
                 School of Design in New York and finished a dual degree at Voldmiths 
@@ -158,9 +158,9 @@ export default function Home() {
             </div>
 
             {/* Experience Section */}
-            <div className="space-y-6 max-w-3xl">
-              <h2 className="text-[10px] font-mono text-gray-400 uppercase tracking-widest">Experience</h2>
-              <p className="text-[17px] leading-relaxed text-[#5a5a5a]">
+            <div className="space-y-3 max-w-xl">
+              <h2 className="text-[9px] font-mono text-gray-400 uppercase tracking-[0.2em] font-semibold">Experience</h2>
+              <p className="text-[13px] leading-[1.6] text-[#5a5a5a]">
                 At Coole 
                 <IconPill icon={Asterisk} color="bg-[#8B5CF6]" iconColor="text-white" /> 
                 I led content structure workshops for the product team and helped rebuild their interface copy for a mobile release. At Plitch 
@@ -173,15 +173,15 @@ export default function Home() {
             </div>
 
             {/* Info Section */}
-            <div className="space-y-6 max-w-3xl">
-              <h2 className="text-[10px] font-mono text-gray-400 uppercase tracking-widest">Info</h2>
-              <p className="text-[17px] leading-relaxed text-[#5a5a5a]">
+            <div className="space-y-3 max-w-xl">
+              <h2 className="text-[9px] font-mono text-gray-400 uppercase tracking-[0.2em] font-semibold">Info</h2>
+              <p className="text-[13px] leading-[1.6] text-[#5a5a5a]">
                 Fluent in English, I work as an individual entrepreneur with a Georgian residence permit. I use tools like Notion 
                 <ToolIcon label="N" bg="bg-black" />, Framer 
                 <ToolIcon label="F" bg="bg-black" />, Figma 
                 <ToolIcon label="F" bg="bg-[#F24E1E]" />, SEO platforms, and ChatGPT 
-                <span className="inline-flex items-center justify-center w-5 h-5 rounded-full bg-[#10A37F] mx-1 align-text-bottom translate-y-[1px]">
-                  <span className="w-2.5 h-2.5 border-[1.5px] border-white rounded-full"></span>
+                <span className="inline-flex items-center justify-center w-4 h-4 rounded-full bg-[#10A37F] mx-1 align-text-bottom translate-y-[1px]">
+                  <span className="w-2 h-2 border-[1px] border-white rounded-full"></span>
                 </span>
                 to build structured content systems and lead editorial teams.
               </p>
@@ -232,8 +232,8 @@ export default function Home() {
                 />
               </div>
 
-              <div className="mt-10">
-                <button className="px-6 py-2.5 rounded-full border border-gray-300 text-[10px] font-mono text-gray-500 hover:border-gray-900 hover:text-gray-900 transition-colors uppercase tracking-widest bg-transparent">
+              <div className="mt-8">
+                <button className="px-5 py-2 rounded-full border border-gray-200 text-[9px] font-mono text-gray-400 hover:border-gray-900 hover:text-gray-900 transition-colors uppercase tracking-widest bg-transparent">
                   All
                 </button>
               </div>
