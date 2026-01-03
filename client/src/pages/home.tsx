@@ -29,6 +29,7 @@ import { StaggerTestimonials } from "@/components/ui/stagger-testimonials";
 import { motion, AnimatePresence } from "framer-motion";
 import { StardustButton } from "@/components/ui/stardust-button";
 import { cn } from "@/lib/utils";
+import { toast } from "sonner";
 
 // Enrollment Modal Component
 const EnrollmentModal = ({ isOpen, onClose }: { isOpen: boolean, onClose: () => void }) => {
@@ -70,7 +71,28 @@ const EnrollmentModal = ({ isOpen, onClose }: { isOpen: boolean, onClose: () => 
       return;
     }
 
-    alert("Application Submitted! We'll be in touch within 4 hours.");
+    setErrors({});
+    
+    toast.custom((t) => (
+      <motion.div
+        initial={{ opacity: 0, y: -20, scale: 0.95 }}
+        animate={{ opacity: 1, y: 0, scale: 1 }}
+        exit={{ opacity: 0, scale: 0.95 }}
+        className="bg-[#1a1a1a] text-[#D4E845] p-5 rounded-2xl shadow-2xl border border-[#D4E845]/20 flex flex-col items-center gap-1 min-w-[320px] pointer-events-auto"
+      >
+        <div className="flex items-center gap-2 mb-1">
+          <CheckCircle2 className="w-5 h-5 text-[#D4E845]" />
+          <span className="font-bold uppercase tracking-[0.2em] text-[11px] font-mono">Form Submitted</span>
+        </div>
+        <p className="text-white/80 text-[12px] font-medium text-center leading-relaxed font-inter">
+          We'll get in touch within 24 hours
+        </p>
+      </motion.div>
+    ), {
+      position: 'top-center',
+      duration: 4000,
+    });
+    
     onClose();
   };
 
