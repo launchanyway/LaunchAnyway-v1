@@ -140,7 +140,7 @@ export default function Home() {
   return (
     <div className="min-h-screen bg-[#FAF9F2] text-[#1a1a1a] font-inter selection:bg-[#D4E845] selection:text-black antialiased pb-12 md:pb-16">
       {/* Navbar */}
-      <header className="fixed top-0 left-0 right-0 p-6 md:p-8 flex justify-between items-center z-50 pointer-events-none">
+      <header className="fixed top-0 left-0 right-0 p-6 md:p-8 flex justify-between items-start z-50 pointer-events-none bg-gradient-to-b from-[#FAF9F2] via-[#FAF9F2] via-60% to-transparent h-24 md:h-32">
         <div className="flex items-center pointer-events-auto h-[18px] md:h-[22px]">
           <span className="text-[16px] md:text-[18px] font-medium tracking-tight text-gray-900 font-inter leading-none">
             LaunchAnyway.
