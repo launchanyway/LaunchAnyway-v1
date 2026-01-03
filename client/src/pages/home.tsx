@@ -286,12 +286,12 @@ export default function Home() {
       </main>
 
       {/* Footer */}
-      <footer className="fixed bottom-0 left-0 right-0 p-6 md:p-8 flex justify-between items-end text-[11px] font-bold font-mono text-gray-400 pointer-events-none bg-gradient-to-t from-[#FAF9F2] via-[#FAF9F2] via-70% to-transparent h-40 z-40">
+      <footer className="fixed bottom-0 left-0 right-0 p-6 md:p-8 flex justify-between items-end text-[11px] font-bold font-mono text-gray-400 pointer-events-none bg-gradient-to-t from-[#FAF9F2] via-[#FAF9F2] via-60% to-transparent h-24 z-40">
         <div className="pointer-events-auto tracking-[0.2em] uppercase">
           © LAUNCHANYWAY 2026
         </div>
         
-        <div className="absolute left-1/2 -translate-x-1/2 bottom-10 flex items-center gap-2.5 pointer-events-auto cursor-pointer hover:text-black transition-colors tracking-[0.2em] group">
+        <div className="absolute left-1/2 -translate-x-1/2 bottom-6 flex items-center gap-2.5 pointer-events-auto cursor-pointer hover:text-black transition-colors tracking-[0.2em] group">
           <CircleDot className="w-4 h-4 text-gray-400 group-hover:text-black transition-colors" /> CURRICULUM
         </div>
         
