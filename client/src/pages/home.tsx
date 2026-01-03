@@ -54,14 +54,18 @@ const EnrollmentModal = ({ isOpen, onClose }: { isOpen: boolean, onClose: () => 
               }
             }}
             exit={{ opacity: 0, scale: 0.9, y: 20 }}
-            className="relative w-full max-w-md bg-[#FAF9F2] rounded-[32px] overflow-hidden shadow-2xl border-none"
+            className="relative w-full max-w-md bg-[#FAF9F2] rounded-2xl overflow-hidden shadow-2xl border-none pointer-events-auto"
           >
             {/* Header / Banner */}
             <div className="bg-[#D4E845] p-8 pb-10 relative overflow-hidden">
-              <div className="absolute top-0 right-0 p-6">
+              <div className="absolute top-0 right-0 p-6 z-20">
                 <button 
-                  onClick={onClose}
-                  className="w-10 h-10 rounded-full bg-black/10 hover:bg-black/20 flex items-center justify-center transition-colors"
+                  onClick={(e) => {
+                    e.stopPropagation();
+                    onClose();
+                  }}
+                  className="w-10 h-10 rounded-full bg-black/10 hover:bg-black/20 flex items-center justify-center transition-colors pointer-events-auto cursor-pointer"
+                  aria-label="Close modal"
                 >
                   <X className="w-5 h-5 text-black" />
                 </button>
@@ -74,7 +78,7 @@ const EnrollmentModal = ({ isOpen, onClose }: { isOpen: boolean, onClose: () => 
               </div>
             </div>
 
-            <div className="p-8 space-y-6 -mt-6 relative z-10 bg-[#FAF9F2] rounded-t-[32px]">
+            <div className="p-8 space-y-6 -mt-6 relative z-10 bg-[#FAF9F2] rounded-t-2xl">
               <div className="space-y-6">
                 <div className="space-y-2">
                   <h3 className="font-bold text-[13px] uppercase tracking-wider text-gray-400 font-mono">Step 1</h3>
