@@ -2,60 +2,61 @@
 
 This project is configured to deploy to Vercel with a full-stack Express backend and React frontend.
 
-## Setup Steps
+## Quick Setup
 
-1. **Push your code to Git**
+1. **Push changes to Git**
    ```bash
    git add .
-   git commit -m "Fix Vercel deployment configuration"
+   git commit -m "Fix Vercel deployment"
    git push
    ```
 
-2. **Configure Build Settings in Vercel**
+2. **Configure Vercel Project**
 
-   In your Vercel project dashboard, go to **Settings** → **General**:
+   Go to your project in Vercel dashboard → **Settings** → **General**:
 
    - **Build Command**: `npm run vercel-build`
-   - **Output Directory**: Leave blank (configuration is in vercel.json)
+   - **Output Directory**: (leave empty)
    - **Install Command**: `npm install`
-   - **Root Directory**: `.` (default)
 
 3. **Add Environment Variables**
 
-   In Vercel dashboard, go to **Settings** → **Environment Variables** and add:
+   In **Settings** → **Environment Variables**, add:
+   - `VITE_SUPABASE_URL`
+   - `VITE_SUPABASE_ANON_KEY`
 
-   - `VITE_SUPABASE_URL` - Your Supabase project URL
-   - `VITE_SUPABASE_ANON_KEY` - Your Supabase anonymous key
-   - Any other environment variables your app uses
+   Add them for Production, Preview, and Development environments.
 
-   Make sure to add them for **Production**, **Preview**, and **Development** environments.
+4. **Deploy**
 
-4. **Redeploy**
-
-   After updating settings, trigger a new deployment:
-   - Go to **Deployments** tab
-   - Click the **...** menu on the latest deployment
-   - Select **Redeploy**
+   Trigger a new deployment from the Deployments tab.
 
 ## How It Works
 
-- `vercel.json` configures builds and routes
-- Static files (React app) are built to `/public` directory
-- Express server is bundled to `/api/index.js` as a serverless function
-- Static assets (.js, .css, images) are served directly from `/public`
-- All other routes go through the Express serverless function for proper SPA routing
+The build process:
+1. Builds React frontend → `public/` directory
+2. Bundles Express backend → `api/index.js` serverless function
+3. The serverless function serves static files and handles all routes
+
+Key files:
+- `vercel.json` - Routes all requests through the Express function and includes static files
+- `api/index.js` - Express serverless handler (created during build)
+- `public/` - Static React app files (created during build)
+- `server/vercel.ts` - Source for the serverless function
 
 ## Troubleshooting
 
-**404 Errors:**
-- Make sure the build completes successfully (check Vercel build logs)
-- Verify `api/index.js` and `public/` directory exist after build
-- Check that vercel.json is in the root directory
-
-**Build Failures:**
-- Check environment variables are set correctly
-- Review build logs in Vercel dashboard for specific errors
+**404 NOT_FOUND Error:**
+- Check build logs for errors
+- Verify environment variables are set
+- Ensure `vercel.json` and build files are committed to Git
+- The `includeFiles` setting in `vercel.json` ensures `public/` is bundled with the function
 
 **Static Files Not Loading:**
-- Ensure file paths in your code are absolute (start with `/`)
-- Check the Vercel logs to see if files are being requested correctly
+- Check that `public/` directory includes static files after build
+- Verify `includeFiles` configuration in `vercel.json`
+
+**Build Fails:**
+- Review Vercel build logs for specific errors
+- Confirm all dependencies install correctly
+- Check that environment variables are set for the correct environment
