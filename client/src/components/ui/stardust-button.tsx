@@ -33,15 +33,15 @@ export const StardustButton: React.FC<StardustButtonProps> = ({
   };
 
   const wrapStyle = {
-    fontSize: '14px',
+    fontSize: '13px',
     fontWeight: 700,
     color: '#D4E845',
-    padding: '16px 24px',
+    padding: '12px 20px',
     borderRadius: 'inherit',
     position: 'relative',
     overflow: 'hidden',
     textTransform: 'uppercase' as const,
-    letterSpacing: '0.15em',
+    letterSpacing: '0.1em',
   };
 
   const pStyle = {
