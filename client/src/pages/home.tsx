@@ -25,6 +25,8 @@ import {
   CheckCircle2,
   ExternalLink
 } from "lucide-react";
+import { StaggerTestimonials } from "@/components/ui/stagger-testimonials";
+import { motion, AnimatePresence } from "framer-motion";
 import { StardustButton } from "@/components/ui/stardust-button";
 
 // Enrollment Modal Component

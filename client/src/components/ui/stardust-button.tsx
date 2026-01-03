@@ -1,7 +1,11 @@
 import React from 'react';
 import { cn } from '@/lib/utils';
 
-export const StardustButton = ({ 
+interface StardustButtonProps extends React.ButtonHTMLAttributes<HTMLButtonElement> {
+  children?: React.ReactNode;
+}
+
+export const StardustButton: React.FC<StardustButtonProps> = ({ 
   children = "Secure Your Spot", 
   onClick, 
   className = "",
