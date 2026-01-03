@@ -71,9 +71,9 @@ const EnrollmentModal = ({ isOpen, onClose }: { isOpen: boolean, onClose: () => 
                   <Sparkles className="w-6 h-6 text-[#D4E845] fill-current" />
                 </div>
                 <h2 className="text-3xl md:text-4xl font-medium tracking-tight font-instrument text-black">
-                  Ready to build?
+                  Selection Process
                 </h2>
-                <p className="text-black/60 font-medium">We'd love to have you, but first...</p>
+                <p className="text-black/60 font-medium">Small cohorts, personalized focus.</p>
               </div>
               {/* Abstract decoration */}
               <div className="absolute -bottom-12 -right-12 w-48 h-48 bg-black/5 rounded-full blur-3xl" />
@@ -85,11 +85,10 @@ const EnrollmentModal = ({ isOpen, onClose }: { isOpen: boolean, onClose: () => 
                   <div className="w-10 h-10 rounded-full bg-blue-600/10 flex items-center justify-center shrink-0">
                     <CheckCircle2 className="w-5 h-5 text-blue-600" />
                   </div>
-                  <div className="space-y-1.5">
-                    <h3 className="font-bold text-[15px] uppercase tracking-wider text-gray-900 font-mono">1. The Vibe Check</h3>
+                  <div className="space-y-1">
+                    <h3 className="font-bold text-[14px] uppercase tracking-wider text-gray-900 font-mono">1. The Application</h3>
                     <p className="text-gray-600 leading-relaxed text-[15px]">
-                      We keep our cohorts small to make sure everyone gets real attention. 
-                      Please <span className="text-blue-600 font-bold underline underline-offset-4 cursor-pointer">fill out this quick form</span> so we can see if we're a good fit for your goals.
+                      Fill out this quick form so we can understand your goals.
                     </p>
                   </div>
                 </div>
@@ -98,11 +97,10 @@ const EnrollmentModal = ({ isOpen, onClose }: { isOpen: boolean, onClose: () => 
                   <div className="w-10 h-10 rounded-full bg-blue-600/10 flex items-center justify-center shrink-0">
                     <MessageSquare className="w-5 h-5 text-blue-600" />
                   </div>
-                  <div className="space-y-1.5">
-                    <h3 className="font-bold text-[15px] uppercase tracking-wider text-gray-900 font-mono">2. Real Human Response</h3>
+                  <div className="space-y-1">
+                    <h3 className="font-bold text-[14px] uppercase tracking-wider text-gray-900 font-mono">2. Fast Response</h3>
                     <p className="text-gray-600 leading-relaxed text-[15px]">
-                      A real human will review your application and get back to you within 2-3 hours. 
-                      And don't worry—we'll let you know either way, because being left on read sucks.
+                      We'll get back to you within 2-3 hours. We'll let you know even if you're not selected.
                     </p>
                   </div>
                 </div>
@@ -110,11 +108,11 @@ const EnrollmentModal = ({ isOpen, onClose }: { isOpen: boolean, onClose: () => 
 
               <div className="pt-2">
                 <button className="w-full py-5 rounded-2xl bg-black text-[#D4E845] text-[15px] font-bold hover:bg-gray-900 transition-all uppercase tracking-[0.2em] shadow-xl flex items-center justify-center gap-3 group">
-                  Open Application Form
+                  Open Form
                   <ExternalLink className="w-4 h-4 transition-transform group-hover:translate-x-1 group-hover:-translate-y-1" />
                 </button>
                 <p className="text-center text-[11px] text-gray-400 font-bold font-mono uppercase tracking-[0.1em] mt-6 italic">
-                  * Next cohort starts Jan 20th — No strings attached
+                  * Next cohort starts Jan 20th
                 </p>
               </div>
             </div>
