@@ -283,7 +283,7 @@ export default function Home() {
           </div>
 
           {/* Right Sidebar Column - Enrollment Card (Fixed/Sticky) */}
-          <aside className="w-full lg:w-[35%] lg:pl-12 lg:sticky lg:top-28 self-start">
+          <aside id="enrollment" className="w-full lg:w-[35%] lg:pl-12 lg:sticky lg:top-28 self-start scroll-mt-32">
             <h2 className="text-[13px] font-bold font-mono text-gray-500 uppercase tracking-[0.3em] mb-10">Enrollment</h2>
             
             <div className="bg-[#eeede8] border border-black/5 rounded-3xl p-6 space-y-8 shadow-sm">
@@ -323,21 +323,22 @@ export default function Home() {
 
       {/* Footer */}
       <footer className="fixed bottom-0 left-0 right-0 p-6 md:p-8 flex justify-between items-end text-[11px] font-bold font-mono text-gray-400 pointer-events-none bg-gradient-to-t from-[#FAF9F2] via-[#FAF9F2] via-60% to-transparent h-24 z-40">
-        <div className="pointer-events-auto tracking-[0.2em] uppercase">
-          © LAUNCHANYWAY 2026
-        </div>
-        
-        <div className="absolute left-1/2 -translate-x-1/2 bottom-8 pointer-events-auto">
+        <div className="pointer-events-auto">
           <button 
-            onClick={() => document.getElementById('journey')?.scrollIntoView({ behavior: 'smooth' })}
-            className="flex items-center gap-2.5 cursor-pointer text-[11px] font-bold font-mono text-gray-400 hover:text-black transition-colors tracking-[0.2em] group"
+            onClick={() => document.getElementById('enrollment')?.scrollIntoView({ behavior: 'smooth' })}
+            className="tracking-[0.2em] uppercase cursor-pointer hover:text-black transition-colors"
           >
-            <CircleDot className="w-4 h-4 text-gray-400 group-hover:text-black transition-colors" /> CURRICULUM
+            Register Now
           </button>
         </div>
         
-        <div className="pointer-events-auto flex items-center gap-2.5 tracking-[0.2em] uppercase invisible opacity-0">
-          MADE BY <span className="bg-[#e5e5e0] text-gray-600 px-2 py-1 rounded text-[10px] font-black">tmpl</span>
+        <div className="pointer-events-auto">
+          <button 
+            onClick={() => document.getElementById('journey')?.scrollIntoView({ behavior: 'smooth' })}
+            className="flex items-center gap-2.5 cursor-pointer hover:text-black transition-colors tracking-[0.2em] group uppercase"
+          >
+            <CircleDot className="w-4 h-4 text-gray-400 group-hover:text-black transition-colors" /> Curriculum
+          </button>
         </div>
       </footer>
     </div>
