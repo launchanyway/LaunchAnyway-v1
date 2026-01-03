@@ -125,15 +125,13 @@ export default function Home() {
             <div className="space-y-4">
               <h2 className="text-[32px] md:text-[42px] leading-[1.1] font-bold text-gray-900 max-w-2xl tracking-tight">
                 You have an idea? <br />
-                Are you going to <CircledText>ship</CircledText> it?
+                Are you going to ship it?
               </h2>
               <div className="text-[18px] md:text-[20px] leading-[1.6] text-[#4a4a4a] font-normal max-w-2xl">
                 <p>
                   LaunchAnyway is a live, hands-on course for accidental founders to learn vibe coding 
                   <IconPill icon={Zap} color="bg-[#D4E845]" iconColor="text-black" /> 
-                  and ship real products. We help you cut through the 
-                  <CircledText>noise</CircledText> of technical jargon and focus on what matters: launching your vision 
-                  <IconPill icon={Star} color="bg-[#3FD9D9]" iconColor="text-black" />.
+                  and ship real products.
                 </p>
               </div>
             </div>
