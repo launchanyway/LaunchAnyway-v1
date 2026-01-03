@@ -97,7 +97,7 @@ const ToolIcon = ({ label, bg, text = "text-white" }: { label: string, bg: strin
 
 export default function Home() {
   return (
-    <div className="min-h-screen bg-[#FAFAF9] text-[#1a1a1a] font-sans selection:bg-[#D4E845] selection:text-black">
+    <div className="min-h-screen bg-[#FAF9F2] text-[#1a1a1a] font-sans selection:bg-[#D4E845] selection:text-black">
       {/* Navbar */}
       <header className="fixed top-0 left-0 right-0 p-5 md:p-6 flex justify-between items-start z-50 pointer-events-none mix-blend-multiply">
         <div className="flex items-center pointer-events-auto">
@@ -115,7 +115,7 @@ export default function Home() {
             
             {/* Course Header Chip */}
             <div className="flex items-center">
-              <div className="bg-[#e5e7eb] px-4 py-1.5 rounded-full flex items-center gap-2">
+              <div className="bg-[#eeede8] px-4 py-1.5 rounded-full flex items-center gap-2 shadow-sm">
                 <span className="text-[12px] font-mono text-gray-500 font-bold">/</span>
                 <span className="text-[11px] font-mono text-gray-900 font-bold tracking-widest uppercase">LIVE COURSE</span>
               </div>
@@ -232,7 +232,7 @@ export default function Home() {
       </main>
 
       {/* Footer */}
-      <footer className="fixed bottom-0 left-0 right-0 p-6 md:p-8 flex justify-between items-end text-[10px] font-mono text-gray-400 pointer-events-none bg-gradient-to-t from-[#FAFAF9] via-[#FAFAF9] via-60% to-transparent h-32 z-40">
+      <footer className="fixed bottom-0 left-0 right-0 p-6 md:p-8 flex justify-between items-end text-[10px] font-mono text-gray-400 pointer-events-none bg-gradient-to-t from-[#FAF9F2] via-[#FAF9F2] via-60% to-transparent h-32 z-40">
         <div className="pointer-events-auto tracking-widest uppercase">
           © LAUNCHANYWAY 2026
         </div>
