@@ -30,14 +30,14 @@ const IconPill = ({
   iconColor?: string,
   className?: string 
 }) => (
-  <span className={`inline-flex items-center justify-center w-5 h-5 rounded-full ${color} mx-1 align-text-bottom ${className} translate-y-[1px]`}>
-    <Icon className={`w-3 h-3 ${iconColor}`} />
+  <span className={`inline-flex items-center justify-center w-6 h-6 rounded-full ${color} mx-1 align-text-bottom ${className} translate-y-[1px]`}>
+    <Icon className={`w-3.5 h-3.5 ${iconColor}`} />
   </span>
 );
 
 // Circled Text Component
 const CircledText = ({ children }: { children: React.ReactNode }) => (
-  <span className="inline-block border-[1.5px] border-blue-600/40 rounded-full px-2 py-0 mx-0.5 text-inherit leading-normal">
+  <span className="inline-block border-[1.5px] border-blue-600/40 rounded-full px-2.5 py-0 mx-0.5 text-inherit leading-normal">
     {children}
   </span>
 );
@@ -69,18 +69,18 @@ const CaseItem = ({
   isLocked?: boolean 
 }) => (
   <div className="flex gap-4 mb-8 group cursor-pointer">
-    <div className={`w-10 h-10 rounded-xl flex items-center justify-center shrink-0 ${color} text-white transition-transform group-hover:scale-105 shadow-sm`}>
-      <Icon className="w-5 h-5" />
+    <div className={`w-11 h-11 rounded-xl flex items-center justify-center shrink-0 ${color} text-white transition-transform group-hover:scale-105 shadow-sm`}>
+      <Icon className="w-6 h-6" />
     </div>
     <div className="flex flex-col pt-0.5">
-      <h3 className="text-[14px] font-semibold leading-snug text-gray-800 mb-1 group-hover:text-gray-500 transition-colors">
+      <h3 className="text-[15px] font-semibold leading-snug text-gray-800 mb-1 group-hover:text-gray-500 transition-colors">
         {title}
       </h3>
-      <div className="flex items-center text-[10px] text-gray-400 font-mono gap-2 tracking-tight">
+      <div className="flex items-center text-[11px] text-gray-400 font-mono gap-2 tracking-tight">
         <span>{date}</span>
         <span className="w-0.5 h-0.5 rounded-full bg-gray-300"></span>
-        <div className="flex items-center gap-1">
-          {isLocked && <Lock className="w-2.5 h-2.5" />}
+        <div className="flex items-center gap-1.5">
+          {isLocked && <Lock className="w-3 h-3" />}
           <span className="uppercase">{tag}</span>
         </div>
       </div>
@@ -90,7 +90,7 @@ const CaseItem = ({
 
 // Tool Icon Component
 const ToolIcon = ({ label, bg, text = "text-white" }: { label: string, bg: string, text?: string }) => (
-  <span className={`inline-flex items-center justify-center w-5 h-5 rounded-sm mx-1 align-text-bottom ${bg} ${text} text-[10px] font-bold font-mono translate-y-[1px]`}>
+  <span className={`inline-flex items-center justify-center w-6 h-6 rounded-sm mx-1 align-text-bottom ${bg} ${text} text-[11px] font-bold font-mono translate-y-[1px]`}>
     {label}
   </span>
 );
@@ -123,18 +123,18 @@ export default function Home() {
           <div className="lg:col-span-8 space-y-20">
             
             {/* Profile Header */}
-            <div className="flex items-center gap-5">
-              <div className="w-14 h-14 rounded-xl overflow-hidden bg-gray-200 shadow-inner">
+            <div className="flex items-center gap-6">
+              <div className="w-16 h-16 rounded-2xl overflow-hidden bg-gray-200 shadow-inner">
                 <img src={profileImage} alt="Sasha Mozdir" className="w-full h-full object-cover" />
               </div>
               <div className="flex flex-col">
-                <h1 className="text-[15px] font-bold text-gray-900 leading-tight">Sasha Mozdir</h1>
-                <span className="text-[11px] font-mono text-gray-400 tracking-widest uppercase font-semibold">ENTREPRENEUR</span>
+                <h1 className="text-[17px] font-bold text-gray-900 leading-tight">Sasha Mozdir</h1>
+                <span className="text-[12px] font-mono text-gray-400 tracking-widest uppercase font-semibold">ENTREPRENEUR</span>
               </div>
             </div>
 
             {/* Intro */}
-            <div className="text-[16px] md:text-[18px] leading-[1.6] text-[#4a4a4a] font-normal max-w-2xl">
+            <div className="text-[18px] md:text-[20px] leading-[1.6] text-[#4a4a4a] font-normal max-w-3xl">
               <p>
                 I'm Sasha Mozdir. I build editorial systems and content-first websites. I run Chemimedia 
                 <IconPill icon={Zap} color="bg-[#D4E845]" iconColor="text-black" /> 
@@ -145,9 +145,9 @@ export default function Home() {
             </div>
 
             {/* Study Section */}
-            <div className="space-y-4 max-w-2xl">
-              <h2 className="text-[10px] font-mono text-gray-400 uppercase tracking-[0.2em] font-semibold">Study</h2>
-              <p className="text-[15px] leading-[1.6] text-[#5a5a5a]">
+            <div className="space-y-4 max-w-3xl">
+              <h2 className="text-[11px] font-mono text-gray-400 uppercase tracking-[0.2em] font-semibold">Study</h2>
+              <p className="text-[16px] leading-[1.6] text-[#5a5a5a]">
                 I studied Philosophy and Design at Marsons 
                 <IconPill icon={Flower2} color="bg-[#D93F3F]" iconColor="text-white" /> 
                 School of Design in New York and finished a dual degree at Voldmiths 
@@ -158,9 +158,9 @@ export default function Home() {
             </div>
 
             {/* Experience Section */}
-            <div className="space-y-4 max-w-2xl">
-              <h2 className="text-[10px] font-mono text-gray-400 uppercase tracking-[0.2em] font-semibold">Experience</h2>
-              <p className="text-[15px] leading-[1.6] text-[#5a5a5a]">
+            <div className="space-y-4 max-w-3xl">
+              <h2 className="text-[11px] font-mono text-gray-400 uppercase tracking-[0.2em] font-semibold">Experience</h2>
+              <p className="text-[16px] leading-[1.6] text-[#5a5a5a]">
                 At Coole 
                 <IconPill icon={Asterisk} color="bg-[#8B5CF6]" iconColor="text-white" /> 
                 I led content structure workshops for the product team and helped rebuild their interface copy for a mobile release. At Plitch 
@@ -173,15 +173,15 @@ export default function Home() {
             </div>
 
             {/* Info Section */}
-            <div className="space-y-4 max-w-2xl">
-              <h2 className="text-[10px] font-mono text-gray-400 uppercase tracking-[0.2em] font-semibold">Info</h2>
-              <p className="text-[15px] leading-[1.6] text-[#5a5a5a]">
+            <div className="space-y-4 max-w-3xl">
+              <h2 className="text-[11px] font-mono text-gray-400 uppercase tracking-[0.2em] font-semibold">Info</h2>
+              <p className="text-[16px] leading-[1.6] text-[#5a5a5a]">
                 Fluent in English, I work as an individual entrepreneur with a Georgian residence permit. I use tools like Notion 
                 <ToolIcon label="N" bg="bg-black" />, Framer 
                 <ToolIcon label="F" bg="bg-black" />, Figma 
                 <ToolIcon label="F" bg="bg-[#F24E1E]" />, SEO platforms, and ChatGPT 
-                <span className="inline-flex items-center justify-center w-5 h-5 rounded-full bg-[#10A37F] mx-1 align-text-bottom translate-y-[1px]">
-                  <span className="w-2.5 h-2.5 border-[1px] border-white rounded-full"></span>
+                <span className="inline-flex items-center justify-center w-6 h-6 rounded-full bg-[#10A37F] mx-1 align-text-bottom translate-y-[1px]">
+                  <span className="w-3 h-3 border-[1.5px] border-white rounded-full"></span>
                 </span>
                 to build structured content systems and lead editorial teams.
               </p>
