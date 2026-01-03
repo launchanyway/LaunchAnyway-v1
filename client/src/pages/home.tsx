@@ -323,8 +323,8 @@ const VideoPlayer = ({ videoId }: { videoId: string }) => {
         </div>
       ) : (
         <iframe
-          className="w-full h-full"
-          src={`https://www.youtube.com/embed/${videoId}?autoplay=1&controls=1&modestbranding=1&rel=0`}
+          className="absolute inset-0 w-full h-full border-none"
+          src={`https://www.youtube.com/embed/${videoId}?autoplay=1&controls=1&modestbranding=1&rel=0&iv_load_policy=3&showinfo=0`}
           title="YouTube video player"
           allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture"
           allowFullScreen
