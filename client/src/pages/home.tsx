@@ -132,7 +132,7 @@ const ToolIcon = ({ src, alt, className }: { src: string, alt: string, className
 
 export default function Home() {
   return (
-    <div className="min-h-screen bg-[#FAF9F2] text-[#1a1a1a] font-inter selection:bg-[#D4E845] selection:text-black antialiased pb-32">
+    <div className="min-h-screen bg-[#FAF9F2] text-[#1a1a1a] font-inter selection:bg-[#D4E845] selection:text-black antialiased pb-12 md:pb-16">
       {/* Navbar */}
       <header className="fixed top-0 left-0 right-0 p-6 md:p-8 flex justify-between items-start z-50 pointer-events-none">
         <div className="flex items-center pointer-events-auto">
@@ -142,7 +142,7 @@ export default function Home() {
         </div>
       </header>
 
-      <main className="max-w-[1200px] mx-auto px-6 md:px-12 pt-28 md:pt-36 pb-64">
+      <main className="max-w-[1200px] mx-auto px-6 md:px-12 pt-28 md:pt-36 pb-32">
         <div className="flex flex-col lg:flex-row gap-16 lg:gap-24 items-start relative">
           
           {/* Left Content Column */}
