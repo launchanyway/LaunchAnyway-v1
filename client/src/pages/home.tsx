@@ -183,6 +183,30 @@ export default function Home() {
                   to build structured content systems and lead editorial teams.
                 </p>
               </div>
+
+              {/* Deliverables Section */}
+              <div className="space-y-5 max-w-xl pt-4 border-t border-black/5">
+                <h2 className="text-[13px] font-bold font-mono text-gray-500 uppercase tracking-[0.3em]">The Outcome</h2>
+                <div className="grid grid-cols-1 md:grid-cols-2 gap-4">
+                  <div className="bg-[#eeede8] p-5 rounded-2xl border border-black/[0.03]">
+                    <div className="w-8 h-8 rounded-lg bg-black/5 flex items-center justify-center mb-3">
+                      <Globe className="w-4 h-4 text-gray-600" />
+                    </div>
+                    <h3 className="text-[15px] font-bold text-gray-900 mb-1">SaaS Web App</h3>
+                    <p className="text-[13px] text-gray-500 leading-relaxed">A fully functional, responsive web application ready for users.</p>
+                  </div>
+                  <div className="bg-[#eeede8] p-5 rounded-2xl border border-black/[0.03]">
+                    <div className="w-8 h-8 rounded-lg bg-black/5 flex items-center justify-center mb-3">
+                      <Zap className="w-4 h-4 text-gray-600" />
+                    </div>
+                    <h3 className="text-[15px] font-bold text-gray-900 mb-1">Mobile Application</h3>
+                    <p className="text-[13px] text-gray-500 leading-relaxed">A native-feel mobile experience optimized for modern devices.</p>
+                  </div>
+                </div>
+                <p className="text-[14px] text-gray-400 italic font-inter pt-2">
+                  Two real-world products. One week. No excuses.
+                </p>
+              </div>
             </div>
           </div>
 
