@@ -196,32 +196,70 @@ export default function Home() {
               </div>
 
               {/* Curriculum / Journey */}
-              <div className="space-y-4 max-w-xl">
+              <div className="space-y-6 max-w-xl">
                 <h2 className="text-[13px] font-bold font-mono text-gray-500 uppercase tracking-[0.3em]">The Journey</h2>
-                <p className="text-[16px] md:text-[17px] leading-[1.6] text-[#5a5a5a] font-inter">
-                  From your first prompt to a live domain 
-                  <IconPill icon={Globe} color="bg-[#E895C9]" iconColor="text-black" />. 
-                  We cover content architecture, interface design at Cyper Island 
-                  <IconPill icon={Flower2} color="bg-[#E895C9]" iconColor="text-black" />
-                  , and the psychology of shipping. Join a group of 3M+ builders 
-                  <IconPill icon={Star} color="bg-[#D4E845]" iconColor="text-black" /> 
-                  who stopped making excuses.
-                </p>
-              </div>
+                
+                <div className="space-y-4">
+                  {/* Week 1 */}
+                  <div className="bg-[#eeede8] rounded-2xl border border-black/[0.03] overflow-hidden">
+                    <button className="w-full p-5 flex items-center justify-between group hover:bg-black/[0.02] transition-colors">
+                      <div className="flex items-center gap-4">
+                        <div className="w-10 h-10 rounded-xl bg-blue-600 flex items-center justify-center text-white font-mono font-bold text-xs">W1</div>
+                        <div className="text-left">
+                          <h3 className="text-[15px] font-bold text-gray-900">Foundations & Setup</h3>
+                          <p className="text-[12px] text-gray-500 font-mono uppercase tracking-wider font-bold">Days 1 — 3</p>
+                        </div>
+                      </div>
+                      <IconPill icon={Zap} color="bg-white" iconColor="text-blue-600" className="opacity-0 group-hover:opacity-100 transition-opacity" />
+                    </button>
+                    <div className="px-5 pb-5 pt-1 space-y-3">
+                      <div className="flex gap-3 items-start">
+                        <span className="text-[11px] font-bold font-mono text-blue-600 pt-0.5">D1</span>
+                        <p className="text-[14px] text-gray-600 leading-snug">Vibe Coding 101: Prompt engineering and content architecture.</p>
+                      </div>
+                      <div className="flex gap-3 items-start">
+                        <span className="text-[11px] font-bold font-mono text-blue-600 pt-0.5">D2</span>
+                        <p className="text-[14px] text-gray-600 leading-snug">Interface Design: Mastering Cyber Island aesthetics.</p>
+                      </div>
+                      <div className="flex gap-3 items-start">
+                        <span className="text-[11px] font-bold font-mono text-blue-600 pt-0.5">D3</span>
+                        <p className="text-[14px] text-gray-600 leading-snug">Database Architecture: Connecting Supabase securely.</p>
+                      </div>
+                    </div>
+                  </div>
 
-              {/* Info Section */}
-              <div className="space-y-4 max-w-xl">
-                <h2 className="text-[13px] font-bold font-mono text-gray-500 uppercase tracking-[0.3em]">Info</h2>
-                <p className="text-[16px] md:text-[17px] leading-[1.6] text-[#5a5a5a] font-inter">
-                  Fluent in English, I work as an individual entrepreneur with a Georgian residence permit. I use tools like Notion 
-                  <ToolIcon src="https://www.vectorlogo.zone/logos/notion/notion-icon.svg" alt="Notion" />, Framer 
-                  <ToolIcon src="https://www.vectorlogo.zone/logos/framer/framer-icon.svg" alt="Framer" />, Figma 
-                  <ToolIcon src="https://www.vectorlogo.zone/logos/figma/figma-icon.svg" alt="Figma" />, SEO platforms, and ChatGPT 
-                  <span className="inline-flex items-center justify-center w-[20px] h-[20px] rounded-full bg-[#10A37F] mx-1 align-middle translate-y-[-1px] shadow-sm">
-                    <span className="w-3 h-3 border-[1.5px] border-white rounded-full"></span>
-                  </span>
-                  to build structured content systems and lead editorial teams.
-                </p>
+                  {/* Week 2 */}
+                  <div className="bg-[#eeede8] rounded-2xl border border-black/[0.03] overflow-hidden">
+                    <button className="w-full p-5 flex items-center justify-between group hover:bg-black/[0.02] transition-colors">
+                      <div className="flex items-center gap-4">
+                        <div className="w-10 h-10 rounded-xl bg-purple-600 flex items-center justify-center text-white font-mono font-bold text-xs">W2</div>
+                        <div className="text-left">
+                          <h3 className="text-[15px] font-bold text-gray-900">Shipping & Scaling</h3>
+                          <p className="text-[12px] text-gray-500 font-mono uppercase tracking-wider font-bold">Days 4 — 7</p>
+                        </div>
+                      </div>
+                      <IconPill icon={Globe} color="bg-white" iconColor="text-purple-600" className="opacity-0 group-hover:opacity-100 transition-opacity" />
+                    </button>
+                    <div className="px-5 pb-5 pt-1 space-y-3">
+                      <div className="flex gap-3 items-start">
+                        <span className="text-[11px] font-bold font-mono text-purple-600 pt-0.5">D4</span>
+                        <p className="text-[14px] text-gray-600 leading-snug">Logic & Auth: Building functional SaaS workflows.</p>
+                      </div>
+                      <div className="flex gap-3 items-start">
+                        <span className="text-[11px] font-bold font-mono text-purple-600 pt-0.5">D5</span>
+                        <p className="text-[14px] text-gray-600 leading-snug">Mobile Optimization: Native-feel PWA experiences.</p>
+                      </div>
+                      <div className="flex gap-3 items-start">
+                        <span className="text-[11px] font-bold font-mono text-purple-600 pt-0.5">D6</span>
+                        <p className="text-[14px] text-gray-600 leading-snug">Deployment & Vercel: Going live on your own domain.</p>
+                      </div>
+                      <div className="flex gap-3 items-start">
+                        <span className="text-[11px] font-bold font-mono text-purple-600 pt-0.5">D7</span>
+                        <p className="text-[14px] text-gray-600 leading-snug font-bold">Launch Day: Psychology of shipping and final reveals.</p>
+                      </div>
+                    </div>
+                  </div>
+                </div>
               </div>
 
               {/* Deliverables Section */}
