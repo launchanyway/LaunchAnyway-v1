@@ -304,6 +304,58 @@ export default function Home() {
                   Two real-world products. Two weeks. No excuses.
                 </p>
               </div>
+              {/* Testimonials Section */}
+              <div className="space-y-6 max-w-xl pt-12 border-t border-black/5">
+                <h2 className="text-[13px] font-bold font-mono text-gray-500 uppercase tracking-[0.3em]">Testimonials</h2>
+                
+                <div className="space-y-4">
+                  <div className="bg-[#eeede8] p-6 rounded-2xl border border-black/[0.03] space-y-4">
+                    <p className="text-[16px] font-medium text-gray-900 leading-relaxed font-instrument">
+                      "My favorite solution in the market. We work 5x faster with the tools taught in this course."
+                    </p>
+                    <div className="flex items-center gap-3">
+                      <div className="w-8 h-8 rounded-full bg-gray-200 overflow-hidden">
+                        <img src="https://i.pravatar.cc/150?img=1" alt="Alex" className="w-full h-full object-cover" />
+                      </div>
+                      <div>
+                        <p className="text-[13px] font-bold text-gray-900 leading-none">Alex</p>
+                        <p className="text-[11px] text-gray-400 font-mono uppercase tracking-widest mt-1">CEO at TechCorp</p>
+                      </div>
+                    </div>
+                  </div>
+
+                  <div className="bg-[#eeede8] p-6 rounded-2xl border border-black/[0.03] space-y-4">
+                    <p className="text-[16px] font-medium text-gray-900 leading-relaxed font-instrument">
+                      "It's so simple and intuitive, we got the team up to speed in 10 minutes. Absolute game-changer."
+                    </p>
+                    <div className="flex items-center gap-3">
+                      <div className="w-8 h-8 rounded-full bg-gray-200 overflow-hidden">
+                        <img src="https://i.pravatar.cc/150?img=12" alt="Marina" className="w-full h-full object-cover" />
+                      </div>
+                      <div>
+                        <p className="text-[13px] font-bold text-gray-900 leading-none">Marina</p>
+                        <p className="text-[11px] text-gray-400 font-mono uppercase tracking-widest mt-1">HR Manager at TalentForge</p>
+                      </div>
+                    </div>
+                  </div>
+
+                  <div className="bg-[#eeede8] p-6 rounded-2xl border border-black/[0.03] space-y-4">
+                    <p className="text-[16px] font-medium text-gray-900 leading-relaxed font-instrument">
+                      "If I could give 11 stars, I'd give 12. The efficiency gains are off the charts."
+                    </p>
+                    <div className="flex items-center gap-3">
+                      <div className="w-8 h-8 rounded-full bg-gray-200 overflow-hidden">
+                        <img src="https://i.pravatar.cc/150?img=5" alt="Andre" className="w-full h-full object-cover" />
+                      </div>
+                      <div>
+                        <p className="text-[13px] font-bold text-gray-900 leading-none">Andre</p>
+                        <p className="text-[11px] text-gray-400 font-mono uppercase tracking-widest mt-1">Head of Design</p>
+                      </div>
+                    </div>
+                  </div>
+                </div>
+              </div>
+
             </div>
           </div>
 
