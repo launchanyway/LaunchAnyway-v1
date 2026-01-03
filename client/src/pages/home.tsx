@@ -105,15 +105,6 @@ export default function Home() {
             LaunchAnyway.
           </span>
         </div>
-        
-        <div className="flex gap-6 text-[10px] font-mono text-gray-400 pointer-events-auto tracking-tight">
-          <a href="#" className="flex items-center gap-1.5 hover:text-black transition-colors">
-            <Download className="w-3 h-3" /> CV
-          </a>
-          <a href="#" className="flex items-center gap-1.5 hover:text-black transition-colors">
-            <Mail className="w-3 h-3" /> HELLO@TMPL.DIGITAL
-          </a>
-        </div>
       </header>
 
       <main className="max-w-[1400px] mx-auto px-6 md:px-12 pt-32 md:pt-40 pb-32">
