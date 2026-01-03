@@ -78,15 +78,17 @@ const EnrollmentModal = ({ isOpen, onClose }: { isOpen: boolean, onClose: () => 
         initial={{ opacity: 0, y: -20, scale: 0.95 }}
         animate={{ opacity: 1, y: 0, scale: 1 }}
         exit={{ opacity: 0, scale: 0.95 }}
-        className="bg-[#1a1a1a] text-[#D4E845] p-5 rounded-2xl shadow-2xl border border-[#D4E845]/20 flex flex-col items-center gap-1 min-w-[320px] pointer-events-auto"
+        className="bg-[#FAF9F2] text-[#1a1a1a] p-4 rounded-2xl shadow-[0_20px_50px_rgba(0,0,0,0.1)] border border-black/[0.03] flex items-center gap-4 min-w-[320px] pointer-events-auto"
       >
-        <div className="flex items-center gap-2 mb-1">
-          <CheckCircle2 className="w-5 h-5 text-[#D4E845]" />
-          <span className="font-bold uppercase tracking-[0.2em] text-[11px] font-mono">Form Submitted</span>
+        <div className="w-10 h-10 rounded-full bg-[#D4E845] flex items-center justify-center shrink-0">
+          <CheckCircle2 className="w-5 h-5 text-black" />
         </div>
-        <p className="text-white/80 text-[12px] font-medium text-center leading-relaxed font-inter">
-          We'll get in touch within 24 hours
-        </p>
+        <div className="flex flex-col">
+          <span className="font-bold text-[14px] tracking-tight">Form Submitted</span>
+          <p className="text-gray-500 text-[12px] font-medium leading-none mt-0.5">
+            We'll get in touch within 24 hours
+          </p>
+        </div>
       </motion.div>
     ), {
       position: 'top-center',
