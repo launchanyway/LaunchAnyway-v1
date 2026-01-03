@@ -134,7 +134,7 @@ const EnrollmentModal = ({ isOpen, onClose }: { isOpen: boolean, onClose: () => 
               </div>
             </div>
 
-            <div className="p-8 -mt-6 relative z-10 bg-[#FAF9F2] rounded-t-3xl h-full md:max-h-[70vh] overflow-y-auto custom-scrollbar">
+            <div className="p-8 pb-32 -mt-6 relative z-10 bg-[#FAF9F2] rounded-t-3xl h-full md:max-h-[70vh] overflow-y-auto custom-scrollbar">
               <form className="space-y-8" onSubmit={handleSubmit}>
                 {/* Section 1: Basic Info */}
                 <div className="space-y-6">
