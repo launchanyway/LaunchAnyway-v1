@@ -216,11 +216,8 @@ const EnrollmentModal = ({ isOpen, onClose }: { isOpen: boolean, onClose: () => 
                 <div className="pt-4 pb-2">
                   <StardustButton 
                     type="submit"
+                    disabled={!formData.fullName || !formData.email || !formData.phone || !formData.role || !formData.goal || !formData.reason || !formData.commitment}
                     onClick={() => {
-                      if (!formData.fullName || !formData.email || !formData.phone || !formData.role || !formData.goal || !formData.reason || !formData.commitment) {
-                        alert("Please fill in all required fields.");
-                        return;
-                      }
                       alert("Application Submitted! We'll be in touch within 4 hours.");
                       onClose();
                     }}
