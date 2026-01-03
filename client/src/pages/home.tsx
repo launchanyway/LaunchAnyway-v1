@@ -498,7 +498,7 @@ export default function Home() {
       <footer className="fixed bottom-0 left-0 right-0 p-6 md:p-8 flex justify-between items-end text-[11px] font-bold font-mono text-gray-400 pointer-events-none bg-gradient-to-t from-[#FAF9F2] via-[#FAF9F2] via-60% to-transparent h-24 z-40">
         <div className="pointer-events-auto">
           <button 
-            onClick={() => setIsModalOpen(true)}
+            onClick={() => document.getElementById('enrollment')?.scrollIntoView({ behavior: 'smooth' })}
             className="tracking-[0.2em] uppercase cursor-pointer hover:text-black transition-colors"
           >
             Register Now
