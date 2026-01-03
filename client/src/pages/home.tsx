@@ -31,6 +31,7 @@ import { StardustButton } from "@/components/ui/stardust-button";
 import { cn } from "@/lib/utils";
 import { toast } from "sonner";
 import { supabase } from "@/lib/supabase";
+import { ScrollReveal } from "@/components/scroll-reveal";
 
 // Enrollment Modal Component
 const EnrollmentModal = ({ isOpen, onClose, onSuccess }: { isOpen: boolean, onClose: () => void, onSuccess: () => void }) => {
@@ -496,54 +497,63 @@ export default function Home() {
           <div className="w-full lg:w-[65%] space-y-10">
             
             {/* Course Header Chip */}
-            <div className="flex items-center">
-              <div className="inline-flex items-center bg-[#E5E4DE] rounded-full p-1 pr-3 gap-2.5 border border-black/5 group cursor-default">
-                <div className="w-6 h-6 rounded-full bg-blue-600 flex items-center justify-center">
-                  <Zap className="w-3 h-3 text-white fill-current" />
+            <ScrollReveal delay={0.1} duration={0.6}>
+              <div className="flex items-center">
+                <div className="inline-flex items-center bg-[#E5E4DE] rounded-full p-1 pr-3 gap-2.5 border border-black/5 group cursor-default">
+                  <div className="w-6 h-6 rounded-full bg-blue-600 flex items-center justify-center">
+                    <Zap className="w-3 h-3 text-white fill-current" />
+                  </div>
+                  <span className="text-[10px] font-bold font-mono text-gray-900 tracking-[0.2em] uppercase">LIVE COURSE</span>
                 </div>
-                <span className="text-[10px] font-bold font-mono text-gray-900 tracking-[0.2em] uppercase">LIVE COURSE</span>
               </div>
-            </div>
+            </ScrollReveal>
 
             {/* Title / Hero Intro */}
             <div className="space-y-6">
-              <h1 className="text-[44px] md:text-[68px] leading-[1.0] font-medium text-gray-900 tracking-tight font-instrument">
-                You have an idea? <br />
-                Are you going to ship it?
-              </h1>
-              <div className="text-[18px] md:text-[21px] leading-[1.5] text-[#4a4a4a] font-normal max-w-xl font-inter tracking-tight">
-                <p>
-                  LaunchAnyway is a live, hands-on course for accidental founders to learn vibe coding 
-                  <IconPill icon={Zap} color="bg-[#D4E845]" iconColor="text-black" /> 
-                  and ship real products.
-                </p>
-              </div>
+              <ScrollReveal delay={0.2} duration={0.9}>
+                <h1 className="text-[44px] md:text-[68px] leading-[1.0] font-medium text-gray-900 tracking-tight font-instrument">
+                  You have an idea? <br />
+                  Are you going to ship it?
+                </h1>
+              </ScrollReveal>
+              <ScrollReveal delay={0.4} duration={0.8}>
+                <div className="text-[18px] md:text-[21px] leading-[1.5] text-[#4a4a4a] font-normal max-w-xl font-inter tracking-tight">
+                  <p>
+                    LaunchAnyway is a live, hands-on course for accidental founders to learn vibe coding
+                    <IconPill icon={Zap} color="bg-[#D4E845]" iconColor="text-black" />
+                    and ship real products.
+                  </p>
+                </div>
+              </ScrollReveal>
             </div>
 
             {/* Sections Wrapper */}
             <div className="space-y-12 pt-6">
               {/* Why This Course */}
-              <div className="space-y-4 max-w-xl">
-                <h2 className="text-[13px] font-bold font-mono text-gray-500 uppercase tracking-[0.3em]">The Vibe</h2>
-                <VideoPlayer videoId="9BtxpKQHga4" />
-                <p className="text-[16px] md:text-[17px] leading-[1.6] text-[#5a5a5a] font-inter">
-                  Stop watching tutorials and start shipping. We use modern tools like
-                  Replit <ToolIcon src="/logos/replit.png" alt="Replit" />,
-                  Lovable <ToolIcon src="/logos/lovable.png" alt="Lovable" />,
-                  LLMs, 
-                  Supabase <ToolIcon src="/logos/supabase.png" alt="Supabase" />,
-                  Vercel <ToolIcon src="/logos/vercel.png" alt="Vercel" />,
-                  and Github 
-                  to turn founders into builders. No CS degree required 
-                  <IconPill icon={Asterisk} color="bg-[#8B5CF6]" iconColor="text-white" />.
-                </p>
-              </div>
+              <ScrollReveal>
+                <div className="space-y-4 max-w-xl">
+                  <h2 className="text-[13px] font-bold font-mono text-gray-500 uppercase tracking-[0.3em]">The Vibe</h2>
+                  <VideoPlayer videoId="9BtxpKQHga4" />
+                  <p className="text-[16px] md:text-[17px] leading-[1.6] text-[#5a5a5a] font-inter">
+                    Stop watching tutorials and start shipping. We use modern tools like
+                    Replit <ToolIcon src="/logos/replit.png" alt="Replit" />,
+                    Lovable <ToolIcon src="/logos/lovable.png" alt="Lovable" />,
+                    LLMs,
+                    Supabase <ToolIcon src="/logos/supabase.png" alt="Supabase" />,
+                    Vercel <ToolIcon src="/logos/vercel.png" alt="Vercel" />,
+                    and Github
+                    to turn founders into builders. No CS degree required
+                    <IconPill icon={Asterisk} color="bg-[#8B5CF6]" iconColor="text-white" />.
+                  </p>
+                </div>
+              </ScrollReveal>
 
               {/* Curriculum / Journey */}
-              <div id="journey" className="space-y-8 max-w-xl scroll-mt-32">
-                <h2 className="text-[13px] font-bold font-mono text-gray-500 uppercase tracking-[0.3em]">The Journey</h2>
-                
-                <div className="space-y-10 relative before:absolute before:left-[17px] before:top-2 before:bottom-2 before:w-[1.5px] before:bg-black/5">
+              <ScrollReveal>
+                <div id="journey" className="space-y-8 max-w-xl scroll-mt-32">
+                  <h2 className="text-[13px] font-bold font-mono text-gray-500 uppercase tracking-[0.3em]">The Journey</h2>
+
+                  <div className="space-y-10 relative before:absolute before:left-[17px] before:top-2 before:bottom-2 before:w-[1.5px] before:bg-black/5">
                   {/* Week 1 */}
                   <div className="relative pl-12 group">
                     <div className="absolute left-0 top-0 w-[35px] h-[35px] rounded-full bg-[#D4E845] flex items-center justify-center text-black font-mono font-bold text-[10px] z-10">W1</div>
@@ -618,61 +628,81 @@ export default function Home() {
                     </div>
                   </div>
                 </div>
-              </div>
+                </div>
+              </ScrollReveal>
 
               {/* Testimonials Section */}
-              <div className="space-y-6 max-w-xl pt-12 border-t border-black/5">
-                <h2 className="text-[13px] font-bold font-mono text-gray-500 uppercase tracking-[0.3em]">Testimonials</h2>
-                
-                <div className="relative overflow-hidden">
-                  {/* Subtle fade edges */}
-                  <div className="absolute inset-y-0 left-0 w-8 md:w-16 bg-gradient-to-r from-[#FAF9F2] to-transparent z-20 pointer-events-none" />
-                  <div className="absolute inset-y-0 right-0 w-8 md:w-16 bg-gradient-to-l from-[#FAF9F2] to-transparent z-20 pointer-events-none" />
-                  
-                  <StaggerTestimonials />
+              <ScrollReveal>
+                <div className="space-y-6 max-w-xl pt-12 border-t border-black/5">
+                  <h2 className="text-[13px] font-bold font-mono text-gray-500 uppercase tracking-[0.3em]">Testimonials</h2>
+
+                  <div className="relative overflow-hidden">
+                    {/* Subtle fade edges */}
+                    <div className="absolute inset-y-0 left-0 w-8 md:w-16 bg-gradient-to-r from-[#FAF9F2] to-transparent z-20 pointer-events-none" />
+                    <div className="absolute inset-y-0 right-0 w-8 md:w-16 bg-gradient-to-l from-[#FAF9F2] to-transparent z-20 pointer-events-none" />
+
+                    <StaggerTestimonials />
+                  </div>
                 </div>
-              </div>
+              </ScrollReveal>
 
               {/* Deliverables Section */}
-              <div className="space-y-5 max-w-xl pt-12 border-t border-black/5">
-                <h2 className="text-[13px] font-bold font-mono text-gray-500 uppercase tracking-[0.3em]">The Deliverables</h2>
-                <p className="text-[18px] md:text-[20px] font-medium text-gray-900 font-inter leading-tight tracking-tight">
-                  At the end, what will you have built?
-                </p>
-                <div className="grid grid-cols-1 md:grid-cols-2 gap-4">
-                  <div className="bg-[#eeede8] p-5 rounded-2xl border border-black/[0.03]">
-                    <div className="w-8 h-8 rounded-lg bg-black/5 flex items-center justify-center mb-3">
-                      <Globe className="w-4 h-4 text-gray-600" />
-                    </div>
-                    <h3 className="text-[15px] font-bold text-gray-900 mb-1">SaaS Web App</h3>
-                    <p className="text-[13px] text-gray-500 leading-relaxed">A fully functional, responsive web application ready for users.</p>
+              <ScrollReveal>
+                <div className="space-y-5 max-w-xl pt-12 border-t border-black/5">
+                  <h2 className="text-[13px] font-bold font-mono text-gray-500 uppercase tracking-[0.3em]">The Deliverables</h2>
+                  <p className="text-[18px] md:text-[20px] font-medium text-gray-900 font-inter leading-tight tracking-tight">
+                    At the end, what will you have built?
+                  </p>
+                  <div className="grid grid-cols-1 md:grid-cols-2 gap-4">
+                    <motion.div
+                      initial={{ opacity: 0, y: 20, filter: "blur(6px)" }}
+                      whileInView={{ opacity: 1, y: 0, filter: "blur(0px)" }}
+                      viewport={{ once: true, margin: "-50px" }}
+                      transition={{ duration: 0.6, delay: 0.1, ease: [0.21, 0.47, 0.32, 0.98] }}
+                      className="bg-[#eeede8] p-5 rounded-2xl border border-black/[0.03]"
+                    >
+                      <div className="w-8 h-8 rounded-lg bg-black/5 flex items-center justify-center mb-3">
+                        <Globe className="w-4 h-4 text-gray-600" />
+                      </div>
+                      <h3 className="text-[15px] font-bold text-gray-900 mb-1">SaaS Web App</h3>
+                      <p className="text-[13px] text-gray-500 leading-relaxed">A fully functional, responsive web application ready for users.</p>
+                    </motion.div>
+                    <motion.div
+                      initial={{ opacity: 0, y: 20, filter: "blur(6px)" }}
+                      whileInView={{ opacity: 1, y: 0, filter: "blur(0px)" }}
+                      viewport={{ once: true, margin: "-50px" }}
+                      transition={{ duration: 0.6, delay: 0.2, ease: [0.21, 0.47, 0.32, 0.98] }}
+                      className="bg-[#eeede8] p-5 rounded-2xl border border-black/[0.03]"
+                    >
+                      <div className="w-8 h-8 rounded-lg bg-black/5 flex items-center justify-center mb-3">
+                        <Zap className="w-4 h-4 text-gray-600" />
+                      </div>
+                      <h3 className="text-[15px] font-bold text-gray-900 mb-1">Mobile Application</h3>
+                      <p className="text-[13px] text-gray-500 leading-relaxed">A native-feel mobile experience optimized for modern devices.</p>
+                    </motion.div>
                   </div>
-                  <div className="bg-[#eeede8] p-5 rounded-2xl border border-black/[0.03]">
-                    <div className="w-8 h-8 rounded-lg bg-black/5 flex items-center justify-center mb-3">
-                      <Zap className="w-4 h-4 text-gray-600" />
-                    </div>
-                    <h3 className="text-[15px] font-bold text-gray-900 mb-1">Mobile Application</h3>
-                    <p className="text-[13px] text-gray-500 leading-relaxed">A native-feel mobile experience optimized for modern devices.</p>
-                  </div>
+                  <p className="text-[14px] text-gray-400 italic font-inter pt-2">
+                    Two real-world products. Two weeks. No excuses.
+                  </p>
                 </div>
-                <p className="text-[14px] text-gray-400 italic font-inter pt-2">
-                  Two real-world products. Two weeks. No excuses.
-                </p>
-              </div>
+              </ScrollReveal>
 
             </div>
           </div>
 
           {/* Right Sidebar Column - Enrollment Card (Fixed/Sticky) */}
           <aside id="enrollment" className="w-full lg:w-[35%] lg:pl-12 lg:sticky lg:top-28 self-start scroll-mt-32">
-            <h2 className="text-[13px] font-bold font-mono text-gray-500 uppercase tracking-[0.3em] mb-10">Enrollment</h2>
-            
-            <div 
-              className="bg-[#eeede8] border-2 border-black/5 p-6 space-y-8 shadow-sm relative"
-              style={{
-                clipPath: `polygon(40px 0%, calc(100% - 40px) 0%, 100% 40px, 100% 100%, calc(100% - 40px) 100%, 40px 100%, 0 100%, 0 0)`,
-              }}
-            >
+            <ScrollReveal delay={0.1} duration={0.6}>
+              <h2 className="text-[13px] font-bold font-mono text-gray-500 uppercase tracking-[0.3em] mb-10">Enrollment</h2>
+            </ScrollReveal>
+
+            <ScrollReveal delay={0.3}>
+              <div
+                className="bg-[#eeede8] border-2 border-black/5 p-6 space-y-8 shadow-sm relative"
+                style={{
+                  clipPath: `polygon(40px 0%, calc(100% - 40px) 0%, 100% 40px, 100% 100%, calc(100% - 40px) 100%, 40px 100%, 0 100%, 0 0)`,
+                }}
+              >
               {/* Folder accent line */}
               <span
                 className="absolute block origin-top-right rotate-45 bg-black/5"
@@ -735,7 +765,8 @@ export default function Home() {
               <p className="text-[10px] text-center text-gray-400 font-medium font-inter relative z-10">
                 Limited cohort size for personalized feedback.
               </p>
-            </div>
+              </div>
+            </ScrollReveal>
           </aside>
 
         </div>
