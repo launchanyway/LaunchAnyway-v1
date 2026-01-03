@@ -53,7 +53,8 @@ const TestimonialCard: React.FC<TestimonialCardProps> = ({
       )}
       style={{
         width: cardSize,
-        height: cardSize,
+        minHeight: 300,
+        height: 'auto',
         clipPath: `polygon(50px 0%, calc(100% - 50px) 0%, 100% 50px, 100% 100%, calc(100% - 50px) 100%, 50px 100%, 0 100%, 0 0)`,
         transform: `
           translate(-50%, -50%) 
@@ -81,7 +82,7 @@ const TestimonialCard: React.FC<TestimonialCardProps> = ({
         />
       </div>
       <h3 className={cn(
-        "text-sm sm:text-[15px] font-medium font-inter leading-relaxed tracking-tight",
+        "text-sm sm:text-[15px] font-medium font-inter leading-relaxed tracking-tight pb-16",
         isCenter ? "text-white" : "text-gray-900"
       )}>
         "{testimonial.testimonial}"
@@ -103,16 +104,14 @@ export const StaggerTestimonials: React.FC = () => {
   const handleMove = (steps: number) => {
     const newList = [...testimonialsList];
     if (steps > 0) {
-      for (let i = steps; i > 0; i--) {
+      for (let i = 0; i < steps; i++) {
         const item = newList.shift();
-        if (!item) return;
-        newList.push({ ...item, tempId: Math.random() });
+        if (item) newList.push({ ...item, tempId: Math.random() });
       }
-    } else {
-      for (let i = steps; i < 0; i++) {
+    } else if (steps < 0) {
+      for (let i = 0; i < Math.abs(steps); i++) {
         const item = newList.pop();
-        if (!item) return;
-        newList.unshift({ ...item, tempId: Math.random() });
+        if (item) newList.unshift({ ...item, tempId: Math.random() });
       }
     }
     setTestimonialsList(newList);
@@ -132,12 +131,10 @@ export const StaggerTestimonials: React.FC = () => {
   return (
     <div
       className="relative w-full overflow-hidden bg-transparent"
-      style={{ height: 500 }}
+      style={{ height: 550 }}
     >
       {testimonialsList.map((testimonial, index) => {
-        const position = testimonialsList.length % 2
-          ? index - (testimonialsList.length + 1) / 2
-          : index - testimonialsList.length / 2;
+        const position = index - Math.floor(testimonialsList.length / 2);
         return (
           <TestimonialCard
             key={testimonial.tempId}
