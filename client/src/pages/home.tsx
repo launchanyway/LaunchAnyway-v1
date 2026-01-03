@@ -95,6 +95,7 @@ const EnrollmentModal = ({ isOpen, onClose }: { isOpen: boolean, onClose: () => 
                       <label className="text-[13px] font-bold text-gray-700 ml-1">Full Name</label>
                       <input 
                         type="text" 
+                        required
                         placeholder="Bruce Wayne (Batman)"
                         className="w-full px-4 py-3 rounded-xl bg-black/5 border-none focus:ring-2 focus:ring-[#D4E845] transition-all text-sm font-inter"
                         value={formData.fullName}
@@ -105,6 +106,7 @@ const EnrollmentModal = ({ isOpen, onClose }: { isOpen: boolean, onClose: () => 
                       <label className="text-[13px] font-bold text-gray-700 ml-1">Email Address</label>
                       <input 
                         type="email" 
+                        required
                         placeholder="john@example.com"
                         className="w-full px-4 py-3 rounded-xl bg-black/5 border-none focus:ring-2 focus:ring-[#D4E845] transition-all text-sm font-inter"
                         value={formData.email}
@@ -112,23 +114,14 @@ const EnrollmentModal = ({ isOpen, onClose }: { isOpen: boolean, onClose: () => 
                       />
                     </div>
                     <div className="space-y-2">
-                      <label className="text-[13px] font-bold text-gray-700 ml-1">Phone / WhatsApp</label>
+                      <label className="text-[13px] font-bold text-gray-700 ml-1">Phone / WhatsApp (Preferred)</label>
                       <input 
                         type="text" 
+                        required
                         placeholder="+91 8123456780"
                         className="w-full px-4 py-3 rounded-xl bg-black/5 border-none focus:ring-2 focus:ring-[#D4E845] transition-all text-sm font-inter"
                         value={formData.phone}
                         onChange={(e) => setFormData({...formData, phone: e.target.value})}
-                      />
-                    </div>
-                    <div className="space-y-2">
-                      <label className="text-[13px] font-bold text-gray-700 ml-1">Country</label>
-                      <input 
-                        type="text" 
-                        placeholder="e.g. India, USA"
-                        className="w-full px-4 py-3 rounded-xl bg-black/5 border-none focus:ring-2 focus:ring-[#D4E845] transition-all text-sm font-inter"
-                        value={formData.country}
-                        onChange={(e) => setFormData({...formData, country: e.target.value})}
                       />
                     </div>
                   </div>
@@ -220,12 +213,18 @@ const EnrollmentModal = ({ isOpen, onClose }: { isOpen: boolean, onClose: () => 
                   </div>
                 </div>
 
-                {/* Submit Section */}
                 <div className="pt-4 pb-2">
-                  <StardustButton onClick={() => {
-                    alert("Application Submitted! We'll be in touch within 4 hours.");
-                    onClose();
-                  }}>
+                  <StardustButton 
+                    type="submit"
+                    onClick={() => {
+                      if (!formData.fullName || !formData.email || !formData.phone || !formData.role || !formData.goal || !formData.reason || !formData.commitment) {
+                        alert("Please fill in all required fields.");
+                        return;
+                      }
+                      alert("Application Submitted! We'll be in touch within 4 hours.");
+                      onClose();
+                    }}
+                  >
                     Submit Application
                   </StardustButton>
                   <p className="text-[9px] text-center text-gray-400 mt-3 uppercase tracking-widest font-bold">
