@@ -16,7 +16,6 @@ import {
   Star,
   CircleDot
 } from "lucide-react";
-import profileImage from "@assets/generated_images/professional_portrait_of_a_young_woman_with_dark_hair.png";
 
 // Inline Icon Pill Component
 const IconPill = ({ 
@@ -30,8 +29,8 @@ const IconPill = ({
   iconColor?: string,
   className?: string 
 }) => (
-  <span className={`inline-flex items-center justify-center w-6 h-6 rounded-full ${color} mx-1 align-text-bottom ${className} translate-y-[1px]`}>
-    <Icon className={`w-3.5 h-3.5 ${iconColor}`} />
+  <span className={`inline-flex items-center justify-center w-5 h-5 rounded-full ${color} mx-1 align-text-bottom ${className} translate-y-[1px]`}>
+    <Icon className={`w-3 h-3 ${iconColor}`} />
   </span>
 );
 
@@ -42,217 +41,191 @@ const CircledText = ({ children }: { children: React.ReactNode }) => (
   </span>
 );
 
-// Flag Component
-const Flag = ({ country }: { country: string }) => {
-  const flags: Record<string, string> = {
-    georgia: "🇬🇪",
-    canada: "🇨🇦",
-    us: "🇺🇸"
-  };
-  return <span className="mx-1 align-middle">{flags[country] || "🏳️"}</span>;
-};
-
-// Case Item Component
-const CaseItem = ({ 
-  icon: Icon, 
-  color, 
-  title, 
-  date, 
-  tag, 
-  isLocked = false 
-}: { 
-  icon: any, 
-  color: string, 
-  title: string, 
-  date: string, 
-  tag: string, 
-  isLocked?: boolean 
-}) => (
-  <div className="flex gap-4 mb-8 group cursor-pointer">
-    <div className={`w-11 h-11 rounded-xl flex items-center justify-center shrink-0 ${color} text-white transition-transform group-hover:scale-105 shadow-sm`}>
-      <Icon className="w-6 h-6" />
-    </div>
-    <div className="flex flex-col pt-0.5">
-      <h3 className="text-[15px] font-semibold leading-snug text-gray-800 mb-1 group-hover:text-gray-500 transition-colors">
-        {title}
-      </h3>
-      <div className="flex items-center text-[11px] text-gray-400 font-mono gap-2 tracking-tight">
-        <span>{date}</span>
-        <span className="w-0.5 h-0.5 rounded-full bg-gray-300"></span>
-        <div className="flex items-center gap-1.5">
-          {isLocked && <Lock className="w-3 h-3" />}
-          <span className="uppercase">{tag}</span>
-        </div>
-      </div>
-    </div>
-  </div>
-);
-
 // Tool Icon Component
 const ToolIcon = ({ label, bg, text = "text-white" }: { label: string, bg: string, text?: string }) => (
-  <span className={`inline-flex items-center justify-center w-6 h-6 rounded-sm mx-1 align-text-bottom ${bg} ${text} text-[11px] font-bold font-mono translate-y-[1px]`}>
+  <span className={`inline-flex items-center justify-center w-5 h-5 rounded-sm mx-1 align-text-bottom ${bg} ${text} text-[10px] font-bold font-mono translate-y-[1px]`}>
     {label}
   </span>
+);
+
+// Sidebar Course Card Component
+const CourseCard = ({ title, status, date, icon: Icon, color }: { title: string, status: string, date: string, icon: any, color: string }) => (
+  <div className="p-5 rounded-3xl bg-white border border-gray-100 shadow-sm hover:shadow-md transition-all group cursor-pointer">
+    <div className="flex justify-between items-start mb-4">
+      <div className={`w-10 h-10 rounded-2xl ${color} flex items-center justify-center text-white`}>
+        <Icon className="w-5 h-5" />
+      </div>
+      <span className="text-[10px] font-mono font-bold px-2 py-1 rounded-full bg-gray-50 text-gray-400 uppercase tracking-wider">{status}</span>
+    </div>
+    <h3 className="text-[15px] font-bold text-gray-900 mb-1 leading-tight">{title}</h3>
+    <p className="text-[11px] font-mono text-gray-400">{date}</p>
+  </div>
 );
 
 export default function Home() {
   return (
     <div className="min-h-screen bg-[#FAFAF9] text-[#1a1a1a] font-sans selection:bg-[#D4E845] selection:text-black">
       {/* Navbar */}
-      <header className="fixed top-0 left-0 right-0 p-5 md:p-6 flex justify-between items-start z-50 pointer-events-none mix-blend-multiply">
-        <div className="flex gap-4 pointer-events-auto">
-          <button className="text-gray-400 hover:text-black transition-colors"><Box className="w-4 h-4" strokeWidth={1.5} /></button>
-          <button className="text-gray-400 hover:text-black transition-colors"><Twitter className="w-4 h-4" strokeWidth={1.5} /></button>
-          <button className="text-gray-400 hover:text-black transition-colors"><Instagram className="w-4 h-4" strokeWidth={1.5} /></button>
+      <nav className="fixed top-0 left-0 right-0 p-6 flex justify-between items-center z-50 bg-[#FAFAF9]/80 backdrop-blur-md border-b border-gray-100">
+        <div className="flex items-center gap-3">
+          <div className="w-8 h-8 rounded-lg bg-[#D4E845] flex items-center justify-center">
+            <Zap className="w-5 h-5 text-black" />
+          </div>
+          <span className="text-sm font-bold tracking-tight uppercase">LaunchAnyway</span>
         </div>
         
-        <div className="flex gap-6 text-[10px] font-mono text-gray-400 pointer-events-auto tracking-tight">
-          <a href="#" className="flex items-center gap-1.5 hover:text-black transition-colors">
-            <Download className="w-3 h-3" /> CV
-          </a>
-          <a href="#" className="flex items-center gap-1.5 hover:text-black transition-colors">
-            <Mail className="w-3 h-3" /> HELLO@TMPL.DIGITAL
-          </a>
+        <div className="flex items-center gap-8">
+          <div className="hidden md:flex gap-6 text-[11px] font-mono text-gray-400 tracking-widest uppercase">
+            <a href="#" className="hover:text-black transition-colors">Curriculum</a>
+            <a href="#" className="hover:text-black transition-colors">Pricing</a>
+            <a href="#" className="hover:text-black transition-colors">FAQ</a>
+          </div>
+          <button className="px-5 py-2 rounded-full bg-black text-white text-[11px] font-bold uppercase tracking-widest hover:bg-gray-800 transition-colors pointer-events-auto">
+            Apply Now
+          </button>
         </div>
-      </header>
+      </nav>
 
-      <main className="max-w-[1400px] mx-auto px-6 md:px-12 pt-32 md:pt-40 pb-32">
-        <div className="grid grid-cols-1 lg:grid-cols-12 gap-16 lg:gap-24">
+      <main className="max-w-[1400px] mx-auto px-6 md:px-12 pt-32 pb-40">
+        <div className="grid grid-cols-1 lg:grid-cols-12 gap-20">
           
           {/* Left Content Column */}
-          <div className="lg:col-span-8 space-y-20">
+          <div className="lg:col-span-7 space-y-24">
             
-            {/* Course Header */}
-            <div className="flex items-center gap-6">
-              <div className="w-16 h-16 rounded-2xl overflow-hidden bg-[#D4E845] flex items-center justify-center shadow-inner">
-                <IconPill icon={Zap} color="bg-transparent" iconColor="text-black" className="w-8 h-8 !translate-y-0" />
-              </div>
-              <div className="flex flex-col">
-                <h1 className="text-[17px] font-bold text-gray-900 leading-tight tracking-tight">LaunchAnyway</h1>
-                <span className="text-[12px] font-mono text-gray-400 tracking-widest uppercase font-semibold">LIVE COHORT</span>
-              </div>
-            </div>
-
             {/* Title / Hero Intro */}
-            <div className="space-y-8">
-              <h2 className="text-[32px] md:text-[42px] leading-[1.1] font-bold text-gray-900 max-w-2xl tracking-tight">
+            <div className="space-y-10">
+              <div className="inline-flex items-center gap-2 px-3 py-1 rounded-full bg-[#D4E845]/20 text-[#85941c] text-[10px] font-bold uppercase tracking-[0.2em]">
+                <span className="w-1.5 h-1.5 rounded-full bg-[#D4E845] animate-pulse" />
+                Next Cohort: May 2026
+              </div>
+              <h1 className="text-[48px] md:text-[64px] leading-[1] font-bold text-gray-900 tracking-tighter">
                 You have an idea? <br />
                 Are you going to <CircledText>ship</CircledText> it?
-              </h2>
-              <div className="text-[18px] md:text-[20px] leading-[1.6] text-[#4a4a4a] font-normal max-w-2xl">
-                <p>
-                  LaunchAnyway is a live, hands-on course for accidental founders to learn vibe coding 
-                  <IconPill icon={Zap} color="bg-[#D4E845]" iconColor="text-black" /> 
-                  and ship real products. We help you cut through the 
-                  <CircledText>noise</CircledText> of technical jargon and focus on what matters: launching your vision 
-                  <IconPill icon={Star} color="bg-[#3FD9D9]" iconColor="text-black" />.
+              </h1>
+              <p className="text-[20px] md:text-[22px] leading-[1.5] text-[#4a4a4a] font-light max-w-2xl">
+                LaunchAnyway is a live, hands-on course for accidental founders to learn <span className="font-semibold text-black italic">vibe coding</span> and ship real products in weeks, not months.
+              </p>
+            </div>
+
+            <div className="grid grid-cols-1 md:grid-cols-2 gap-12">
+              <div className="space-y-4">
+                <h2 className="text-[11px] font-mono text-gray-400 uppercase tracking-[0.2em] font-semibold">The Vibe</h2>
+                <p className="text-[16px] leading-relaxed text-[#5a5a5a]">
+                  Stop watching tutorials and start building. We use modern AI tools like Cursor <ToolIcon label="C" bg="bg-black" /> and Replit <ToolIcon label="R" bg="bg-[#F24E1E]" /> to turn ideas into software.
+                </p>
+              </div>
+              <div className="space-y-4">
+                <h2 className="text-[11px] font-mono text-gray-400 uppercase tracking-[0.2em] font-semibold">The Result</h2>
+                <p className="text-[16px] leading-relaxed text-[#5a5a5a]">
+                  Leave with a live product on your own domain <IconPill icon={Globe} color="bg-[#E895C9]" iconColor="text-black" /> and the confidence to build anything you can imagine.
                 </p>
               </div>
             </div>
 
-            {/* Why This Course */}
-            <div className="space-y-4 max-w-2xl">
-              <h2 className="text-[11px] font-mono text-gray-400 uppercase tracking-[0.2em] font-semibold">The Vibe</h2>
-              <p className="text-[16px] leading-[1.6] text-[#5a5a5a]">
-                Stop watching tutorials and start shipping. We use modern tools like Cursor 
-                <ToolIcon label="C" bg="bg-black" />, Replit 
-                <ToolIcon label="R" bg="bg-[#F24E1E]" />, and LLMs 
-                <span className="inline-flex items-center justify-center w-6 h-6 rounded-full bg-[#10A37F] mx-1 align-text-bottom translate-y-[1px]">
-                  <span className="w-3 h-3 border-[1.5px] border-white rounded-full"></span>
-                </span>
-                to turn founders into builders. No CS degree required 
-                <IconPill icon={Asterisk} color="bg-[#8B5CF6]" iconColor="text-white" />.
+            {/* Testimonial / Social Proof */}
+            <div className="p-8 rounded-3xl bg-white border border-gray-100 shadow-sm space-y-6">
+              <div className="flex gap-1">
+                {[1,2,3,4,5].map(i => <Star key={i} className="w-4 h-4 fill-[#D4E845] text-[#D4E845]" />)}
+              </div>
+              <p className="text-[18px] italic text-gray-700 leading-relaxed">
+                "I went from zero coding knowledge to shipping my first SaaS in 4 weeks. Vibe coding is a superpower for non-technical founders."
               </p>
+              <div className="flex items-center gap-4 pt-4 border-t border-gray-50">
+                <div className="w-10 h-10 rounded-full bg-gray-200" />
+                <div>
+                  <p className="text-sm font-bold text-gray-900">Alex Rivera</p>
+                  <p className="text-[11px] font-mono text-gray-400 uppercase">Founder, Synthly</p>
+                </div>
+              </div>
             </div>
-
-            {/* Curriculum / Journey */}
-            <div className="space-y-4 max-w-2xl">
-              <h2 className="text-[11px] font-mono text-gray-400 uppercase tracking-[0.2em] font-semibold">The Journey</h2>
-              <p className="text-[16px] leading-[1.6] text-[#5a5a5a]">
-                From your first prompt to a live domain 
-                <IconPill icon={Globe} color="bg-[#E895C9]" iconColor="text-black" />. 
-                We cover content architecture, interface design at Cyper Island 
-                <IconPill icon={Flower2} color="bg-[#E895C9]" iconColor="text-black" />
-                , and the psychology of shipping. Join a group of 3M+ builders 
-                <IconPill icon={Star} color="bg-[#D4E845]" iconColor="text-black" /> 
-                who stopped making excuses.
-              </p>
-            </div>
-
-            {/* Info Section */}
-            <div className="space-y-4 max-w-3xl">
-              <h2 className="text-[11px] font-mono text-gray-400 uppercase tracking-[0.2em] font-semibold">Info</h2>
-              <p className="text-[16px] leading-[1.6] text-[#5a5a5a]">
-                Fluent in English, I work as an individual entrepreneur with a Georgian residence permit. I use tools like Notion 
-                <ToolIcon label="N" bg="bg-black" />, Framer 
-                <ToolIcon label="F" bg="bg-black" />, Figma 
-                <ToolIcon label="F" bg="bg-[#F24E1E]" />, SEO platforms, and ChatGPT 
-                <span className="inline-flex items-center justify-center w-6 h-6 rounded-full bg-[#10A37F] mx-1 align-text-bottom translate-y-[1px]">
-                  <span className="w-3 h-3 border-[1.5px] border-white rounded-full"></span>
-                </span>
-                to build structured content systems and lead editorial teams.
-              </p>
-            </div>
-
           </div>
 
-          {/* Right Sidebar Column - Cohorts */}
-          <div className="lg:col-span-4 lg:pl-12">
-            <div className="sticky top-32">
-              <h2 className="text-[11px] font-mono text-gray-400 uppercase tracking-widest mb-10">Cohorts</h2>
-              
-              <div className="space-y-2">
-                <CaseItem 
+          {/* Right Sidebar Column */}
+          <div className="lg:col-span-5 space-y-8">
+            <div className="sticky top-32 space-y-6">
+              <div className="p-8 rounded-[40px] bg-black text-white space-y-8 shadow-2xl shadow-black/20">
+                <div className="space-y-2">
+                  <h2 className="text-[24px] font-bold leading-tight italic">Ship your vision. <br />Join the cohort.</h2>
+                  <p className="text-gray-400 text-sm">Limited to 50 builders per cohort to ensure hands-on mentorship.</p>
+                </div>
+                
+                <div className="space-y-4">
+                  <div className="flex justify-between items-center text-sm py-3 border-b border-white/10">
+                    <span className="text-gray-400">Duration</span>
+                    <span className="font-mono uppercase">4 Weeks</span>
+                  </div>
+                  <div className="flex justify-between items-center text-sm py-3 border-b border-white/10">
+                    <span className="text-gray-400">Next Cohort</span>
+                    <span className="font-mono uppercase italic">May 12, 2026</span>
+                  </div>
+                  <div className="flex justify-between items-center text-sm py-3">
+                    <span className="text-gray-400">Format</span>
+                    <span className="font-mono uppercase">Live Workshops</span>
+                  </div>
+                </div>
+
+                <div className="pt-4 space-y-4">
+                  <button className="w-full py-5 rounded-2xl bg-[#D4E845] text-black text-[16px] font-black hover:scale-[1.02] transition-all uppercase tracking-widest">
+                    Apply for $999
+                  </button>
+                  <p className="text-center text-[10px] text-gray-500 font-mono uppercase tracking-widest">Only 12 seats remaining</p>
+                </div>
+              </div>
+
+              <div className="grid grid-cols-1 gap-4">
+                <CourseCard 
+                  title="Cohort #01"
+                  status="Waitlist"
+                  date="May 12 - June 10"
                   icon={Zap}
-                  color="bg-[#1a1a1a]"
-                  title="Cohort #01: The Pioneers"
-                  date="Starts 5/23/25"
-                  tag="WAITLIST"
-                  isLocked={true}
+                  color="bg-[#D4E845] !text-black"
                 />
-                
-                <CaseItem 
-                  icon={Flower2}
-                  color="bg-[#F472B6]"
-                  title="Cohort #02: Building in Public"
-                  date="Planned 7/22/25"
-                  tag="SOON"
-                  isLocked={true}
-                />
-                
-                <CaseItem 
+                <CourseCard 
+                  title="Cohort #02"
+                  status="Enrolling"
+                  date="Aug 05 - Sep 02"
                   icon={Asterisk}
                   color="bg-[#8B5CF6]"
-                  title="Vibe Coding Workshop"
-                  date="Online"
-                  tag="LIVE"
-                  isLocked={false}
                 />
-              </div>
-
-              <div className="mt-8">
-                <button className="w-full py-4 rounded-2xl bg-black text-white text-[14px] font-bold hover:bg-gray-800 transition-all uppercase tracking-widest shadow-lg shadow-black/10">
-                  Secure Your Spot
-                </button>
               </div>
             </div>
           </div>
-
         </div>
       </main>
 
-      {/* Footer */}
-      <footer className="fixed bottom-0 left-0 right-0 p-6 md:p-8 flex justify-between items-end text-[10px] font-mono text-gray-400 pointer-events-none bg-gradient-to-t from-[#FAFAF9] via-[#FAFAF9] via-60% to-transparent h-32 z-40">
-        <div className="pointer-events-auto tracking-widest uppercase">
-          © LAUNCHANYWAY 2026
+      {/* Modern Footer */}
+      <footer className="bg-white border-t border-gray-100 py-20">
+        <div className="max-w-[1400px] mx-auto px-6 md:px-12 grid grid-cols-1 md:grid-cols-4 gap-12">
+          <div className="col-span-2 space-y-6">
+            <div className="flex items-center gap-3">
+              <div className="w-8 h-8 rounded-lg bg-[#D4E845] flex items-center justify-center">
+                <Zap className="w-5 h-5 text-black" />
+              </div>
+              <span className="text-sm font-bold tracking-tight uppercase">LaunchAnyway</span>
+            </div>
+            <p className="text-gray-500 max-w-sm text-sm">
+              Helping accidental founders, designers, and thinkers ship their visions without the friction of traditional engineering.
+            </p>
+          </div>
+          <div className="space-y-6">
+            <h3 className="text-[11px] font-mono text-gray-400 uppercase tracking-widest font-bold">Social</h3>
+            <div className="flex flex-col gap-3 text-sm font-medium">
+              <a href="#" className="hover:text-[#D4E845] transition-colors">Twitter / X</a>
+              <a href="#" className="hover:text-[#D4E845] transition-colors">LinkedIn</a>
+              <a href="#" className="hover:text-[#D4E845] transition-colors">YouTube</a>
+            </div>
+          </div>
+          <div className="space-y-6">
+            <h3 className="text-[11px] font-mono text-gray-400 uppercase tracking-widest font-bold">Legal</h3>
+            <div className="flex flex-col gap-3 text-sm font-medium">
+              <a href="#" className="hover:text-[#D4E845] transition-colors">Privacy Policy</a>
+              <a href="#" className="hover:text-[#D4E845] transition-colors">Terms of Service</a>
+            </div>
+          </div>
         </div>
-        
-        <div className="absolute left-1/2 -translate-x-1/2 bottom-8 flex items-center gap-2 pointer-events-auto cursor-pointer hover:text-black transition-colors tracking-widest group">
-          <CircleDot className="w-3.5 h-3.5 text-gray-400 group-hover:text-black transition-colors" /> CURRICULUM
-        </div>
-        
-        <div className="pointer-events-auto flex items-center gap-2 tracking-widest uppercase">
-          MADE BY <span className="bg-[#e5e5e0] text-gray-500 px-1.5 py-0.5 rounded text-[9px] font-bold">tmpl</span>
+        <div className="max-w-[1400px] mx-auto px-6 md:px-12 pt-20 flex justify-between items-center text-[10px] font-mono text-gray-400 uppercase tracking-widest">
+          <span>© 2026 LaunchAnyway</span>
+          <span>Crafted by tmpl</span>
         </div>
       </footer>
     </div>
