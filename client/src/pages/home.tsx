@@ -107,11 +107,11 @@ export default function Home() {
         </div>
       </header>
 
-      <main className="max-w-[1400px] mx-auto px-6 md:px-16 pt-36 md:pt-48 pb-32">
-        <div className="grid grid-cols-1 lg:grid-cols-12 gap-20 lg:gap-32">
+      <main className="max-w-[1400px] mx-auto px-6 md:px-16 pt-36 md:pt-48 pb-32 overflow-hidden">
+        <div className="flex flex-col lg:flex-row gap-20 lg:gap-32 items-start">
           
           {/* Left Content Column */}
-          <div className="lg:col-span-8 space-y-14">
+          <div className="w-full lg:w-2/3 space-y-14">
             
             {/* Course Header Chip */}
             <div className="flex items-center">
@@ -187,7 +187,7 @@ export default function Home() {
           </div>
 
           {/* Right Sidebar Column - Cohorts */}
-          <div className="lg:col-span-4 lg:pl-16">
+          <div className="w-full lg:w-1/3 lg:pl-16">
             <div className="sticky top-40">
               <h2 className="text-[12px] font-bold font-mono text-gray-400 uppercase tracking-[0.3em] mb-12">Cohorts</h2>
               
