@@ -66,7 +66,7 @@ const TestimonialCard: React.FC<TestimonialCardProps> = ({
       className={cn(
         "absolute left-1/2 top-1/2 cursor-pointer border-2 p-8 transition-all duration-500 ease-in-out",
         isCenter 
-          ? "z-10 bg-black text-white border-black" 
+          ? "z-10 bg-[#1a1a1a] text-white border-black" 
           : "z-0 bg-[#eeede8] text-gray-900 border-black/5 hover:border-black/20"
       )}
       style={{
@@ -100,7 +100,7 @@ const TestimonialCard: React.FC<TestimonialCardProps> = ({
         }}
       />
       <h3 className={cn(
-        "text-base sm:text-lg font-medium font-instrument leading-tight",
+        "text-base sm:text-lg font-medium font-inter leading-tight tracking-tight",
         isCenter ? "text-white" : "text-gray-900"
       )}>
         "{testimonial.testimonial}"
