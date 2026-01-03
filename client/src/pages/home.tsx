@@ -196,66 +196,60 @@ export default function Home() {
               </div>
 
               {/* Curriculum / Journey */}
-              <div className="space-y-6 max-w-xl">
+              <div className="space-y-8 max-w-xl">
                 <h2 className="text-[13px] font-bold font-mono text-gray-500 uppercase tracking-[0.3em]">The Journey</h2>
                 
-                <div className="space-y-4">
+                <div className="space-y-10 relative before:absolute before:left-[17px] before:top-2 before:bottom-2 before:w-[1.5px] before:bg-black/5">
                   {/* Week 1 */}
-                  <div className="bg-[#eeede8] rounded-2xl border border-black/[0.03] overflow-hidden">
-                    <button className="w-full p-5 flex items-center justify-between group hover:bg-black/[0.02] transition-colors">
-                      <div className="flex items-center gap-4">
-                        <div className="w-10 h-10 rounded-xl bg-blue-600 flex items-center justify-center text-white font-mono font-bold text-xs">W1</div>
-                        <div className="text-left">
-                          <h3 className="text-[15px] font-bold text-gray-900">Foundations & Setup</h3>
-                          <p className="text-[12px] text-gray-500 font-mono uppercase tracking-wider font-bold">Days 1 — 3</p>
+                  <div className="relative pl-12 group">
+                    <div className="absolute left-0 top-0 w-[35px] h-[35px] rounded-full bg-blue-600 flex items-center justify-center text-white font-mono font-bold text-[10px] z-10 shadow-lg shadow-blue-500/20">W1</div>
+                    <div className="space-y-4">
+                      <div>
+                        <h3 className="text-[17px] font-bold text-gray-900 tracking-tight">Foundations & Setup</h3>
+                        <p className="text-[11px] text-gray-400 font-mono uppercase tracking-widest font-bold mt-1">Days 1 — 3</p>
+                      </div>
+                      <div className="space-y-5">
+                        <div className="flex gap-4">
+                          <span className="text-[10px] font-black font-mono text-blue-600 bg-blue-50 w-6 h-6 rounded flex items-center justify-center shrink-0">01</span>
+                          <p className="text-[15px] text-[#5a5a5a] leading-relaxed"><span className="text-gray-900 font-semibold">Vibe Coding 101:</span> Prompt engineering and content architecture.</p>
                         </div>
-                      </div>
-                      <IconPill icon={Zap} color="bg-white" iconColor="text-blue-600" className="opacity-0 group-hover:opacity-100 transition-opacity" />
-                    </button>
-                    <div className="px-5 pb-5 pt-1 space-y-3">
-                      <div className="flex gap-3 items-start">
-                        <span className="text-[11px] font-bold font-mono text-blue-600 pt-0.5">D1</span>
-                        <p className="text-[14px] text-gray-600 leading-snug">Vibe Coding 101: Prompt engineering and content architecture.</p>
-                      </div>
-                      <div className="flex gap-3 items-start">
-                        <span className="text-[11px] font-bold font-mono text-blue-600 pt-0.5">D2</span>
-                        <p className="text-[14px] text-gray-600 leading-snug">Interface Design: Mastering Cyber Island aesthetics.</p>
-                      </div>
-                      <div className="flex gap-3 items-start">
-                        <span className="text-[11px] font-bold font-mono text-blue-600 pt-0.5">D3</span>
-                        <p className="text-[14px] text-gray-600 leading-snug">Database Architecture: Connecting Supabase securely.</p>
+                        <div className="flex gap-4">
+                          <span className="text-[10px] font-black font-mono text-blue-600 bg-blue-50 w-6 h-6 rounded flex items-center justify-center shrink-0">02</span>
+                          <p className="text-[15px] text-[#5a5a5a] leading-relaxed"><span className="text-gray-900 font-semibold">Interface Design:</span> Mastering Cyber Island aesthetics.</p>
+                        </div>
+                        <div className="flex gap-4">
+                          <span className="text-[10px] font-black font-mono text-blue-600 bg-blue-50 w-6 h-6 rounded flex items-center justify-center shrink-0">03</span>
+                          <p className="text-[15px] text-[#5a5a5a] leading-relaxed"><span className="text-gray-900 font-semibold">Database Architecture:</span> Connecting Supabase securely.</p>
+                        </div>
                       </div>
                     </div>
                   </div>
 
                   {/* Week 2 */}
-                  <div className="bg-[#eeede8] rounded-2xl border border-black/[0.03] overflow-hidden">
-                    <button className="w-full p-5 flex items-center justify-between group hover:bg-black/[0.02] transition-colors">
-                      <div className="flex items-center gap-4">
-                        <div className="w-10 h-10 rounded-xl bg-purple-600 flex items-center justify-center text-white font-mono font-bold text-xs">W2</div>
-                        <div className="text-left">
-                          <h3 className="text-[15px] font-bold text-gray-900">Shipping & Scaling</h3>
-                          <p className="text-[12px] text-gray-500 font-mono uppercase tracking-wider font-bold">Days 4 — 7</p>
+                  <div className="relative pl-12 group">
+                    <div className="absolute left-0 top-0 w-[35px] h-[35px] rounded-full bg-purple-600 flex items-center justify-center text-white font-mono font-bold text-[10px] z-10 shadow-lg shadow-purple-500/20">W2</div>
+                    <div className="space-y-4">
+                      <div>
+                        <h3 className="text-[17px] font-bold text-gray-900 tracking-tight">Shipping & Scaling</h3>
+                        <p className="text-[11px] text-gray-400 font-mono uppercase tracking-widest font-bold mt-1">Days 4 — 7</p>
+                      </div>
+                      <div className="space-y-5">
+                        <div className="flex gap-4">
+                          <span className="text-[10px] font-black font-mono text-purple-600 bg-purple-50 w-6 h-6 rounded flex items-center justify-center shrink-0">04</span>
+                          <p className="text-[15px] text-[#5a5a5a] leading-relaxed"><span className="text-gray-900 font-semibold">Logic & Auth:</span> Building functional SaaS workflows.</p>
                         </div>
-                      </div>
-                      <IconPill icon={Globe} color="bg-white" iconColor="text-purple-600" className="opacity-0 group-hover:opacity-100 transition-opacity" />
-                    </button>
-                    <div className="px-5 pb-5 pt-1 space-y-3">
-                      <div className="flex gap-3 items-start">
-                        <span className="text-[11px] font-bold font-mono text-purple-600 pt-0.5">D4</span>
-                        <p className="text-[14px] text-gray-600 leading-snug">Logic & Auth: Building functional SaaS workflows.</p>
-                      </div>
-                      <div className="flex gap-3 items-start">
-                        <span className="text-[11px] font-bold font-mono text-purple-600 pt-0.5">D5</span>
-                        <p className="text-[14px] text-gray-600 leading-snug">Mobile Optimization: Native-feel PWA experiences.</p>
-                      </div>
-                      <div className="flex gap-3 items-start">
-                        <span className="text-[11px] font-bold font-mono text-purple-600 pt-0.5">D6</span>
-                        <p className="text-[14px] text-gray-600 leading-snug">Deployment & Vercel: Going live on your own domain.</p>
-                      </div>
-                      <div className="flex gap-3 items-start">
-                        <span className="text-[11px] font-bold font-mono text-purple-600 pt-0.5">D7</span>
-                        <p className="text-[14px] text-gray-600 leading-snug font-bold">Launch Day: Psychology of shipping and final reveals.</p>
+                        <div className="flex gap-4">
+                          <span className="text-[10px] font-black font-mono text-purple-600 bg-purple-50 w-6 h-6 rounded flex items-center justify-center shrink-0">05</span>
+                          <p className="text-[15px] text-[#5a5a5a] leading-relaxed"><span className="text-gray-900 font-semibold">Mobile Optimization:</span> Native-feel PWA experiences.</p>
+                        </div>
+                        <div className="flex gap-4">
+                          <span className="text-[10px] font-black font-mono text-purple-600 bg-purple-50 w-6 h-6 rounded flex items-center justify-center shrink-0">06</span>
+                          <p className="text-[15px] text-[#5a5a5a] leading-relaxed"><span className="text-gray-900 font-semibold">Deployment:</span> Going live on your own domain.</p>
+                        </div>
+                        <div className="flex gap-4">
+                          <span className="text-[10px] font-black font-mono text-purple-600 bg-purple-50 w-6 h-6 rounded flex items-center justify-center shrink-0">07</span>
+                          <p className="text-[15px] text-[#5a5a5a] leading-relaxed"><span className="text-gray-900 font-semibold">Launch Day:</span> Psychology of shipping and final reveals.</p>
+                        </div>
                       </div>
                     </div>
                   </div>
