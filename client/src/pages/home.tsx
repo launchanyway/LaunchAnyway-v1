@@ -125,7 +125,7 @@ export default function Home() {
 
             {/* Title / Hero Intro */}
             <div className="space-y-8">
-              <h1 className="text-[52px] md:text-[84px] leading-[0.95] font-medium text-gray-900 max-w-3xl tracking-tight font-instrument">
+              <h1 className="text-[52px] md:text-[84px] leading-[0.95] font-medium text-gray-900 tracking-tight font-instrument">
                 You have an idea? <br />
                 Are you going to ship it?
               </h1>
