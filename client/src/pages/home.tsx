@@ -178,6 +178,7 @@ export default function Home() {
               {/* Why This Course */}
               <div className="space-y-4 max-w-xl">
                 <h2 className="text-[13px] font-bold font-mono text-gray-500 uppercase tracking-[0.3em]">The Vibe</h2>
+                <VideoPlayer videoId="9BtxpKQHga4" />
                 <p className="text-[16px] md:text-[17px] leading-[1.6] text-[#5a5a5a] font-inter">
                   Stop watching tutorials and start shipping. We use modern tools like
                   Replit <ToolIcon src="/logos/replit.png" alt="Replit" />,
@@ -192,7 +193,6 @@ export default function Home() {
                   to turn founders into builders. No CS degree required 
                   <IconPill icon={Asterisk} color="bg-[#8B5CF6]" iconColor="text-white" />.
                 </p>
-                <VideoPlayer videoId="9BtxpKQHga4" />
               </div>
 
               {/* Curriculum / Journey */}
