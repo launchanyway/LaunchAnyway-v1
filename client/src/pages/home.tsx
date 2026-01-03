@@ -152,12 +152,15 @@ const EnrollmentModal = ({ isOpen, onClose }: { isOpen: boolean, onClose: () => 
                     <div className="space-y-2">
                       <label className="text-[13px] font-bold text-gray-700 ml-1">Phone / WhatsApp (Preferred)</label>
                       <input 
-                        type="text" 
+                        type="tel" 
                         required
                         placeholder="+91 8123456780"
                         className="w-full px-4 py-3 rounded-xl bg-black/5 border-none focus:ring-2 focus:ring-[#D4E845] transition-all text-sm font-inter"
                         value={formData.phone}
-                        onChange={(e) => setFormData({...formData, phone: e.target.value})}
+                        onChange={(e) => {
+                          const value = e.target.value.replace(/[^0-9+ ]/g, "");
+                          setFormData({...formData, phone: value});
+                        }}
                       />
                     </div>
                   </div>
