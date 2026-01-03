@@ -284,8 +284,21 @@ export default function Home() {
                 </div>
               </div>
 
+              {/* Testimonials Section */}
+              <div className="space-y-6 max-w-xl pt-12 border-t border-black/5">
+                <h2 className="text-[13px] font-bold font-mono text-gray-500 uppercase tracking-[0.3em]">Testimonials</h2>
+                
+                <div className="relative overflow-hidden">
+                  {/* Subtle fade edges */}
+                  <div className="absolute inset-y-0 left-0 w-8 md:w-16 bg-gradient-to-r from-[#FAF9F2] to-transparent z-20 pointer-events-none" />
+                  <div className="absolute inset-y-0 right-0 w-8 md:w-16 bg-gradient-to-l from-[#FAF9F2] to-transparent z-20 pointer-events-none" />
+                  
+                  <StaggerTestimonials />
+                </div>
+              </div>
+
               {/* Deliverables Section */}
-              <div className="space-y-5 max-w-xl pt-4 border-t border-black/5">
+              <div className="space-y-5 max-w-xl pt-12 border-t border-black/5">
                 <h2 className="text-[13px] font-bold font-mono text-gray-500 uppercase tracking-[0.3em]">The Deliverables</h2>
                 <p className="text-[18px] md:text-[20px] font-medium text-gray-900 font-inter leading-tight tracking-tight">
                   At the end, what will you have built?
@@ -309,18 +322,6 @@ export default function Home() {
                 <p className="text-[14px] text-gray-400 italic font-inter pt-2">
                   Two real-world products. Two weeks. No excuses.
                 </p>
-              </div>
-              {/* Testimonials Section */}
-              <div className="space-y-6 max-w-xl pt-12 border-t border-black/5">
-                <h2 className="text-[13px] font-bold font-mono text-gray-500 uppercase tracking-[0.3em]">Testimonials</h2>
-                
-                <div className="relative overflow-hidden">
-                  {/* Subtle fade edges */}
-                  <div className="absolute inset-y-0 left-0 w-8 md:w-16 bg-gradient-to-r from-[#FAF9F2] to-transparent z-20 pointer-events-none" />
-                  <div className="absolute inset-y-0 right-0 w-8 md:w-16 bg-gradient-to-l from-[#FAF9F2] to-transparent z-20 pointer-events-none" />
-                  
-                  <StaggerTestimonials />
-                </div>
               </div>
 
             </div>
