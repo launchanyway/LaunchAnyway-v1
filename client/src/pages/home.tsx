@@ -454,7 +454,7 @@ export default function Home() {
 
               <div className="space-y-1 relative z-10">
                 <p className="text-[11px] font-bold font-mono text-blue-600 uppercase tracking-widest">Next Intake</p>
-                <p className="text-[20px] font-medium text-gray-900 font-inter tracking-tight">January 20th, 2026</p>
+                <p className="text-[20px] font-medium text-gray-900 font-inter tracking-tight">January 18th, 2026</p>
               </div>
 
               <div className="grid grid-cols-2 gap-6 relative z-10">
