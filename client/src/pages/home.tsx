@@ -311,10 +311,14 @@ export default function Home() {
                 </p>
               </div>
               {/* Testimonials Section */}
-              <div className="space-y-6 max-w-xl pt-12 border-t border-black/5">
+              <div className="space-y-6 w-full pt-12 border-t border-black/5">
                 <h2 className="text-[13px] font-bold font-mono text-gray-500 uppercase tracking-[0.3em]">Testimonials</h2>
                 
-                <div className="-mx-6 md:-mx-12 overflow-hidden">
+                <div className="relative -mx-6 md:-mx-12 overflow-hidden">
+                  {/* Subtle fade edges */}
+                  <div className="absolute inset-y-0 left-0 w-12 md:w-24 bg-gradient-to-r from-[#FAF9F2] to-transparent z-20 pointer-events-none" />
+                  <div className="absolute inset-y-0 right-0 w-12 md:w-24 bg-gradient-to-l from-[#FAF9F2] to-transparent z-20 pointer-events-none" />
+                  
                   <StaggerTestimonials />
                 </div>
               </div>
