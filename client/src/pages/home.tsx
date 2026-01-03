@@ -95,7 +95,7 @@ const EnrollmentModal = ({ isOpen, onClose }: { isOpen: boolean, onClose: () => 
                       <label className="text-[13px] font-bold text-gray-700 ml-1">Full Name</label>
                       <input 
                         type="text" 
-                        placeholder="John Doe"
+                        placeholder="Bruce Wayne (Batman)"
                         className="w-full px-4 py-3 rounded-xl bg-black/5 border-none focus:ring-2 focus:ring-[#D4E845] transition-all text-sm font-inter"
                         value={formData.fullName}
                         onChange={(e) => setFormData({...formData, fullName: e.target.value})}
@@ -115,7 +115,7 @@ const EnrollmentModal = ({ isOpen, onClose }: { isOpen: boolean, onClose: () => 
                       <label className="text-[13px] font-bold text-gray-700 ml-1">Phone / WhatsApp</label>
                       <input 
                         type="text" 
-                        placeholder="+1 234 567 890"
+                        placeholder="+91 8123456780"
                         className="w-full px-4 py-3 rounded-xl bg-black/5 border-none focus:ring-2 focus:ring-[#D4E845] transition-all text-sm font-inter"
                         value={formData.phone}
                         onChange={(e) => setFormData({...formData, phone: e.target.value})}
