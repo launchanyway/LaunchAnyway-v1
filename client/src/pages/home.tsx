@@ -1,4 +1,4 @@
-import React from "react";
+import React, { useState } from "react";
 import { 
   Box, 
   Twitter, 
@@ -20,9 +20,110 @@ import {
   ChevronRight,
   Code2,
   Rocket,
-  Sparkles
+  Sparkles,
+  X,
+  CheckCircle2,
+  ExternalLink
 } from "lucide-react";
 import { StaggerTestimonials } from "@/components/ui/stagger-testimonials";
+import { motion, AnimatePresence } from "framer-motion";
+
+// Enrollment Modal Component
+const EnrollmentModal = ({ isOpen, onClose }: { isOpen: boolean, onClose: () => void }) => {
+  return (
+    <AnimatePresence>
+      {isOpen && (
+        <div className="fixed inset-0 z-[100] flex items-center justify-center p-4 md:p-6">
+          <motion.div
+            initial={{ opacity: 0 }}
+            animate={{ opacity: 1 }}
+            exit={{ opacity: 0 }}
+            onClick={onClose}
+            className="absolute inset-0 bg-black/40 backdrop-blur-sm"
+          />
+          <motion.div
+            initial={{ opacity: 0, scale: 0.9, y: 20 }}
+            animate={{ 
+              opacity: 1, 
+              scale: 1, 
+              y: 0,
+              transition: {
+                type: "spring",
+                damping: 25,
+                stiffness: 300
+              }
+            }}
+            exit={{ opacity: 0, scale: 0.9, y: 20 }}
+            className="relative w-full max-w-lg bg-[#FAF9F2] rounded-[32px] overflow-hidden shadow-2xl border border-black/5"
+          >
+            {/* Header / Banner */}
+            <div className="bg-[#D4E845] p-8 pb-12 relative overflow-hidden">
+              <div className="absolute top-0 right-0 p-6">
+                <button 
+                  onClick={onClose}
+                  className="w-10 h-10 rounded-full bg-black/10 hover:bg-black/20 flex items-center justify-center transition-colors"
+                >
+                  <X className="w-5 h-5 text-black" />
+                </button>
+              </div>
+              <div className="relative z-10 space-y-2">
+                <div className="w-12 h-12 rounded-2xl bg-black flex items-center justify-center mb-4">
+                  <Sparkles className="w-6 h-6 text-[#D4E845] fill-current" />
+                </div>
+                <h2 className="text-3xl md:text-4xl font-medium tracking-tight font-instrument text-black">
+                  Ready to build?
+                </h2>
+                <p className="text-black/60 font-medium">We'd love to have you, but first...</p>
+              </div>
+              {/* Abstract decoration */}
+              <div className="absolute -bottom-12 -right-12 w-48 h-48 bg-black/5 rounded-full blur-3xl" />
+            </div>
+
+            <div className="p-8 space-y-8 -mt-6 relative z-10 bg-[#FAF9F2] rounded-t-[32px]">
+              <div className="space-y-6">
+                <div className="flex gap-5">
+                  <div className="w-10 h-10 rounded-full bg-blue-600/10 flex items-center justify-center shrink-0">
+                    <CheckCircle2 className="w-5 h-5 text-blue-600" />
+                  </div>
+                  <div className="space-y-1.5">
+                    <h3 className="font-bold text-[15px] uppercase tracking-wider text-gray-900 font-mono">1. The Vibe Check</h3>
+                    <p className="text-gray-600 leading-relaxed text-[15px]">
+                      We keep our cohorts small to make sure everyone gets real attention. 
+                      Please <span className="text-blue-600 font-bold underline underline-offset-4 cursor-pointer">fill out this quick form</span> so we can see if we're a good fit for your goals.
+                    </p>
+                  </div>
+                </div>
+
+                <div className="flex gap-5">
+                  <div className="w-10 h-10 rounded-full bg-blue-600/10 flex items-center justify-center shrink-0">
+                    <MessageSquare className="w-5 h-5 text-blue-600" />
+                  </div>
+                  <div className="space-y-1.5">
+                    <h3 className="font-bold text-[15px] uppercase tracking-wider text-gray-900 font-mono">2. Real Human Response</h3>
+                    <p className="text-gray-600 leading-relaxed text-[15px]">
+                      A real human will review your application and get back to you within 2-3 hours. 
+                      And don't worry—we'll let you know either way, because being left on read sucks.
+                    </p>
+                  </div>
+                </div>
+              </div>
+
+              <div className="pt-2">
+                <button className="w-full py-5 rounded-2xl bg-black text-[#D4E845] text-[15px] font-bold hover:bg-gray-900 transition-all uppercase tracking-[0.2em] shadow-xl flex items-center justify-center gap-3 group">
+                  Open Application Form
+                  <ExternalLink className="w-4 h-4 transition-transform group-hover:translate-x-1 group-hover:-translate-y-1" />
+                </button>
+                <p className="text-center text-[11px] text-gray-400 font-bold font-mono uppercase tracking-[0.1em] mt-6 italic">
+                  * Next cohort starts Jan 20th — No strings attached
+                </p>
+              </div>
+            </div>
+          </motion.div>
+        </div>
+      )}
+    </AnimatePresence>
+  );
+};
 
 // Video Player Component
 const VideoPlayer = ({ videoId }: { videoId: string }) => {
@@ -137,8 +238,11 @@ const ToolIcon = ({ src, alt, className }: { src: string, alt: string, className
 );
 
 export default function Home() {
+  const [isModalOpen, setIsModalOpen] = useState(false);
+
   return (
     <div className="min-h-screen bg-[#FAF9F2] text-[#1a1a1a] font-inter selection:bg-[#D4E845] selection:text-black antialiased pb-12 md:pb-16">
+      <EnrollmentModal isOpen={isModalOpen} onClose={() => setIsModalOpen(false)} />
       {/* Navbar */}
       <header className="absolute md:fixed top-0 left-0 right-0 p-6 md:p-8 flex justify-between items-center z-50 pointer-events-none">
         <div className="flex items-center pointer-events-auto h-[18px] md:h-[22px]">
@@ -373,7 +477,10 @@ export default function Home() {
               </div>
 
               <div className="space-y-3 relative z-10">
-                <button className="w-full py-4 rounded-2xl bg-black text-white text-[14px] font-bold hover:bg-gray-800 transition-all uppercase tracking-[0.15em] shadow-xl shadow-black/5 hover:scale-[1.02] active:scale-[0.98]">
+                <button 
+                  onClick={() => setIsModalOpen(true)}
+                  className="w-full py-4 rounded-2xl bg-black text-white text-[14px] font-bold hover:bg-gray-800 transition-all uppercase tracking-[0.15em] shadow-xl shadow-black/5 hover:scale-[1.02] active:scale-[0.98]"
+                >
                   Secure Your Spot
                 </button>
                 <p className="text-[11px] text-center text-blue-600 font-bold font-mono uppercase tracking-wider">
@@ -394,7 +501,7 @@ export default function Home() {
       <footer className="fixed bottom-0 left-0 right-0 p-6 md:p-8 flex justify-between items-end text-[11px] font-bold font-mono text-gray-400 pointer-events-none bg-gradient-to-t from-[#FAF9F2] via-[#FAF9F2] via-60% to-transparent h-24 z-40">
         <div className="pointer-events-auto">
           <button 
-            onClick={() => document.getElementById('enrollment')?.scrollIntoView({ behavior: 'smooth' })}
+            onClick={() => setIsModalOpen(true)}
             className="tracking-[0.2em] uppercase cursor-pointer hover:text-black transition-colors"
           >
             Register Now
