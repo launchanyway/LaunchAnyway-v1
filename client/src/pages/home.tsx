@@ -107,7 +107,7 @@ export default function Home() {
         </div>
       </header>
 
-      <main className="max-w-[1200px] mx-auto px-6 md:px-12 pt-28 md:pt-36 pb-32 overflow-hidden">
+      <main className="max-w-[1200px] mx-auto px-6 md:px-12 pt-28 md:pt-36 pb-64 overflow-hidden">
         <div className="flex flex-col lg:flex-row gap-16 lg:gap-24 items-start">
           
           {/* Left Content Column */}
