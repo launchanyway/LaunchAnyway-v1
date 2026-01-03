@@ -205,16 +205,21 @@ export default function Home() {
                         <h3 className="text-[17px] font-bold text-gray-900 tracking-tight uppercase">Build & Launch Your First SaaS</h3>
                         <p className="text-[11px] text-gray-400 font-mono uppercase tracking-widest font-bold mt-1">Week 1</p>
                       </div>
-                      <div className="space-y-6">
-                        <div className="flex gap-4">
-                          <span className="text-[10px] font-black font-mono text-black bg-[#D4E845] w-6 h-6 rounded flex items-center justify-center shrink-0">01</span>
-                          <div className="space-y-1">
+                      <div className="space-y-8">
+                        <div className="flex gap-6">
+                          <div className="flex flex-col items-center">
+                            <span className="text-[10px] font-black font-mono text-black bg-[#D4E845] px-2 py-1 rounded flex items-center justify-center shrink-0">01</span>
+                            <div className="w-[1.5px] h-full bg-black/5 mt-2"></div>
+                          </div>
+                          <div className="space-y-1 pb-4">
                             <p className="text-[15px] text-gray-900 font-bold leading-none">Live session</p>
                             <p className="text-[14px] text-[#5a5a5a] leading-relaxed">We build your first AI-powered product together. You'll use Lovable, Gemini, and Supabase to create a real working AI tool — not a demo.</p>
                           </div>
                         </div>
-                        <div className="flex gap-4">
-                          <span className="text-[10px] font-black font-mono text-black bg-[#D4E845] w-6 h-6 rounded flex items-center justify-center shrink-0">2-7</span>
+                        <div className="flex gap-6">
+                          <div className="flex flex-col items-center">
+                            <span className="text-[10px] font-black font-mono text-black bg-[#D4E845] px-2 py-1 rounded flex items-center justify-center shrink-0">2–7</span>
+                          </div>
                           <div className="space-y-1">
                             <p className="text-[15px] text-gray-900 font-bold leading-none">Build & launch</p>
                             <p className="text-[14px] text-[#5a5a5a] leading-relaxed">You'll work on daily assignments to improve what you built. By the end of the week, you'll launch your first real SaaS product with a live URL.</p>
@@ -232,23 +237,31 @@ export default function Home() {
                         <h3 className="text-[17px] font-bold text-gray-900 tracking-tight uppercase">Build Your First Mobile App</h3>
                         <p className="text-[11px] text-gray-400 font-mono uppercase tracking-widest font-bold mt-1">Week 2</p>
                       </div>
-                      <div className="space-y-6">
-                        <div className="flex gap-4">
-                          <span className="text-[10px] font-black font-mono text-black bg-[#E895C9] w-6 h-6 rounded flex items-center justify-center shrink-0">08</span>
-                          <div className="space-y-1">
+                      <div className="space-y-8">
+                        <div className="flex gap-6">
+                          <div className="flex flex-col items-center">
+                            <span className="text-[10px] font-black font-mono text-black bg-[#E895C9] px-2 py-1 rounded flex items-center justify-center shrink-0">08</span>
+                            <div className="w-[1.5px] h-full bg-black/5 mt-2"></div>
+                          </div>
+                          <div className="space-y-1 pb-4">
                             <p className="text-[15px] text-gray-900 font-bold leading-none">Live session</p>
                             <p className="text-[14px] text-[#5a5a5a] leading-relaxed">We build a cross-platform mobile app using Replit. You'll run it on both iOS and Android using Expo.</p>
                           </div>
                         </div>
-                        <div className="flex gap-4">
-                          <span className="text-[10px] font-black font-mono text-black bg-[#E895C9] w-6 h-6 rounded flex items-center justify-center shrink-0">09</span>
-                          <div className="space-y-1">
+                        <div className="flex gap-6">
+                          <div className="flex flex-col items-center">
+                            <span className="text-[10px] font-black font-mono text-black bg-[#E895C9] px-2 py-1 rounded flex items-center justify-center shrink-0">09</span>
+                            <div className="w-[1.5px] h-full bg-black/5 mt-2"></div>
+                          </div>
+                          <div className="space-y-1 pb-4">
                             <p className="text-[15px] text-gray-900 font-bold leading-none">Backend & debugging</p>
                             <p className="text-[14px] text-[#5a5a5a] leading-relaxed">We connect your mobile app to Supabase. You'll learn how to store data, handle auth, and debug real issues.</p>
                           </div>
                         </div>
-                        <div className="flex gap-4">
-                          <span className="text-[10px] font-black font-mono text-black bg-[#E895C9] w-6 h-6 rounded flex items-center justify-center shrink-0">10-14</span>
+                        <div className="flex gap-6">
+                          <div className="flex flex-col items-center">
+                            <span className="text-[10px] font-black font-mono text-black bg-[#E895C9] px-2 py-1 rounded flex items-center justify-center shrink-0">10–14</span>
+                          </div>
                           <div className="space-y-1">
                             <p className="text-[15px] text-gray-900 font-bold leading-none">Build & refine</p>
                             <p className="text-[14px] text-[#5a5a5a] leading-relaxed">Daily assignments focused on building a complete mobile app. You'll design habit flows, streaks, and nudges — and end with a fully working app.</p>
