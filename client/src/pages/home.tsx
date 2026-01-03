@@ -122,14 +122,11 @@ export default function Home() {
           {/* Left Content Column */}
           <div className="lg:col-span-8 space-y-20">
             
-            {/* Course Header */}
-            <div className="flex items-center gap-6">
-              <div className="w-16 h-16 rounded-2xl overflow-hidden bg-[#D4E845] flex items-center justify-center shadow-inner">
-                <IconPill icon={Zap} color="bg-transparent" iconColor="text-black" className="w-8 h-8 !translate-y-0" />
-              </div>
-              <div className="flex flex-col">
-                <h1 className="text-[17px] font-bold text-gray-900 leading-tight tracking-tight">LaunchAnyway</h1>
-                <span className="text-[12px] font-mono text-gray-400 tracking-widest uppercase font-semibold">LIVE COHORT</span>
+            {/* Course Header Chip */}
+            <div className="flex items-center">
+              <div className="bg-[#e5e7eb] px-4 py-1.5 rounded-full flex items-center gap-2">
+                <span className="text-[12px] font-mono text-gray-500 font-bold">/</span>
+                <span className="text-[11px] font-mono text-gray-900 font-bold tracking-widest uppercase">LIVE COURSE</span>
               </div>
             </div>
 
