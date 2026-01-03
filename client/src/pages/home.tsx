@@ -1,11 +1,11 @@
 import React, { useState, useRef } from "react";
-import { 
-  Box, 
-  Twitter, 
-  Instagram, 
-  Download, 
-  Mail, 
-  MapPin, 
+import {
+  Box,
+  Twitter,
+  Instagram,
+  Download,
+  Mail,
+  MapPin,
   ArrowUpRight,
   Lock,
   Asterisk,
@@ -30,6 +30,7 @@ import { motion, AnimatePresence } from "framer-motion";
 import { StardustButton } from "@/components/ui/stardust-button";
 import { cn } from "@/lib/utils";
 import { toast } from "sonner";
+import { supabase } from "@/lib/supabase";
 
 // Enrollment Modal Component
 const EnrollmentModal = ({ isOpen, onClose }: { isOpen: boolean, onClose: () => void }) => {
@@ -43,6 +44,7 @@ const EnrollmentModal = ({ isOpen, onClose }: { isOpen: boolean, onClose: () => 
     commitment: ""
   });
   const [errors, setErrors] = useState<Record<string, string>>({});
+  const [isSubmitting, setIsSubmitting] = useState(false);
   const emailRef = useRef<HTMLInputElement>(null);
 
   const roles = ["Designer", "Developer", "Product Manager", "Founder / Solo Builder", "Student", "Other"];
@@ -54,7 +56,7 @@ const EnrollmentModal = ({ isOpen, onClose }: { isOpen: boolean, onClose: () => 
     return /^[^\s@]+@[^\s@]+\.[^\s@]+$/.test(email);
   };
 
-  const handleSubmit = (e: React.FormEvent) => {
+  const handleSubmit = async (e: React.FormEvent) => {
     e.preventDefault();
     const newErrors: Record<string, string> = {};
 
@@ -72,30 +74,83 @@ const EnrollmentModal = ({ isOpen, onClose }: { isOpen: boolean, onClose: () => 
     }
 
     setErrors({});
-    
-    toast.custom((t) => (
-      <motion.div
-        initial={{ opacity: 0, y: -20, scale: 0.95 }}
-        animate={{ opacity: 1, y: 0, scale: 1 }}
-        exit={{ opacity: 0, scale: 0.95 }}
-        className="bg-[#FAF9F2] text-[#1a1a1a] p-4 rounded-2xl shadow-[0_20px_50px_rgba(0,0,0,0.1)] border border-black/[0.03] flex items-center gap-4 min-w-[320px] pointer-events-auto"
-      >
-        <div className="w-10 h-10 rounded-full bg-[#D4E845] flex items-center justify-center shrink-0">
-          <CheckCircle2 className="w-5 h-5 text-black" />
-        </div>
-        <div className="flex flex-col">
-          <span className="font-bold text-[14px] tracking-tight">Form Submitted</span>
-          <p className="text-gray-500 text-[12px] font-medium leading-none mt-0.5">
-            We'll get in touch within 24 hours
-          </p>
-        </div>
-      </motion.div>
-    ), {
-      position: 'top-center',
-      duration: 4000,
-    });
-    
-    onClose();
+    setIsSubmitting(true);
+
+    try {
+      const { error } = await supabase
+        .from('applications')
+        .insert([
+          {
+            full_name: formData.fullName,
+            email: formData.email,
+            phone: formData.phone,
+            role: formData.role,
+            goal: formData.goal,
+            reason: formData.reason,
+            commitment: formData.commitment
+          }
+        ]);
+
+      if (error) throw error;
+
+      toast.custom((t) => (
+        <motion.div
+          initial={{ opacity: 0, y: -20, scale: 0.95 }}
+          animate={{ opacity: 1, y: 0, scale: 1 }}
+          exit={{ opacity: 0, scale: 0.95 }}
+          className="bg-[#FAF9F2] text-[#1a1a1a] p-4 rounded-2xl shadow-[0_20px_50px_rgba(0,0,0,0.1)] border border-black/[0.03] flex items-center gap-4 min-w-[320px] pointer-events-auto"
+        >
+          <div className="w-10 h-10 rounded-full bg-[#D4E845] flex items-center justify-center shrink-0">
+            <CheckCircle2 className="w-5 h-5 text-black" />
+          </div>
+          <div className="flex flex-col">
+            <span className="font-bold text-[14px] tracking-tight">Form Submitted</span>
+            <p className="text-gray-500 text-[12px] font-medium leading-none mt-0.5">
+              We'll get in touch within 24 hours
+            </p>
+          </div>
+        </motion.div>
+      ), {
+        position: 'top-center',
+        duration: 4000,
+      });
+
+      setFormData({
+        fullName: "",
+        email: "",
+        phone: "",
+        role: "",
+        goal: "",
+        reason: "",
+        commitment: ""
+      });
+
+      onClose();
+    } catch (error: any) {
+      toast.custom((t) => (
+        <motion.div
+          initial={{ opacity: 0, y: -20, scale: 0.95 }}
+          animate={{ opacity: 1, y: 0, scale: 1 }}
+          exit={{ opacity: 0, scale: 0.95 }}
+          className="bg-[#FAF9F2] text-[#1a1a1a] p-4 rounded-2xl shadow-[0_20px_50px_rgba(0,0,0,0.1)] border border-black/[0.03] flex items-center gap-4 min-w-[320px] pointer-events-auto"
+        >
+          <div className="w-10 h-10 rounded-full bg-red-500 flex items-center justify-center shrink-0">
+            <X className="w-5 h-5 text-white" />
+          </div>
+          <div className="flex flex-col">
+            <span className="font-bold text-[14px] tracking-tight">Submission Failed</span>
+            <p className="text-gray-500 text-[12px] font-medium leading-none mt-0.5">
+              {error.message || "Please try again"}
+            </p>
+          </div>
+        </motion.div>
+      ), {
+        position: 'top-center',
+        duration: 4000,
+      });
+    } finally {
+      setIsSubmitting(false);
+    }
   };
 
   return (
@@ -281,11 +336,11 @@ const EnrollmentModal = ({ isOpen, onClose }: { isOpen: boolean, onClose: () => 
                 </div>
 
                 <div className="pt-4 pb-2">
-                  <StardustButton 
+                  <StardustButton
                     type="submit"
-                    disabled={!formData.fullName || !formData.email || !formData.phone || !formData.role || !formData.goal || !formData.reason || !formData.commitment}
+                    disabled={!formData.fullName || !formData.email || !formData.phone || !formData.role || !formData.goal || !formData.reason || !formData.commitment || isSubmitting}
                   >
-                    Submit Application
+                    {isSubmitting ? "Submitting..." : "Submit Application"}
                   </StardustButton>
                   <p className="text-[9px] text-center text-gray-400 mt-3 uppercase tracking-widest font-bold">
                     100% Secure • No Payment Required Yet
