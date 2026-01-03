@@ -221,18 +221,16 @@ const EnrollmentModal = ({ isOpen, onClose }: { isOpen: boolean, onClose: () => 
                 </div>
 
                 {/* Submit Section */}
-                <div className="pt-4 pb-2 sticky bottom-0 bg-[#FAF9F2] z-30">
-                  <div className="bg-black/5 rounded-2xl p-4 border border-black/5">
-                    <StardustButton onClick={() => {
-                      alert("Application Submitted! We'll be in touch within 4 hours.");
-                      onClose();
-                    }}>
-                      Submit Application
-                    </StardustButton>
-                    <p className="text-[9px] text-center text-gray-400 mt-3 uppercase tracking-widest font-bold">
-                      100% Secure • No Payment Required Yet
-                    </p>
-                  </div>
+                <div className="pt-4 pb-2">
+                  <StardustButton onClick={() => {
+                    alert("Application Submitted! We'll be in touch within 4 hours.");
+                    onClose();
+                  }}>
+                    Submit Application
+                  </StardustButton>
+                  <p className="text-[9px] text-center text-gray-400 mt-3 uppercase tracking-widest font-bold">
+                    100% Secure • No Payment Required Yet
+                  </p>
                 </div>
               </form>
             </div>
