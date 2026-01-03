@@ -193,7 +193,7 @@ export default function Home() {
               </div>
 
               {/* Curriculum / Journey */}
-              <div className="space-y-8 max-w-xl">
+              <div id="journey" className="space-y-8 max-w-xl scroll-mt-32">
                 <h2 className="text-[13px] font-bold font-mono text-gray-500 uppercase tracking-[0.3em]">The Journey</h2>
                 
                 <div className="space-y-10 relative before:absolute before:left-[17px] before:top-2 before:bottom-2 before:w-[1.5px] before:bg-black/5">
@@ -327,11 +327,16 @@ export default function Home() {
           © LAUNCHANYWAY 2026
         </div>
         
-        <div className="absolute left-1/2 -translate-x-1/2 bottom-8 flex items-center gap-2.5 pointer-events-auto cursor-pointer hover:text-black transition-colors tracking-[0.2em] group">
-          <CircleDot className="w-4 h-4 text-gray-400 group-hover:text-black transition-colors" /> CURRICULUM
+        <div className="absolute left-1/2 -translate-x-1/2 bottom-8 pointer-events-auto">
+          <button 
+            onClick={() => document.getElementById('journey')?.scrollIntoView({ behavior: 'smooth' })}
+            className="flex items-center gap-2.5 cursor-pointer text-[11px] font-bold font-mono text-gray-400 hover:text-black transition-colors tracking-[0.2em] group"
+          >
+            <CircleDot className="w-4 h-4 text-gray-400 group-hover:text-black transition-colors" /> CURRICULUM
+          </button>
         </div>
         
-        <div className="pointer-events-auto flex items-center gap-2.5 tracking-[0.2em] uppercase">
+        <div className="pointer-events-auto flex items-center gap-2.5 tracking-[0.2em] uppercase invisible opacity-0">
           MADE BY <span className="bg-[#e5e5e0] text-gray-600 px-2 py-1 rounded text-[10px] font-black">tmpl</span>
         </div>
       </footer>
