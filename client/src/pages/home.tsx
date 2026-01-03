@@ -104,9 +104,9 @@ const EnrollmentModal = ({ isOpen, onClose }: { isOpen: boolean, onClose: () => 
             <CheckCircle2 className="w-5 h-5 text-black" />
           </div>
           <div className="flex flex-col">
-            <span className="font-bold text-[14px] tracking-tight">Form Submitted</span>
+            <span className="font-bold text-[14px] tracking-tight">you're in</span>
             <p className="text-gray-500 text-[12px] font-medium leading-none mt-0.5">
-              We'll get in touch within 24 hours
+              we'll hit you up within 24hrs
             </p>
           </div>
         </motion.div>
