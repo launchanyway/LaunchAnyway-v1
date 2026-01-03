@@ -140,6 +140,11 @@ export default function Home() {
             LaunchAnyway.
           </span>
         </div>
+        <div className="flex items-center pointer-events-auto">
+          <span className="text-[11px] font-bold font-mono text-gray-400 uppercase tracking-[0.2em]">
+            Course by Designfolio
+          </span>
+        </div>
       </header>
 
       <main className="max-w-[1200px] mx-auto px-6 md:px-12 pt-28 md:pt-36 pb-32">
