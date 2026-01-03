@@ -463,7 +463,7 @@ export default function Home() {
                 </div>
                 <div className="space-y-1">
                   <p className="text-[10px] font-bold font-mono text-gray-400 uppercase tracking-widest">Cost</p>
-                  <p className="text-[15px] font-semibold text-gray-800 font-inter">₹5,999</p>
+                  <p className="text-[15px] font-semibold text-gray-800 font-inter">₹6,999</p>
                 </div>
                 <div className="space-y-1">
                   <p className="text-[10px] font-bold font-mono text-gray-400 uppercase tracking-widest">Duration</p>
