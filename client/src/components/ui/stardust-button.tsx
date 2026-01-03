@@ -9,21 +9,23 @@ export const StardustButton: React.FC<StardustButtonProps> = ({
   children = "Secure Your Spot", 
   onClick, 
   className = "",
+  disabled,
   ...props 
 }) => {
   const buttonStyle = {
     '--lime': '#D4E845',
-    '--bg': '#000000',
+    '--bg': disabled ? '#1a1a1a' : '#000000',
     '--radius': '16px',
     outline: 'none',
-    cursor: 'pointer',
+    cursor: disabled ? 'not-allowed' : 'pointer',
     border: 0,
     position: 'relative',
     borderRadius: 'var(--radius)',
     backgroundColor: 'var(--bg)',
     transition: 'all 0.2s ease',
     width: '100%',
-    boxShadow: `
+    opacity: disabled ? 0.6 : 1,
+    boxShadow: disabled ? 'none' : `
       inset 0 0.3rem 0.9rem rgba(212, 232, 69, 0.2),
       inset 0 -0.1rem 0.3rem rgba(0, 0, 0, 0.7),
       inset 0 -0.4rem 0.9rem rgba(212, 232, 69, 0.3),
@@ -35,7 +37,7 @@ export const StardustButton: React.FC<StardustButtonProps> = ({
   const wrapStyle = {
     fontSize: '13px',
     fontWeight: 700,
-    color: '#D4E845',
+    color: disabled ? '#4a4a4a' : '#D4E845',
     padding: '12px 20px',
     borderRadius: 'inherit',
     position: 'relative',
@@ -86,7 +88,7 @@ export const StardustButton: React.FC<StardustButtonProps> = ({
       );
     }
     
-    .stardust-btn:hover {
+    .stardust-btn:not(:disabled):hover {
       box-shadow:
         inset 0 0.3rem 0.5rem rgba(212, 232, 69, 0.3),
         inset 0 -0.1rem 0.3rem rgba(0, 0, 0, 0.7),
@@ -96,17 +98,22 @@ export const StardustButton: React.FC<StardustButtonProps> = ({
       transform: scale(1.02);
     }
     
-    .stardust-btn:active {
+    .stardust-btn:not(:disabled):active {
       transform: translateY(2px) scale(0.98);
     }
 
-    .stardust-btn:hover .wrap::before {
+    .stardust-btn:not(:disabled):hover .wrap::before {
       transform: translateY(-5%);
     }
     
-    .stardust-btn:hover .wrap::after {
+    .stardust-btn:not(:disabled):hover .wrap::after {
       opacity: 0.4;
       transform: translateY(5%);
+    }
+
+    .stardust-btn:disabled .wrap::before,
+    .stardust-btn:disabled .wrap::after {
+      display: none;
     }
   `;
 
@@ -117,6 +124,7 @@ export const StardustButton: React.FC<StardustButtonProps> = ({
         className={cn("stardust-btn", className)}
         style={buttonStyle}
         onClick={onClick}
+        disabled={disabled}
         {...props}
       >
         <div className="wrap" style={wrapStyle}>
