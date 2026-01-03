@@ -54,10 +54,10 @@ const EnrollmentModal = ({ isOpen, onClose }: { isOpen: boolean, onClose: () => 
               }
             }}
             exit={{ opacity: 0, scale: 0.9, y: 20 }}
-            className="relative w-full max-w-lg bg-[#FAF9F2] rounded-[32px] overflow-hidden shadow-2xl border border-black/5"
+            className="relative w-full max-w-md bg-[#FAF9F2] rounded-[32px] overflow-hidden shadow-2xl border-none"
           >
             {/* Header / Banner */}
-            <div className="bg-[#D4E845] p-8 pb-12 relative overflow-hidden">
+            <div className="bg-[#D4E845] p-8 pb-10 relative overflow-hidden">
               <div className="absolute top-0 right-0 p-6">
                 <button 
                   onClick={onClose}
@@ -66,54 +66,36 @@ const EnrollmentModal = ({ isOpen, onClose }: { isOpen: boolean, onClose: () => 
                   <X className="w-5 h-5 text-black" />
                 </button>
               </div>
-              <div className="relative z-10 space-y-2">
-                <div className="w-12 h-12 rounded-2xl bg-black flex items-center justify-center mb-4">
-                  <Sparkles className="w-6 h-6 text-[#D4E845] fill-current" />
-                </div>
+              <div className="relative z-10 space-y-1">
                 <h2 className="text-3xl md:text-4xl font-medium tracking-tight font-instrument text-black">
-                  Selection Process
+                  Ready to Build?
                 </h2>
                 <p className="text-black/60 font-medium">Small cohorts, personalized focus.</p>
               </div>
-              {/* Abstract decoration */}
-              <div className="absolute -bottom-12 -right-12 w-48 h-48 bg-black/5 rounded-full blur-3xl" />
             </div>
 
-            <div className="p-8 space-y-8 -mt-6 relative z-10 bg-[#FAF9F2] rounded-t-[32px]">
+            <div className="p-8 space-y-6 -mt-6 relative z-10 bg-[#FAF9F2] rounded-t-[32px]">
               <div className="space-y-6">
-                <div className="flex gap-5">
-                  <div className="w-10 h-10 rounded-full bg-blue-600/10 flex items-center justify-center shrink-0">
-                    <CheckCircle2 className="w-5 h-5 text-blue-600" />
-                  </div>
-                  <div className="space-y-1">
-                    <h3 className="font-bold text-[14px] uppercase tracking-wider text-gray-900 font-mono">1. The Application</h3>
-                    <p className="text-gray-600 leading-relaxed text-[15px]">
-                      Fill out this quick form so we can understand your goals.
-                    </p>
-                  </div>
+                <div className="space-y-2">
+                  <h3 className="font-bold text-[13px] uppercase tracking-wider text-gray-400 font-mono">Step 1</h3>
+                  <p className="text-gray-900 leading-relaxed text-[17px] font-medium">
+                    Fill out <span className="text-blue-600 underline underline-offset-4 cursor-pointer">this application form</span>.
+                  </p>
                 </div>
 
-                <div className="flex gap-5">
-                  <div className="w-10 h-10 rounded-full bg-blue-600/10 flex items-center justify-center shrink-0">
-                    <MessageSquare className="w-5 h-5 text-blue-600" />
-                  </div>
-                  <div className="space-y-1">
-                    <h3 className="font-bold text-[14px] uppercase tracking-wider text-gray-900 font-mono">2. Fast Response</h3>
-                    <p className="text-gray-600 leading-relaxed text-[15px]">
-                      We'll get back to you within 2-3 hours. We'll let you know even if you're not selected.
-                    </p>
-                  </div>
+                <div className="space-y-2">
+                  <h3 className="font-bold text-[13px] uppercase tracking-wider text-gray-400 font-mono">Step 2</h3>
+                  <p className="text-gray-600 leading-relaxed text-[15px]">
+                    We'll get back to you within 2-3 hours. We'll let you know even if you're not selected.
+                  </p>
                 </div>
               </div>
 
-              <div className="pt-2">
+              <div className="pt-4">
                 <button className="w-full py-5 rounded-2xl bg-black text-[#D4E845] text-[15px] font-bold hover:bg-gray-900 transition-all uppercase tracking-[0.2em] shadow-xl flex items-center justify-center gap-3 group">
                   Open Form
                   <ExternalLink className="w-4 h-4 transition-transform group-hover:translate-x-1 group-hover:-translate-y-1" />
                 </button>
-                <p className="text-center text-[11px] text-gray-400 font-bold font-mono uppercase tracking-[0.1em] mt-6 italic">
-                  * Next cohort starts Jan 20th
-                </p>
               </div>
             </div>
           </motion.div>
