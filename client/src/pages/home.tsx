@@ -115,9 +115,9 @@ export default function Home() {
             
             {/* Course Header Chip */}
             <div className="flex items-center">
-              <div className="bg-[#eeede8] px-5 py-2 rounded-full flex items-center gap-2.5 shadow-sm border border-black/5">
-                <span className="text-[13px] font-bold font-mono text-gray-400">/</span>
-                <span className="text-[11px] font-bold font-mono text-gray-900 tracking-[0.2em] uppercase">LIVE COURSE</span>
+              <div className="flex items-center gap-2">
+                <span className="text-[12px] font-bold font-mono text-blue-600">/</span>
+                <span className="text-[11px] font-bold font-mono text-gray-900 tracking-[0.3em] uppercase opacity-80">LIVE COURSE</span>
               </div>
             </div>
 
