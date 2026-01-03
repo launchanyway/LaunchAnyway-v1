@@ -120,7 +120,7 @@ export default function Home() {
         <div className="grid grid-cols-1 lg:grid-cols-12 gap-16 lg:gap-24">
           
           {/* Left Content Column */}
-          <div className="lg:col-span-8 space-y-20">
+          <div className="lg:col-span-8 space-y-12">
             
             {/* Course Header Chip */}
             <div className="flex items-center">
@@ -131,7 +131,7 @@ export default function Home() {
             </div>
 
             {/* Title / Hero Intro */}
-            <div className="space-y-8">
+            <div className="space-y-8 !mt-10">
               <h2 className="text-[32px] md:text-[42px] leading-[1.1] font-bold text-gray-900 max-w-2xl tracking-tight">
                 You have an idea? <br />
                 Are you going to <CircledText>ship</CircledText> it?
