@@ -309,10 +309,7 @@ export default function Home() {
             <div className="bg-[#eeede8] border border-black/5 rounded-3xl p-6 space-y-8 shadow-sm">
               <div className="space-y-1">
                 <p className="text-[11px] font-bold font-mono text-blue-600 uppercase tracking-widest">Next Intake</p>
-                <div className="flex justify-between items-baseline">
-                  <p className="text-[20px] font-medium text-gray-900 font-inter tracking-tight">January 20th, 2026</p>
-                  <p className="text-[20px] font-bold text-gray-900 font-inter tracking-tight">₹5,999</p>
-                </div>
+                <p className="text-[20px] font-medium text-gray-900 font-inter tracking-tight">January 20th, 2026</p>
               </div>
 
               <div className="grid grid-cols-2 gap-6">
@@ -321,14 +318,17 @@ export default function Home() {
                   <p className="text-[15px] font-semibold text-gray-800 font-inter">9 / 20 Seats</p>
                 </div>
                 <div className="space-y-1">
+                  <p className="text-[10px] font-bold font-mono text-gray-400 uppercase tracking-widest">Cost</p>
+                  <p className="text-[15px] font-semibold text-gray-800 font-inter">₹5,999</p>
+                </div>
+                <div className="space-y-1">
                   <p className="text-[10px] font-bold font-mono text-gray-400 uppercase tracking-widest">Duration</p>
                   <p className="text-[15px] font-semibold text-gray-800 font-inter">2 Week Sprint</p>
                 </div>
-              </div>
-
-              <div className="space-y-1 pt-2 border-t border-black/5">
-                <p className="text-[10px] font-bold font-mono text-gray-400 uppercase tracking-widest">Live Sessions</p>
-                <p className="text-[15px] font-semibold text-gray-800 font-inter">8:00 PM IST (x2)</p>
+                <div className="space-y-1">
+                  <p className="text-[10px] font-bold font-mono text-gray-400 uppercase tracking-widest">Sessions</p>
+                  <p className="text-[15px] font-semibold text-gray-800 font-inter">x2 Live</p>
+                </div>
               </div>
 
               <button className="w-full py-4 rounded-2xl bg-black text-white text-[14px] font-bold hover:bg-gray-800 transition-all uppercase tracking-[0.15em] shadow-xl shadow-black/5 hover:scale-[1.02] active:scale-[0.98]">
