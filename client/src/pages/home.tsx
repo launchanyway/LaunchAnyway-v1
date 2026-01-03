@@ -115,9 +115,11 @@ export default function Home() {
             
             {/* Course Header Chip */}
             <div className="flex items-center">
-              <div className="flex items-center gap-2">
-                <span className="text-[12px] font-bold font-mono text-blue-600">/</span>
-                <span className="text-[11px] font-bold font-mono text-gray-900 tracking-[0.3em] uppercase opacity-80">LIVE COURSE</span>
+              <div className="inline-flex items-center bg-[#E5E4DE] rounded-full p-1 pr-4 gap-3 shadow-sm border border-black/5 group cursor-default">
+                <div className="w-7 h-7 rounded-full bg-blue-600 flex items-center justify-center shadow-sm">
+                  <Zap className="w-3.5 h-3.5 text-white fill-current" />
+                </div>
+                <span className="text-[11px] font-bold font-mono text-gray-900 tracking-[0.2em] uppercase">LIVE COURSE</span>
               </div>
             </div>
 
