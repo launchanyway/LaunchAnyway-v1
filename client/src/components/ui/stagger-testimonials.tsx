@@ -9,39 +9,21 @@ const SQRT_5000 = Math.sqrt(5000);
 const testimonials = [
   {
     tempId: 0,
-    testimonial: "My favorite solution in the market. We work 5x faster with the tools taught in this course.",
-    by: "Alex, CEO at TechCorp",
-    imgSrc: "https://i.pravatar.cc/150?img=1"
+    testimonial: "This program exceeded my expectations. The daily missions kept me engaged, the community feedback was supportive and insightful, and the AI integration felt seamless. I strengthened my strategic and technical problem-solving skills, gained insight into backend challenges, and left motivated to build my own product.",
+    by: "Prakash, Batch April'25",
+    imgSrc: "/testimonials/prakash.png"
   },
   {
     tempId: 1,
-    testimonial: "I'm confident my data is safe. I can't say that about other providers.",
-    by: "Dan, CTO at SecureNet",
-    imgSrc: "https://i.pravatar.cc/150?img=2"
+    testimonial: "I'd highly recommend this program to anyone in design or development. The hands-on missions are outcome-driven—you either complete them or you don't—which makes the learning stick. I gained valuable industry knowledge, filled key gaps, and created strong additions for my website and portfolio.",
+    by: "Nikole, Batch April'25",
+    imgSrc: "/testimonials/nikole.png"
   },
   {
     tempId: 2,
-    testimonial: "I know it's cliche, but we were lost before we found this course. Can't thank you guys enough!",
-    by: "Stephanie, COO at InnovateCo",
-    imgSrc: "https://i.pravatar.cc/150?img=3"
-  },
-  {
-    tempId: 3,
-    testimonial: "The products we built make planning for the future seamless. Can't recommend them enough!",
-    by: "Marie, CFO at FuturePlanning",
-    imgSrc: "https://i.pravatar.cc/150?img=4"
-  },
-  {
-    tempId: 4,
-    testimonial: "If I could give 11 stars, I'd give 12. The best learning experience so far.",
-    by: "Andre, Head of Design",
-    imgSrc: "https://i.pravatar.cc/150?img=5"
-  },
-  {
-    tempId: 5,
-    testimonial: "SO SO SO HAPPY WE FOUND YOU GUYS!!!! I'd bet you've saved me 100 hours so far.",
-    by: "Jeremy, Product Manager",
-    imgSrc: "https://i.pravatar.cc/150?img=6"
+    testimonial: "You won't just learn how to integrate AI into daily workflows—you'll develop a holistic understanding of business, strategy, and code. The program spans everything from micro-interactions and coding to writing PRDs, all while leveraging AI at a high level. Whether you're early in your design career or a senior designer new to these areas, it's well worth joining.",
+    by: "Preet, Batch Aug'25",
+    imgSrc: "/testimonials/preet.png"
   }
 ];
 
@@ -91,25 +73,24 @@ const TestimonialCard: React.FC<TestimonialCardProps> = ({
           height: 2
         }}
       />
-      <img
-        src={testimonial.imgSrc}
-        alt={`${testimonial.by.split(',')[0]}`}
-        className="mb-4 h-14 w-12 bg-gray-200 object-cover object-top rounded"
-        style={{
-          boxShadow: "3px 3px 0px rgba(0,0,0,0.1)"
-        }}
-      />
+      <div className="mb-4">
+        <img
+          src={testimonial.imgSrc}
+          alt={`${testimonial.by.split(',')[0]}`}
+          className="h-12 w-12 bg-gray-200 object-cover rounded-full border-2 border-white shadow-sm"
+        />
+      </div>
       <h3 className={cn(
-        "text-base sm:text-lg font-medium font-inter leading-tight tracking-tight",
+        "text-sm sm:text-[15px] font-medium font-inter leading-relaxed tracking-tight",
         isCenter ? "text-white" : "text-gray-900"
       )}>
         "{testimonial.testimonial}"
       </h3>
       <p className={cn(
-        "absolute bottom-8 left-8 right-8 mt-2 text-xs italic font-inter",
+        "absolute bottom-8 left-8 right-8 mt-2 text-xs font-bold font-mono uppercase tracking-wider",
         isCenter ? "text-white/70" : "text-gray-500"
       )}>
-        - {testimonial.by}
+        {testimonial.by}
       </p>
     </div>
   );
