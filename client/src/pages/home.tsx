@@ -107,16 +107,16 @@ export default function Home() {
         </div>
       </header>
 
-      <main className="max-w-[1200px] mx-auto px-6 md:px-12 pt-32 md:pt-40 pb-32 overflow-hidden">
+      <main className="max-w-[1200px] mx-auto px-6 md:px-12 pt-28 md:pt-36 pb-32 overflow-hidden">
         <div className="flex flex-col lg:flex-row gap-16 lg:gap-24 items-start">
           
           {/* Left Content Column */}
-          <div className="w-full lg:w-[65%] space-y-12">
+          <div className="w-full lg:w-[65%] space-y-10">
             
             {/* Course Header Chip */}
             <div className="flex items-center">
-              <div className="inline-flex items-center bg-[#E5E4DE] rounded-full p-1 pr-3 gap-2.5 shadow-sm border border-black/5 group cursor-default">
-                <div className="w-6 h-6 rounded-full bg-blue-600 flex items-center justify-center shadow-sm">
+              <div className="inline-flex items-center bg-[#E5E4DE] rounded-full p-1 pr-3 gap-2.5 border border-black/5 group cursor-default">
+                <div className="w-6 h-6 rounded-full bg-blue-600 flex items-center justify-center">
                   <Zap className="w-3 h-3 text-white fill-current" />
                 </div>
                 <span className="text-[10px] font-bold font-mono text-gray-900 tracking-[0.2em] uppercase">LIVE COURSE</span>
