@@ -25,8 +25,7 @@ import {
   CheckCircle2,
   ExternalLink
 } from "lucide-react";
-import { StaggerTestimonials } from "@/components/ui/stagger-testimonials";
-import { motion, AnimatePresence } from "framer-motion";
+import { StardustButton } from "@/components/ui/stardust-button";
 
 // Enrollment Modal Component
 const EnrollmentModal = ({ isOpen, onClose }: { isOpen: boolean, onClose: () => void }) => {
@@ -112,9 +111,9 @@ const EnrollmentModal = ({ isOpen, onClose }: { isOpen: boolean, onClose: () => 
               </div>
 
               <div className="pt-2">
-                <button className="w-full py-5 rounded-2xl bg-black text-[#D4E845] text-[15px] font-bold hover:bg-gray-900 transition-all uppercase tracking-[0.2em] shadow-xl flex items-center justify-center gap-3 group">
+                <StardustButton onClick={() => {}}>
                   Apply Now
-                </button>
+                </StardustButton>
               </div>
             </div>
           </motion.div>
@@ -476,12 +475,9 @@ export default function Home() {
               </div>
 
               <div className="space-y-3 relative z-10">
-                <button 
-                  onClick={() => setIsModalOpen(true)}
-                  className="w-full py-4 rounded-2xl bg-black text-white text-[14px] font-bold hover:bg-gray-800 transition-all uppercase tracking-[0.15em] shadow-xl shadow-black/5 hover:scale-[1.02] active:scale-[0.98]"
-                >
+                <StardustButton onClick={() => setIsModalOpen(true)}>
                   Secure Your Spot
-                </button>
+                </StardustButton>
                 <p className="text-[11px] text-center text-blue-600 font-bold font-mono uppercase tracking-wider">
                   Price increases to ₹8,999 next month
                 </p>
