@@ -134,14 +134,14 @@ export default function Home() {
   return (
     <div className="min-h-screen bg-[#FAF9F2] text-[#1a1a1a] font-inter selection:bg-[#D4E845] selection:text-black antialiased pb-12 md:pb-16">
       {/* Navbar */}
-      <header className="fixed top-0 left-0 right-0 p-6 md:p-8 flex justify-between items-start z-50 pointer-events-none">
-        <div className="flex items-center pointer-events-auto">
-          <span className="text-[16px] md:text-[18px] font-medium tracking-tight text-gray-900 font-inter">
+      <header className="fixed top-0 left-0 right-0 p-6 md:p-8 flex justify-between items-center z-50 pointer-events-none">
+        <div className="flex items-center pointer-events-auto h-[18px] md:h-[22px]">
+          <span className="text-[16px] md:text-[18px] font-medium tracking-tight text-gray-900 font-inter leading-none">
             LaunchAnyway.
           </span>
         </div>
-        <div className="flex items-center pointer-events-auto">
-          <span className="text-[11px] font-bold font-mono text-gray-400 uppercase tracking-[0.2em]">
+        <div className="flex items-center pointer-events-auto h-[18px] md:h-[22px]">
+          <span className="text-[11px] font-bold font-mono text-gray-400 uppercase tracking-[0.2em] leading-none">
             Course by Designfolio
           </span>
         </div>
