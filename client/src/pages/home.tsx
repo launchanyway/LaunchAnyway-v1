@@ -125,7 +125,7 @@ const CaseItem = ({
 
 // Tool Icon Component
 const ToolIcon = ({ src, alt, className }: { src: string, alt: string, className?: string }) => (
-  <span className={`inline-flex items-center justify-center w-6 h-6 rounded-md mx-1 align-text-bottom translate-y-[1px] bg-white border border-black/5 p-1 shadow-sm ${className}`}>
+  <span className={`inline-flex items-center justify-center w-6 h-6 mx-1 align-text-bottom translate-y-[1px] ${className}`}>
     <img src={src} alt={alt} className="w-full h-full object-contain" />
   </span>
 );
@@ -183,12 +183,12 @@ export default function Home() {
                   Replit <ToolIcon src="/logos/replit.png" alt="Replit" />,
                   Lovable <ToolIcon src="/logos/lovable.png" alt="Lovable" />,
                   LLMs 
-                  <span className="inline-flex items-center justify-center w-4.5 h-4.5 rounded-full bg-[#10A37F] mx-1 align-text-bottom translate-y-[1px] shadow-sm">
+                  <span className="inline-flex items-center justify-center w-[18px] h-[18px] rounded-full bg-[#10A37F] mx-1 align-text-bottom translate-y-[1px] shadow-sm">
                     <span className="w-2.5 h-2.5 border-[1.5px] border-white rounded-full"></span>
                   </span>,
                   Supabase <ToolIcon src="/logos/supabase.png" alt="Supabase" />,
                   Vercel <ToolIcon src="/logos/vercel.png" alt="Vercel" />,
-                  and Github <ToolIcon src="https://www.vectorlogo.zone/logos/github/github-icon.svg" alt="Github" className="invert brightness-0" />
+                  and Github <ToolIcon src="/logos/github.png" alt="Github" />
                   to turn founders into builders. No CS degree required 
                   <IconPill icon={Asterisk} color="bg-[#8B5CF6]" iconColor="text-white" />.
                 </p>
@@ -217,7 +217,7 @@ export default function Home() {
                   <ToolIcon src="https://www.vectorlogo.zone/logos/notion/notion-icon.svg" alt="Notion" />, Framer 
                   <ToolIcon src="https://www.vectorlogo.zone/logos/framer/framer-icon.svg" alt="Framer" />, Figma 
                   <ToolIcon src="https://www.vectorlogo.zone/logos/figma/figma-icon.svg" alt="Figma" />, SEO platforms, and ChatGPT 
-                  <span className="inline-flex items-center justify-center w-4.5 h-4.5 rounded-full bg-[#10A37F] mx-1 align-text-bottom translate-y-[1px] shadow-sm">
+                  <span className="inline-flex items-center justify-center w-[18px] h-[18px] rounded-full bg-[#10A37F] mx-1 align-text-bottom translate-y-[1px] shadow-sm">
                     <span className="w-2.5 h-2.5 border-[1.5px] border-white rounded-full"></span>
                   </span>
                   to build structured content systems and lead editorial teams.
