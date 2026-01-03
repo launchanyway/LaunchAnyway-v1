@@ -186,8 +186,6 @@ export default function Home() {
             </div>
           </div>
 
-          </div>
-
           {/* Right Sidebar Column - Cohorts */}
           <div className="lg:col-span-4 lg:pl-12">
             <div className="sticky top-32">
