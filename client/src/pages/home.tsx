@@ -107,8 +107,8 @@ export default function Home() {
         </div>
       </header>
 
-      <main className="max-w-[1200px] mx-auto px-6 md:px-12 pt-28 md:pt-36 pb-64 overflow-hidden">
-        <div className="flex flex-col lg:flex-row gap-16 lg:gap-24 items-start">
+      <main className="max-w-[1200px] mx-auto px-6 md:px-12 pt-28 md:pt-36 pb-64">
+        <div className="flex flex-col lg:flex-row gap-16 lg:gap-24 items-start relative">
           
           {/* Left Content Column */}
           <div className="w-full lg:w-[65%] space-y-10">
@@ -210,43 +210,41 @@ export default function Home() {
             </div>
           </div>
 
-          {/* Right Sidebar Column - Cohort Card */}
-          <div className="w-full lg:w-[35%] lg:pl-12">
-            <div className="sticky top-32">
-              <h2 className="text-[13px] font-bold font-mono text-gray-500 uppercase tracking-[0.3em] mb-10">Enrollment</h2>
-              
-              <div className="bg-[#eeede8] border border-black/5 rounded-3xl p-6 space-y-8 shadow-sm">
-                <div className="space-y-1">
-                  <p className="text-[11px] font-bold font-mono text-blue-600 uppercase tracking-widest">Next Intake</p>
-                  <p className="text-[20px] font-medium text-gray-900 font-inter tracking-tight">January 20th, 2026</p>
-                </div>
-
-                <div className="grid grid-cols-2 gap-6">
-                  <div className="space-y-1">
-                    <p className="text-[10px] font-bold font-mono text-gray-400 uppercase tracking-widest">Availability</p>
-                    <p className="text-[15px] font-semibold text-gray-800 font-inter">9 / 20 Seats</p>
-                  </div>
-                  <div className="space-y-1">
-                    <p className="text-[10px] font-bold font-mono text-gray-400 uppercase tracking-widest">Duration</p>
-                    <p className="text-[15px] font-semibold text-gray-800 font-inter">1 Week Sprint</p>
-                  </div>
-                </div>
-
-                <div className="space-y-1 pt-2 border-t border-black/5">
-                  <p className="text-[10px] font-bold font-mono text-gray-400 uppercase tracking-widest">Live Sessions</p>
-                  <p className="text-[15px] font-semibold text-gray-800 font-inter">8:00 PM IST (x3)</p>
-                </div>
-
-                <button className="w-full py-4 rounded-2xl bg-black text-white text-[14px] font-bold hover:bg-gray-800 transition-all uppercase tracking-[0.15em] shadow-xl shadow-black/5 hover:scale-[1.02] active:scale-[0.98]">
-                  Secure Your Spot
-                </button>
-                
-                <p className="text-[10px] text-center text-gray-400 font-medium font-inter">
-                  Limited cohort size for personalized feedback.
-                </p>
+          {/* Right Sidebar Column - Enrollment Card (Fixed/Sticky) */}
+          <aside className="w-full lg:w-[35%] lg:pl-12 lg:sticky lg:top-28 self-start">
+            <h2 className="text-[13px] font-bold font-mono text-gray-500 uppercase tracking-[0.3em] mb-10">Enrollment</h2>
+            
+            <div className="bg-[#eeede8] border border-black/5 rounded-3xl p-6 space-y-8 shadow-sm">
+              <div className="space-y-1">
+                <p className="text-[11px] font-bold font-mono text-blue-600 uppercase tracking-widest">Next Intake</p>
+                <p className="text-[20px] font-medium text-gray-900 font-inter tracking-tight">January 20th, 2026</p>
               </div>
+
+              <div className="grid grid-cols-2 gap-6">
+                <div className="space-y-1">
+                  <p className="text-[10px] font-bold font-mono text-gray-400 uppercase tracking-widest">Availability</p>
+                  <p className="text-[15px] font-semibold text-gray-800 font-inter">9 / 20 Seats</p>
+                </div>
+                <div className="space-y-1">
+                  <p className="text-[10px] font-bold font-mono text-gray-400 uppercase tracking-widest">Duration</p>
+                  <p className="text-[15px] font-semibold text-gray-800 font-inter">1 Week Sprint</p>
+                </div>
+              </div>
+
+              <div className="space-y-1 pt-2 border-t border-black/5">
+                <p className="text-[10px] font-bold font-mono text-gray-400 uppercase tracking-widest">Live Sessions</p>
+                <p className="text-[15px] font-semibold text-gray-800 font-inter">8:00 PM IST (x3)</p>
+              </div>
+
+              <button className="w-full py-4 rounded-2xl bg-black text-white text-[14px] font-bold hover:bg-gray-800 transition-all uppercase tracking-[0.15em] shadow-xl shadow-black/5 hover:scale-[1.02] active:scale-[0.98]">
+                Secure Your Spot
+              </button>
+              
+              <p className="text-[10px] text-center text-gray-400 font-medium font-inter">
+                Limited cohort size for personalized feedback.
+              </p>
             </div>
-          </div>
+          </aside>
 
         </div>
       </main>
