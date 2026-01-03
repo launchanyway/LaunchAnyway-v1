@@ -14,8 +14,43 @@ import {
   MessageSquare,
   Globe,
   Star,
+  Play,
   CircleDot
 } from "lucide-react";
+
+// Video Player Component
+const VideoPlayer = ({ videoId }: { videoId: string }) => {
+  const [isPlaying, setIsPlaying] = React.useState(false);
+
+  return (
+    <div className="relative aspect-video rounded-3xl overflow-hidden bg-black/5 border border-black/5 group cursor-pointer mt-6">
+      {!isPlaying ? (
+        <div 
+          className="absolute inset-0 flex items-center justify-center"
+          onClick={() => setIsPlaying(true)}
+        >
+          <img 
+            src={`https://img.youtube.com/vi/${videoId}/maxresdefault.jpg`}
+            alt="Video Thumbnail"
+            className="absolute inset-0 w-full h-full object-cover opacity-90 transition-transform duration-500 group-hover:scale-105"
+          />
+          <div className="absolute inset-0 bg-black/20 group-hover:bg-black/10 transition-colors duration-500" />
+          <div className="relative w-14 h-14 flex items-center justify-center rounded-full bg-white shadow-xl transition-transform duration-300 group-hover:scale-110">
+            <Play className="w-5 h-5 text-black fill-current translate-x-0.5" />
+          </div>
+        </div>
+      ) : (
+        <iframe
+          className="w-full h-full"
+          src={`https://www.youtube.com/embed/${videoId}?autoplay=1&controls=0&modestbranding=1&rel=0`}
+          title="YouTube video player"
+          allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture"
+          allowFullScreen
+        />
+      )}
+    </div>
+  );
+};
 import profileImage from "@assets/generated_images/professional_portrait_of_a_young_woman_with_dark_hair.png";
 
 // Inline Icon Pill Component
@@ -153,6 +188,7 @@ export default function Home() {
                   to turn founders into builders. No CS degree required 
                   <IconPill icon={Asterisk} color="bg-[#8B5CF6]" iconColor="text-white" />.
                 </p>
+                <VideoPlayer videoId="9BtxpKQHga4" />
               </div>
 
               {/* Curriculum / Journey */}
