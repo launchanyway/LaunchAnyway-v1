@@ -80,28 +80,35 @@ const EnrollmentModal = ({ isOpen, onClose }: { isOpen: boolean, onClose: () => 
             <div className="p-8 space-y-8 -mt-6 relative z-10 bg-[#FAF9F2] rounded-t-2xl">
               <div className="space-y-6">
                 <p className="text-[16px] text-gray-600 leading-relaxed font-inter">
-                  LaunchAnyway isn’t for everyone — and that’s intentional. We review every application to make sure this program is the right fit for you and for the cohort.
+                  LaunchAnyway is intentional. We review every applicant to ensure the best fit for the cohort.
                 </p>
 
-                <div className="space-y-4">
-                  <div className="space-y-1">
-                    <h3 className="font-bold text-[13px] uppercase tracking-wider text-gray-400 font-mono">Step 1</h3>
-                    <p className="text-gray-900 leading-relaxed text-[17px] font-medium">
-                      Fill out a short application.
-                    </p>
+                <div className="relative space-y-0">
+                  {/* Timeline line */}
+                  <div className="absolute left-[11px] top-3 bottom-3 w-[1.5px] bg-black/5" />
+
+                  {/* Step 1 */}
+                  <div className="relative flex gap-6 pb-8">
+                    <div className="relative z-10 w-[24px] h-[24px] rounded-full bg-[#D4E845] border-4 border-[#FAF9F2] flex-shrink-0" />
+                    <div className="space-y-1">
+                      <h3 className="font-bold text-[11px] uppercase tracking-[0.15em] text-gray-400 font-mono leading-none pt-1">Step 01</h3>
+                      <p className="text-gray-900 leading-tight text-[17px] font-medium">
+                        Fill out a short application.
+                      </p>
+                    </div>
                   </div>
 
-                  <div className="space-y-1">
-                    <h3 className="font-bold text-[13px] uppercase tracking-wider text-gray-400 font-mono">Step 2</h3>
-                    <p className="text-gray-900 leading-relaxed text-[17px] font-medium">
-                      Within 4 hours we'll get in touch with you.
-                    </p>
+                  {/* Step 2 */}
+                  <div className="relative flex gap-6">
+                    <div className="relative z-10 w-[24px] h-[24px] rounded-full bg-blue-600 border-4 border-[#FAF9F2] flex-shrink-0" />
+                    <div className="space-y-1">
+                      <h3 className="font-bold text-[11px] uppercase tracking-[0.15em] text-gray-400 font-mono leading-none pt-1">Step 02</h3>
+                      <p className="text-gray-900 leading-tight text-[17px] font-medium">
+                        We'll get in touch within 4 hours.
+                      </p>
+                    </div>
                   </div>
                 </div>
-
-                <p className="text-[14px] text-gray-500 italic font-inter bg-black/5 p-4 rounded-xl">
-                  If selected, you’ll receive a private invite to secure your seat.
-                </p>
               </div>
 
               <div className="pt-2">
