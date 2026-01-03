@@ -109,7 +109,7 @@ const EnrollmentModal = ({ isOpen, onClose }: { isOpen: boolean, onClose: () => 
             onClick={onClose}
             className="fixed inset-0 bg-black/60 backdrop-blur-md"
           />
-          <motion.div 
+          <motion.div
             initial={{ opacity: 0, scale: 0.95, y: 20 }}
             animate={{ 
               opacity: 1, 
@@ -118,23 +118,23 @@ const EnrollmentModal = ({ isOpen, onClose }: { isOpen: boolean, onClose: () => 
               transition: { type: "spring", damping: 25, stiffness: 300 }
             }}
             exit={{ opacity: 0, scale: 0.95, y: 20 }}
-            className="bg-[#FAF9F2] w-full max-w-2xl h-full md:h-auto md:max-h-[90vh] md:rounded-[32px] overflow-hidden relative border-none md:border md:border-black/5 flex flex-col pointer-events-auto"
+            className="relative w-full max-w-xl bg-[#FAF9F2] rounded-3xl overflow-hidden shadow-2xl border-none pointer-events-auto my-8"
           >
             {/* Header */}
-            <div className="p-6 md:p-8 pb-4 flex justify-between items-center bg-white/50 border-b border-black/5 shrink-0">
-              <div className="space-y-1">
-                <h2 className="text-[20px] md:text-[24px] font-bold font-instrument tracking-tight text-gray-900">Apply for Cohort</h2>
-                <p className="text-[10px] md:text-[11px] font-bold font-mono text-gray-400 uppercase tracking-widest">January 18th Intake</p>
-              </div>
+            <div className="bg-[#D4E845] p-8 pb-10 relative overflow-hidden">
               <button 
                 onClick={onClose}
-                className="w-10 h-10 rounded-full bg-black/5 flex items-center justify-center hover:bg-black/10 transition-colors"
+                className="absolute top-6 right-6 w-10 h-10 rounded-full bg-black/10 hover:bg-black/20 flex items-center justify-center transition-colors z-20"
               >
-                <X className="w-5 h-5" />
+                <X className="w-5 h-5 text-black" />
               </button>
+              <div className="relative z-10">
+                <h2 className="text-3xl font-medium font-instrument text-black mb-2">Apply for LaunchAnyway</h2>
+                <p className="text-black/60 text-sm font-medium">Batch starts Jan 18th • 13 seats left</p>
+              </div>
             </div>
 
-            <div className="p-6 md:p-8 relative z-10 bg-[#FAF9F2] overflow-y-auto custom-scrollbar flex-1">
+            <div className="p-8 -mt-6 relative z-10 bg-[#FAF9F2] rounded-t-3xl max-h-[70vh] overflow-y-auto custom-scrollbar">
               <form className="space-y-8" onSubmit={handleSubmit}>
                 {/* Section 1: Basic Info */}
                 <div className="space-y-6">
