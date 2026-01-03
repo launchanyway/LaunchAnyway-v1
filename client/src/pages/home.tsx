@@ -132,7 +132,7 @@ const ToolIcon = ({ src, alt, className }: { src: string, alt: string, className
 
 export default function Home() {
   return (
-    <div className="min-h-screen bg-[#FAF9F2] text-[#1a1a1a] font-inter selection:bg-[#D4E845] selection:text-black antialiased">
+    <div className="min-h-screen bg-[#FAF9F2] text-[#1a1a1a] font-inter selection:bg-[#D4E845] selection:text-black antialiased pb-32">
       {/* Navbar */}
       <header className="fixed top-0 left-0 right-0 p-6 md:p-8 flex justify-between items-start z-50 pointer-events-none">
         <div className="flex items-center pointer-events-auto">
@@ -202,21 +202,23 @@ export default function Home() {
                     <div className="absolute left-0 top-0 w-[35px] h-[35px] rounded-full bg-[#D4E845] flex items-center justify-center text-black font-mono font-bold text-[10px] z-10">W1</div>
                     <div className="space-y-4">
                       <div>
-                        <h3 className="text-[17px] font-bold text-gray-900 tracking-tight">Foundations & Setup</h3>
-                        <p className="text-[11px] text-gray-400 font-mono uppercase tracking-widest font-bold mt-1">Days 1 — 3</p>
+                        <h3 className="text-[17px] font-bold text-gray-900 tracking-tight uppercase">Build & Launch Your First SaaS</h3>
+                        <p className="text-[11px] text-gray-400 font-mono uppercase tracking-widest font-bold mt-1">Week 1</p>
                       </div>
-                      <div className="space-y-5">
+                      <div className="space-y-6">
                         <div className="flex gap-4">
                           <span className="text-[10px] font-black font-mono text-black bg-[#D4E845] w-6 h-6 rounded flex items-center justify-center shrink-0">01</span>
-                          <p className="text-[15px] text-[#5a5a5a] leading-relaxed"><span className="text-gray-900 font-semibold">Vibe Coding 101:</span> Prompt engineering and content architecture.</p>
+                          <div className="space-y-1">
+                            <p className="text-[15px] text-gray-900 font-bold leading-none">Live session</p>
+                            <p className="text-[14px] text-[#5a5a5a] leading-relaxed">We build your first AI-powered product together. You'll use Lovable, Gemini, and Supabase to create a real working AI tool — not a demo.</p>
+                          </div>
                         </div>
                         <div className="flex gap-4">
-                          <span className="text-[10px] font-black font-mono text-black bg-[#D4E845] w-6 h-6 rounded flex items-center justify-center shrink-0">02</span>
-                          <p className="text-[15px] text-[#5a5a5a] leading-relaxed"><span className="text-gray-900 font-semibold">Interface Design:</span> Mastering Cyber Island aesthetics.</p>
-                        </div>
-                        <div className="flex gap-4">
-                          <span className="text-[10px] font-black font-mono text-black bg-[#D4E845] w-6 h-6 rounded flex items-center justify-center shrink-0">03</span>
-                          <p className="text-[15px] text-[#5a5a5a] leading-relaxed"><span className="text-gray-900 font-semibold">Database Architecture:</span> Connecting Supabase securely.</p>
+                          <span className="text-[10px] font-black font-mono text-black bg-[#D4E845] w-6 h-6 rounded flex items-center justify-center shrink-0">2-7</span>
+                          <div className="space-y-1">
+                            <p className="text-[15px] text-gray-900 font-bold leading-none">Build & launch</p>
+                            <p className="text-[14px] text-[#5a5a5a] leading-relaxed">You'll work on daily assignments to improve what you built. By the end of the week, you'll launch your first real SaaS product with a live URL.</p>
+                          </div>
                         </div>
                       </div>
                     </div>
@@ -227,25 +229,30 @@ export default function Home() {
                     <div className="absolute left-0 top-0 w-[35px] h-[35px] rounded-full bg-[#E895C9] flex items-center justify-center text-black font-mono font-bold text-[10px] z-10">W2</div>
                     <div className="space-y-4">
                       <div>
-                        <h3 className="text-[17px] font-bold text-gray-900 tracking-tight">Shipping & Scaling</h3>
-                        <p className="text-[11px] text-gray-400 font-mono uppercase tracking-widest font-bold mt-1">Days 4 — 7</p>
+                        <h3 className="text-[17px] font-bold text-gray-900 tracking-tight uppercase">Build Your First Mobile App</h3>
+                        <p className="text-[11px] text-gray-400 font-mono uppercase tracking-widest font-bold mt-1">Week 2</p>
                       </div>
-                      <div className="space-y-5">
+                      <div className="space-y-6">
                         <div className="flex gap-4">
-                          <span className="text-[10px] font-black font-mono text-black bg-[#E895C9] w-6 h-6 rounded flex items-center justify-center shrink-0">04</span>
-                          <p className="text-[15px] text-[#5a5a5a] leading-relaxed"><span className="text-gray-900 font-semibold">Logic & Auth:</span> Building functional SaaS workflows.</p>
+                          <span className="text-[10px] font-black font-mono text-black bg-[#E895C9] w-6 h-6 rounded flex items-center justify-center shrink-0">08</span>
+                          <div className="space-y-1">
+                            <p className="text-[15px] text-gray-900 font-bold leading-none">Live session</p>
+                            <p className="text-[14px] text-[#5a5a5a] leading-relaxed">We build a cross-platform mobile app using Replit. You'll run it on both iOS and Android using Expo.</p>
+                          </div>
                         </div>
                         <div className="flex gap-4">
-                          <span className="text-[10px] font-black font-mono text-black bg-[#E895C9] w-6 h-6 rounded flex items-center justify-center shrink-0">05</span>
-                          <p className="text-[15px] text-[#5a5a5a] leading-relaxed"><span className="text-gray-900 font-semibold">Mobile Optimization:</span> Native-feel PWA experiences.</p>
+                          <span className="text-[10px] font-black font-mono text-black bg-[#E895C9] w-6 h-6 rounded flex items-center justify-center shrink-0">09</span>
+                          <div className="space-y-1">
+                            <p className="text-[15px] text-gray-900 font-bold leading-none">Backend & debugging</p>
+                            <p className="text-[14px] text-[#5a5a5a] leading-relaxed">We connect your mobile app to Supabase. You'll learn how to store data, handle auth, and debug real issues.</p>
+                          </div>
                         </div>
                         <div className="flex gap-4">
-                          <span className="text-[10px] font-black font-mono text-black bg-[#E895C9] w-6 h-6 rounded flex items-center justify-center shrink-0">06</span>
-                          <p className="text-[15px] text-[#5a5a5a] leading-relaxed"><span className="text-gray-900 font-semibold">Deployment:</span> Going live on your own domain.</p>
-                        </div>
-                        <div className="flex gap-4">
-                          <span className="text-[10px] font-black font-mono text-black bg-[#E895C9] w-6 h-6 rounded flex items-center justify-center shrink-0">07</span>
-                          <p className="text-[15px] text-[#5a5a5a] leading-relaxed"><span className="text-gray-900 font-semibold">Launch Day:</span> Psychology of shipping and final reveals.</p>
+                          <span className="text-[10px] font-black font-mono text-black bg-[#E895C9] w-6 h-6 rounded flex items-center justify-center shrink-0">10-</span>
+                          <div className="space-y-1">
+                            <p className="text-[15px] text-gray-900 font-bold leading-none">Build & refine</p>
+                            <p className="text-[14px] text-[#5a5a5a] leading-relaxed">Daily assignments focused on building a complete mobile app. You'll design habit flows, streaks, and nudges — and end with a fully working app.</p>
+                          </div>
                         </div>
                       </div>
                     </div>
@@ -305,7 +312,7 @@ export default function Home() {
 
               <div className="space-y-1 pt-2 border-t border-black/5">
                 <p className="text-[10px] font-bold font-mono text-gray-400 uppercase tracking-widest">Live Sessions</p>
-                <p className="text-[15px] font-semibold text-gray-800 font-inter">8:00 PM IST (x3)</p>
+                <p className="text-[15px] font-semibold text-gray-800 font-inter">8:00 PM IST (x2)</p>
               </div>
 
               <button className="w-full py-4 rounded-2xl bg-black text-white text-[14px] font-bold hover:bg-gray-800 transition-all uppercase tracking-[0.15em] shadow-xl shadow-black/5 hover:scale-[1.02] active:scale-[0.98]">
