@@ -100,10 +100,10 @@ export default function Home() {
     <div className="min-h-screen bg-[#FAFAF9] text-[#1a1a1a] font-sans selection:bg-[#D4E845] selection:text-black">
       {/* Navbar */}
       <header className="fixed top-0 left-0 right-0 p-5 md:p-6 flex justify-between items-start z-50 pointer-events-none mix-blend-multiply">
-        <div className="flex gap-4 pointer-events-auto">
-          <button className="text-gray-400 hover:text-black transition-colors"><Box className="w-4 h-4" strokeWidth={1.5} /></button>
-          <button className="text-gray-400 hover:text-black transition-colors"><Twitter className="w-4 h-4" strokeWidth={1.5} /></button>
-          <button className="text-gray-400 hover:text-black transition-colors"><Instagram className="w-4 h-4" strokeWidth={1.5} /></button>
+        <div className="flex items-center pointer-events-auto">
+          <span className="text-[18px] md:text-[20px] font-medium tracking-tight text-gray-900">
+            LaunchAnyway.
+          </span>
         </div>
         
         <div className="flex gap-6 text-[10px] font-mono text-gray-400 pointer-events-auto tracking-tight">
