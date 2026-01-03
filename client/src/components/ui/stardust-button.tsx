@@ -14,17 +14,17 @@ export const StardustButton: React.FC<StardustButtonProps> = ({
 }) => {
   const buttonStyle = {
     '--lime': '#D4E845',
-    '--bg': disabled ? '#1a1a1a' : '#000000',
+    '--bg': disabled ? '#2a2a2a' : '#000000',
     '--radius': '16px',
     outline: 'none',
     cursor: disabled ? 'not-allowed' : 'pointer',
-    border: 0,
+    border: disabled ? '1px solid rgba(0,0,0,0.1)' : 0,
     position: 'relative',
     borderRadius: 'var(--radius)',
     backgroundColor: 'var(--bg)',
     transition: 'all 0.2s ease',
     width: '100%',
-    opacity: disabled ? 0.6 : 1,
+    opacity: disabled ? 0.5 : 1,
     boxShadow: disabled ? 'none' : `
       inset 0 0.3rem 0.9rem rgba(212, 232, 69, 0.2),
       inset 0 -0.1rem 0.3rem rgba(0, 0, 0, 0.7),
@@ -37,7 +37,7 @@ export const StardustButton: React.FC<StardustButtonProps> = ({
   const wrapStyle = {
     fontSize: '13px',
     fontWeight: 700,
-    color: disabled ? '#4a4a4a' : '#D4E845',
+    color: disabled ? '#888888' : '#D4E845',
     padding: '12px 20px',
     borderRadius: 'inherit',
     position: 'relative',
