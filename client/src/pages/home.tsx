@@ -183,13 +183,10 @@ export default function Home() {
                   Stop watching tutorials and start shipping. We use modern tools like
                   Replit <ToolIcon src="/logos/replit.png" alt="Replit" />,
                   Lovable <ToolIcon src="/logos/lovable.png" alt="Lovable" />,
-                  LLMs 
-                  <span className="inline-flex items-center justify-center w-[20px] h-[20px] rounded-full bg-[#10A37F] mx-1 align-middle translate-y-[-1px] shadow-sm">
-                    <span className="w-3 h-3 border-[1.5px] border-white rounded-full"></span>
-                  </span>,
+                  LLMs, 
                   Supabase <ToolIcon src="/logos/supabase.png" alt="Supabase" />,
                   Vercel <ToolIcon src="/logos/vercel.png" alt="Vercel" />,
-                  and Github <ToolIcon src="/logos/github.png" alt="Github" />
+                  and Github 
                   to turn founders into builders. No CS degree required 
                   <IconPill icon={Asterisk} color="bg-[#8B5CF6]" iconColor="text-white" />.
                 </p>
