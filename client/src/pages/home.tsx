@@ -199,7 +199,7 @@ export default function Home() {
                 <div className="space-y-10 relative before:absolute before:left-[17px] before:top-2 before:bottom-2 before:w-[1.5px] before:bg-black/5">
                   {/* Week 1 */}
                   <div className="relative pl-12 group">
-                    <div className="absolute left-0 top-0 w-[35px] h-[35px] rounded-full bg-blue-600 flex items-center justify-center text-white font-mono font-bold text-[10px] z-10 shadow-lg shadow-blue-500/20">W1</div>
+                    <div className="absolute left-0 top-0 w-[35px] h-[35px] rounded-full bg-[#D4E845] flex items-center justify-center text-black font-mono font-bold text-[10px] z-10">W1</div>
                     <div className="space-y-4">
                       <div>
                         <h3 className="text-[17px] font-bold text-gray-900 tracking-tight">Foundations & Setup</h3>
@@ -207,15 +207,15 @@ export default function Home() {
                       </div>
                       <div className="space-y-5">
                         <div className="flex gap-4">
-                          <span className="text-[10px] font-black font-mono text-blue-600 bg-blue-50 w-6 h-6 rounded flex items-center justify-center shrink-0">01</span>
+                          <span className="text-[10px] font-black font-mono text-black bg-[#D4E845] w-6 h-6 rounded flex items-center justify-center shrink-0">01</span>
                           <p className="text-[15px] text-[#5a5a5a] leading-relaxed"><span className="text-gray-900 font-semibold">Vibe Coding 101:</span> Prompt engineering and content architecture.</p>
                         </div>
                         <div className="flex gap-4">
-                          <span className="text-[10px] font-black font-mono text-blue-600 bg-blue-50 w-6 h-6 rounded flex items-center justify-center shrink-0">02</span>
+                          <span className="text-[10px] font-black font-mono text-black bg-[#D4E845] w-6 h-6 rounded flex items-center justify-center shrink-0">02</span>
                           <p className="text-[15px] text-[#5a5a5a] leading-relaxed"><span className="text-gray-900 font-semibold">Interface Design:</span> Mastering Cyber Island aesthetics.</p>
                         </div>
                         <div className="flex gap-4">
-                          <span className="text-[10px] font-black font-mono text-blue-600 bg-blue-50 w-6 h-6 rounded flex items-center justify-center shrink-0">03</span>
+                          <span className="text-[10px] font-black font-mono text-black bg-[#D4E845] w-6 h-6 rounded flex items-center justify-center shrink-0">03</span>
                           <p className="text-[15px] text-[#5a5a5a] leading-relaxed"><span className="text-gray-900 font-semibold">Database Architecture:</span> Connecting Supabase securely.</p>
                         </div>
                       </div>
@@ -224,7 +224,7 @@ export default function Home() {
 
                   {/* Week 2 */}
                   <div className="relative pl-12 group">
-                    <div className="absolute left-0 top-0 w-[35px] h-[35px] rounded-full bg-purple-600 flex items-center justify-center text-white font-mono font-bold text-[10px] z-10 shadow-lg shadow-purple-500/20">W2</div>
+                    <div className="absolute left-0 top-0 w-[35px] h-[35px] rounded-full bg-[#E895C9] flex items-center justify-center text-black font-mono font-bold text-[10px] z-10">W2</div>
                     <div className="space-y-4">
                       <div>
                         <h3 className="text-[17px] font-bold text-gray-900 tracking-tight">Shipping & Scaling</h3>
@@ -232,19 +232,19 @@ export default function Home() {
                       </div>
                       <div className="space-y-5">
                         <div className="flex gap-4">
-                          <span className="text-[10px] font-black font-mono text-purple-600 bg-purple-50 w-6 h-6 rounded flex items-center justify-center shrink-0">04</span>
+                          <span className="text-[10px] font-black font-mono text-black bg-[#E895C9] w-6 h-6 rounded flex items-center justify-center shrink-0">04</span>
                           <p className="text-[15px] text-[#5a5a5a] leading-relaxed"><span className="text-gray-900 font-semibold">Logic & Auth:</span> Building functional SaaS workflows.</p>
                         </div>
                         <div className="flex gap-4">
-                          <span className="text-[10px] font-black font-mono text-purple-600 bg-purple-50 w-6 h-6 rounded flex items-center justify-center shrink-0">05</span>
+                          <span className="text-[10px] font-black font-mono text-black bg-[#E895C9] w-6 h-6 rounded flex items-center justify-center shrink-0">05</span>
                           <p className="text-[15px] text-[#5a5a5a] leading-relaxed"><span className="text-gray-900 font-semibold">Mobile Optimization:</span> Native-feel PWA experiences.</p>
                         </div>
                         <div className="flex gap-4">
-                          <span className="text-[10px] font-black font-mono text-purple-600 bg-purple-50 w-6 h-6 rounded flex items-center justify-center shrink-0">06</span>
+                          <span className="text-[10px] font-black font-mono text-black bg-[#E895C9] w-6 h-6 rounded flex items-center justify-center shrink-0">06</span>
                           <p className="text-[15px] text-[#5a5a5a] leading-relaxed"><span className="text-gray-900 font-semibold">Deployment:</span> Going live on your own domain.</p>
                         </div>
                         <div className="flex gap-4">
-                          <span className="text-[10px] font-black font-mono text-purple-600 bg-purple-50 w-6 h-6 rounded flex items-center justify-center shrink-0">07</span>
+                          <span className="text-[10px] font-black font-mono text-black bg-[#E895C9] w-6 h-6 rounded flex items-center justify-center shrink-0">07</span>
                           <p className="text-[15px] text-[#5a5a5a] leading-relaxed"><span className="text-gray-900 font-semibold">Launch Day:</span> Psychology of shipping and final reveals.</p>
                         </div>
                       </div>
