@@ -111,7 +111,7 @@ export default function Home() {
         <div className="grid grid-cols-1 lg:grid-cols-12 gap-16 lg:gap-24">
           
           {/* Left Content Column */}
-          <div className="lg:col-span-8 space-y-12">
+          <div className="lg:col-span-8 space-y-10">
             
             {/* Course Header Chip */}
             <div className="flex items-center">
@@ -122,7 +122,7 @@ export default function Home() {
             </div>
 
             {/* Title / Hero Intro */}
-            <div className="space-y-8 !mt-10">
+            <div className="space-y-4">
               <h2 className="text-[32px] md:text-[42px] leading-[1.1] font-bold text-gray-900 max-w-2xl tracking-tight">
                 You have an idea? <br />
                 Are you going to <CircledText>ship</CircledText> it?
@@ -138,49 +138,53 @@ export default function Home() {
               </div>
             </div>
 
-            {/* Why This Course */}
-            <div className="space-y-4 max-w-2xl">
-              <h2 className="text-[11px] font-mono text-gray-400 uppercase tracking-[0.2em] font-semibold">The Vibe</h2>
-              <p className="text-[16px] leading-[1.6] text-[#5a5a5a]">
-                Stop watching tutorials and start shipping. We use modern tools like Cursor 
-                <ToolIcon label="C" bg="bg-black" />, Replit 
-                <ToolIcon label="R" bg="bg-[#F24E1E]" />, and LLMs 
-                <span className="inline-flex items-center justify-center w-6 h-6 rounded-full bg-[#10A37F] mx-1 align-text-bottom translate-y-[1px]">
-                  <span className="w-3 h-3 border-[1.5px] border-white rounded-full"></span>
-                </span>
-                to turn founders into builders. No CS degree required 
-                <IconPill icon={Asterisk} color="bg-[#8B5CF6]" iconColor="text-white" />.
-              </p>
-            </div>
+            {/* Sections Wrapper */}
+            <div className="space-y-10 pt-4">
+              {/* Why This Course */}
+              <div className="space-y-3 max-w-2xl">
+                <h2 className="text-[11px] font-mono text-gray-400 uppercase tracking-[0.2em] font-semibold">The Vibe</h2>
+                <p className="text-[16px] md:text-[17px] leading-[1.6] text-[#5a5a5a]">
+                  Stop watching tutorials and start shipping. We use modern tools like Cursor 
+                  <ToolIcon label="C" bg="bg-black" />, Replit 
+                  <ToolIcon label="R" bg="bg-[#F24E1E]" />, and LLMs 
+                  <span className="inline-flex items-center justify-center w-5 h-5 rounded-full bg-[#10A37F] mx-1 align-text-bottom translate-y-[1px]">
+                    <span className="w-2.5 h-2.5 border-[1.5px] border-white rounded-full"></span>
+                  </span>
+                  to turn founders into builders. No CS degree required 
+                  <IconPill icon={Asterisk} color="bg-[#8B5CF6]" iconColor="text-white" />.
+                </p>
+              </div>
 
-            {/* Curriculum / Journey */}
-            <div className="space-y-4 max-w-2xl">
-              <h2 className="text-[11px] font-mono text-gray-400 uppercase tracking-[0.2em] font-semibold">The Journey</h2>
-              <p className="text-[16px] leading-[1.6] text-[#5a5a5a]">
-                From your first prompt to a live domain 
-                <IconPill icon={Globe} color="bg-[#E895C9]" iconColor="text-black" />. 
-                We cover content architecture, interface design at Cyper Island 
-                <IconPill icon={Flower2} color="bg-[#E895C9]" iconColor="text-black" />
-                , and the psychology of shipping. Join a group of 3M+ builders 
-                <IconPill icon={Star} color="bg-[#D4E845]" iconColor="text-black" /> 
-                who stopped making excuses.
-              </p>
-            </div>
+              {/* Curriculum / Journey */}
+              <div className="space-y-3 max-w-2xl">
+                <h2 className="text-[11px] font-mono text-gray-400 uppercase tracking-[0.2em] font-semibold">The Journey</h2>
+                <p className="text-[16px] md:text-[17px] leading-[1.6] text-[#5a5a5a]">
+                  From your first prompt to a live domain 
+                  <IconPill icon={Globe} color="bg-[#E895C9]" iconColor="text-black" />. 
+                  We cover content architecture, interface design at Cyper Island 
+                  <IconPill icon={Flower2} color="bg-[#E895C9]" iconColor="text-black" />
+                  , and the psychology of shipping. Join a group of 3M+ builders 
+                  <IconPill icon={Star} color="bg-[#D4E845]" iconColor="text-black" /> 
+                  who stopped making excuses.
+                </p>
+              </div>
 
-            {/* Info Section */}
-            <div className="space-y-4 max-w-3xl">
-              <h2 className="text-[11px] font-mono text-gray-400 uppercase tracking-[0.2em] font-semibold">Info</h2>
-              <p className="text-[16px] leading-[1.6] text-[#5a5a5a]">
-                Fluent in English, I work as an individual entrepreneur with a Georgian residence permit. I use tools like Notion 
-                <ToolIcon label="N" bg="bg-black" />, Framer 
-                <ToolIcon label="F" bg="bg-black" />, Figma 
-                <ToolIcon label="F" bg="bg-[#F24E1E]" />, SEO platforms, and ChatGPT 
-                <span className="inline-flex items-center justify-center w-6 h-6 rounded-full bg-[#10A37F] mx-1 align-text-bottom translate-y-[1px]">
-                  <span className="w-3 h-3 border-[1.5px] border-white rounded-full"></span>
-                </span>
-                to build structured content systems and lead editorial teams.
-              </p>
+              {/* Info Section */}
+              <div className="space-y-3 max-w-2xl">
+                <h2 className="text-[11px] font-mono text-gray-400 uppercase tracking-[0.2em] font-semibold">Info</h2>
+                <p className="text-[16px] md:text-[17px] leading-[1.6] text-[#5a5a5a]">
+                  Fluent in English, I work as an individual entrepreneur with a Georgian residence permit. I use tools like Notion 
+                  <ToolIcon label="N" bg="bg-black" />, Framer 
+                  <ToolIcon label="F" bg="bg-black" />, Figma 
+                  <ToolIcon label="F" bg="bg-[#F24E1E]" />, SEO platforms, and ChatGPT 
+                  <span className="inline-flex items-center justify-center w-5 h-5 rounded-full bg-[#10A37F] mx-1 align-text-bottom translate-y-[1px]">
+                    <span className="w-2.5 h-2.5 border-[1.5px] border-white rounded-full"></span>
+                  </span>
+                  to build structured content systems and lead editorial teams.
+                </p>
+              </div>
             </div>
+          </div>
 
           </div>
 
