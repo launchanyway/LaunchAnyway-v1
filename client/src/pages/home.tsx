@@ -33,7 +33,7 @@ import { toast } from "sonner";
 import { supabase } from "@/lib/supabase";
 
 // Enrollment Modal Component
-const EnrollmentModal = ({ isOpen, onClose }: { isOpen: boolean, onClose: () => void }) => {
+const EnrollmentModal = ({ isOpen, onClose, onSuccess }: { isOpen: boolean, onClose: () => void, onSuccess: () => void }) => {
   const [formData, setFormData] = useState({
     fullName: "",
     email: "",
@@ -104,9 +104,9 @@ const EnrollmentModal = ({ isOpen, onClose }: { isOpen: boolean, onClose: () => 
             <CheckCircle2 className="w-5 h-5 text-black" />
           </div>
           <div className="flex flex-col">
-            <span className="font-bold text-[14px] tracking-tight">you're in</span>
+            <span className="font-bold text-[14px] tracking-tight">Form Submitted</span>
             <p className="text-gray-500 text-[12px] font-medium leading-none mt-0.5">
-              we'll hit you up within 24hrs
+              We'll get in touch within 24 hours
             </p>
           </div>
         </motion.div>
@@ -125,6 +125,7 @@ const EnrollmentModal = ({ isOpen, onClose }: { isOpen: boolean, onClose: () => 
         commitment: ""
       });
 
+      onSuccess();
       onClose();
     } catch (error: any) {
       toast.custom((t) => (
@@ -469,10 +470,11 @@ const ToolIcon = ({ src, alt, className }: { src: string, alt: string, className
 
 export default function Home() {
   const [isModalOpen, setIsModalOpen] = useState(false);
+  const [hasSubmitted, setHasSubmitted] = useState(false);
 
   return (
     <div className="min-h-screen bg-[#FAF9F2] text-[#1a1a1a] font-inter selection:bg-[#D4E845] selection:text-black antialiased pb-12 md:pb-16">
-      <EnrollmentModal isOpen={isModalOpen} onClose={() => setIsModalOpen(false)} />
+      <EnrollmentModal isOpen={isModalOpen} onClose={() => setIsModalOpen(false)} onSuccess={() => setHasSubmitted(true)} />
       {/* Navbar */}
       <header className="absolute md:fixed top-0 left-0 right-0 p-6 md:p-8 flex justify-between items-center z-50 pointer-events-none">
         <div className="flex items-center pointer-events-auto h-[18px] md:h-[22px]">
@@ -711,12 +713,23 @@ export default function Home() {
               </div>
 
               <div className="space-y-3 relative z-10">
-                <StardustButton onClick={() => setIsModalOpen(true)}>
-                  Secure Your Spot
-                </StardustButton>
-                <p className="text-[11px] text-center text-blue-600 font-bold font-mono uppercase tracking-wider">
-                  Price increases to ₹8,999 next month
-                </p>
+                {!hasSubmitted ? (
+                  <>
+                    <StardustButton onClick={() => setIsModalOpen(true)}>
+                      Secure Your Spot
+                    </StardustButton>
+                    <p className="text-[11px] text-center text-blue-600 font-bold font-mono uppercase tracking-wider">
+                      Price increases to ₹8,999 next month
+                    </p>
+                  </>
+                ) : (
+                  <div className="bg-black text-[#D4E845] p-4 rounded-xl text-center">
+                    <p className="text-[14px] font-bold tracking-tight mb-1">you're in</p>
+                    <p className="text-[11px] font-medium text-[#D4E845]/80">
+                      we'll hit you up within 24hrs
+                    </p>
+                  </div>
+                )}
               </div>
               
               <p className="text-[10px] text-center text-gray-400 font-medium font-inter relative z-10">
