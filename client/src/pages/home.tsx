@@ -315,7 +315,7 @@ export default function Home() {
               <div className="grid grid-cols-2 gap-6">
                 <div className="space-y-1">
                   <p className="text-[10px] font-bold font-mono text-gray-400 uppercase tracking-widest">Availability</p>
-                  <p className="text-[15px] font-semibold text-gray-800 font-inter">9 / 20 Seats</p>
+                  <p className="text-[15px] font-semibold text-gray-800 font-inter">13 / 20 Seats</p>
                 </div>
                 <div className="space-y-1">
                   <p className="text-[10px] font-bold font-mono text-gray-400 uppercase tracking-widest">Cost</p>
@@ -331,9 +331,14 @@ export default function Home() {
                 </div>
               </div>
 
-              <button className="w-full py-4 rounded-2xl bg-black text-white text-[14px] font-bold hover:bg-gray-800 transition-all uppercase tracking-[0.15em] shadow-xl shadow-black/5 hover:scale-[1.02] active:scale-[0.98]">
-                Secure Your Spot
-              </button>
+              <div className="space-y-3">
+                <button className="w-full py-4 rounded-2xl bg-black text-white text-[14px] font-bold hover:bg-gray-800 transition-all uppercase tracking-[0.15em] shadow-xl shadow-black/5 hover:scale-[1.02] active:scale-[0.98]">
+                  Secure Your Spot
+                </button>
+                <p className="text-[11px] text-center text-blue-600 font-bold font-mono uppercase tracking-wider">
+                  Price increases to ₹8,999 next month
+                </p>
+              </div>
               
               <p className="text-[10px] text-center text-gray-400 font-medium font-inter">
                 Limited cohort size for personalized feedback.
