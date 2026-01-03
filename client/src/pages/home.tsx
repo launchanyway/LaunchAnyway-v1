@@ -226,7 +226,10 @@ export default function Home() {
 
               {/* Deliverables Section */}
               <div className="space-y-5 max-w-xl pt-4 border-t border-black/5">
-                <h2 className="text-[13px] font-bold font-mono text-gray-500 uppercase tracking-[0.3em]">The Outcome</h2>
+                <h2 className="text-[13px] font-bold font-mono text-gray-500 uppercase tracking-[0.3em]">The Deliverables</h2>
+                <p className="text-[18px] md:text-[20px] font-medium text-gray-900 font-inter leading-tight tracking-tight">
+                  At the end, what will you have built?
+                </p>
                 <div className="grid grid-cols-1 md:grid-cols-2 gap-4">
                   <div className="bg-[#eeede8] p-5 rounded-2xl border border-black/[0.03]">
                     <div className="w-8 h-8 rounded-lg bg-black/5 flex items-center justify-center mb-3">
