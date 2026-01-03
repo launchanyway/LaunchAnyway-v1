@@ -72,33 +72,41 @@ const EnrollmentModal = ({ isOpen, onClose }: { isOpen: boolean, onClose: () => 
               </div>
               <div className="relative z-10 space-y-1">
                 <h2 className="text-3xl md:text-4xl font-medium tracking-tight font-instrument text-black">
-                  Ready to Build?
+                  Start Your Application
                 </h2>
-                <p className="text-black/60 font-medium">Small cohorts, personalized focus.</p>
               </div>
             </div>
 
-            <div className="p-8 space-y-6 -mt-6 relative z-10 bg-[#FAF9F2] rounded-t-2xl">
+            <div className="p-8 space-y-8 -mt-6 relative z-10 bg-[#FAF9F2] rounded-t-2xl">
               <div className="space-y-6">
-                <div className="space-y-2">
-                  <h3 className="font-bold text-[13px] uppercase tracking-wider text-gray-400 font-mono">Step 1</h3>
-                  <p className="text-gray-900 leading-relaxed text-[17px] font-medium">
-                    Fill out <span className="text-blue-600 underline underline-offset-4 cursor-pointer">this application form</span>.
-                  </p>
+                <p className="text-[16px] text-gray-600 leading-relaxed font-inter">
+                  LaunchAnyway isn’t for everyone — and that’s intentional. We review every application to make sure this program is the right fit for you and for the cohort.
+                </p>
+
+                <div className="space-y-4">
+                  <div className="space-y-1">
+                    <h3 className="font-bold text-[13px] uppercase tracking-wider text-gray-400 font-mono">Step 1</h3>
+                    <p className="text-gray-900 leading-relaxed text-[17px] font-medium">
+                      Fill out a short application.
+                    </p>
+                  </div>
+
+                  <div className="space-y-1">
+                    <h3 className="font-bold text-[13px] uppercase tracking-wider text-gray-400 font-mono">Step 2</h3>
+                    <p className="text-gray-900 leading-relaxed text-[17px] font-medium">
+                      Within 4 hours we'll get in touch with you.
+                    </p>
+                  </div>
                 </div>
 
-                <div className="space-y-2">
-                  <h3 className="font-bold text-[13px] uppercase tracking-wider text-gray-400 font-mono">Step 2</h3>
-                  <p className="text-gray-600 leading-relaxed text-[15px]">
-                    We'll get back to you within 2-3 hours. We'll let you know even if you're not selected.
-                  </p>
-                </div>
+                <p className="text-[14px] text-gray-500 italic font-inter bg-black/5 p-4 rounded-xl">
+                  If selected, you’ll receive a private invite to secure your seat.
+                </p>
               </div>
 
-              <div className="pt-4">
+              <div className="pt-2">
                 <button className="w-full py-5 rounded-2xl bg-black text-[#D4E845] text-[15px] font-bold hover:bg-gray-900 transition-all uppercase tracking-[0.2em] shadow-xl flex items-center justify-center gap-3 group">
-                  Open Form
-                  <ExternalLink className="w-4 h-4 transition-transform group-hover:translate-x-1 group-hover:-translate-y-1" />
+                  Apply for LaunchAnyway →
                 </button>
               </div>
             </div>
