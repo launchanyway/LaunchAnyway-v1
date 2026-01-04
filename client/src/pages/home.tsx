@@ -553,75 +553,129 @@ export default function Home() {
                   <h2 className="text-[13px] font-bold font-mono text-gray-500 uppercase tracking-[0.3em]">The Journey — 3-Day Live Workshop</h2>
 
                   <div className="space-y-10 relative before:absolute before:left-[17px] before:top-2 before:bottom-2 before:w-[1.5px] before:bg-black/5">
-                  {/* Week 1 */}
+                  {/* Day 1 */}
                   <div className="relative pl-12 group">
-                    <div className="absolute left-0 top-0 w-[35px] h-[35px] rounded-full bg-[#D4E845] flex items-center justify-center text-black font-mono font-bold text-[10px] z-10">W1</div>
+                    <div className="absolute left-0 top-0 w-[35px] h-[35px] rounded-full bg-[#D4E845] flex items-center justify-center text-black font-mono font-bold text-[10px] z-10">D1</div>
                     <div className="space-y-4">
                       <div>
-                        <h3 className="text-[17px] font-bold text-gray-900 tracking-tight uppercase">Build & Launch Your First SaaS</h3>
-                        <p className="text-[11px] text-gray-400 font-mono uppercase tracking-widest font-bold mt-1">Week 1</p>
+                        <h3 className="text-[17px] font-bold text-gray-900 tracking-tight uppercase">Vibe Coding + AI Web App</h3>
+                        <p className="text-[11px] text-gray-400 font-mono uppercase tracking-widest font-bold mt-1">Day 1</p>
                       </div>
-                      <div className="space-y-8">
+                      <div className="space-y-4">
                         <div className="flex gap-6">
                           <div className="flex flex-col items-center">
-                            <span className="text-[10px] font-black font-mono text-black bg-[#D4E845] px-2 py-1 rounded flex items-center justify-center shrink-0">01</span>
+                            <span className="text-[10px] font-black font-mono text-black bg-[#D4E845] px-2 py-1 rounded flex items-center justify-center shrink-0">GOAL</span>
                             <div className="w-[1.5px] h-full bg-black/5 mt-2"></div>
                           </div>
                           <div className="space-y-1 pb-4">
-                            <p className="text-[15px] text-gray-900 font-bold leading-none">Live session</p>
-                            <p className="text-[14px] text-[#5a5a5a] leading-relaxed">We build your first AI-powered product together. You'll use Lovable, Gemini, and Supabase to create a real working AI tool — not a demo.</p>
+                            <p className="text-[15px] text-gray-900 font-bold leading-none">Understand vibe coding and build your first real AI-powered web app.</p>
                           </div>
                         </div>
-                        <div className="flex gap-6">
-                          <div className="flex flex-col items-center">
-                            <span className="text-[10px] font-black font-mono text-black bg-[#D4E845] px-2 py-1 rounded flex items-center justify-center shrink-0">2–7</span>
-                          </div>
-                          <div className="space-y-1">
-                            <p className="text-[15px] text-gray-900 font-bold leading-none">Build & launch</p>
-                            <p className="text-[14px] text-[#5a5a5a] leading-relaxed">You'll work on daily assignments to improve what you built. By the end of the week, you'll launch your first real SaaS product with a live URL.</p>
-                          </div>
+                        <div className="space-y-3 pl-[46px]">
+                          <p className="text-[14px] text-[#5a5a5a] leading-relaxed flex items-start gap-2">
+                            <span className="text-[#D4E845] mt-1.5 shrink-0">•</span>
+                            What vibe coding actually means (no theory, just builders)
+                          </p>
+                          <p className="text-[14px] text-[#5a5a5a] leading-relaxed flex items-start gap-2">
+                            <span className="text-[#D4E845] mt-1.5 shrink-0">•</span>
+                            How Lovable helps you go from idea → working UI
+                          </p>
+                          <p className="text-[14px] text-[#5a5a5a] leading-relaxed flex items-start gap-2">
+                            <span className="text-[#D4E845] mt-1.5 shrink-0">•</span>
+                            Writing simple, effective prompts for real product screens
+                          </p>
+                          <p className="text-[14px] text-[#5a5a5a] leading-relaxed flex items-start gap-2">
+                            <span className="text-[#D4E845] mt-1.5 shrink-0">•</span>
+                            Connecting Gemini AI to your app (input → AI → output)
+                          </p>
+                          <p className="text-[14px] text-[#5a5a5a] font-bold text-gray-900 pt-2 italic">
+                            Result: You’ll have a working AI-powered web app that you can open, test, and improve.
+                          </p>
                         </div>
                       </div>
                     </div>
                   </div>
 
-                  {/* Week 2 */}
+                  {/* Day 2 */}
                   <div className="relative pl-12 group">
-                    <div className="absolute left-0 top-0 w-[35px] h-[35px] rounded-full bg-[#E895C9] flex items-center justify-center text-black font-mono font-bold text-[10px] z-10">W2</div>
+                    <div className="absolute left-0 top-0 w-[35px] h-[35px] rounded-full bg-[#E895C9] flex items-center justify-center text-black font-mono font-bold text-[10px] z-10">D2</div>
                     <div className="space-y-4">
                       <div>
-                        <h3 className="text-[17px] font-bold text-gray-900 tracking-tight uppercase">Build Your First Mobile App</h3>
-                        <p className="text-[11px] text-gray-400 font-mono uppercase tracking-widest font-bold mt-1">Week 2</p>
+                        <h3 className="text-[17px] font-bold text-gray-900 tracking-tight uppercase">Mobile App Building (iOS & Android)</h3>
+                        <p className="text-[11px] text-gray-400 font-mono uppercase tracking-widest font-bold mt-1">Day 2</p>
                       </div>
-                      <div className="space-y-8">
+                      <div className="space-y-4">
                         <div className="flex gap-6">
                           <div className="flex flex-col items-center">
-                            <span className="text-[10px] font-black font-mono text-black bg-[#E895C9] px-2 py-1 rounded flex items-center justify-center shrink-0">08</span>
+                            <span className="text-[10px] font-black font-mono text-black bg-[#E895C9] px-2 py-1 rounded flex items-center justify-center shrink-0">GOAL</span>
                             <div className="w-[1.5px] h-full bg-black/5 mt-2"></div>
                           </div>
                           <div className="space-y-1 pb-4">
-                            <p className="text-[15px] text-gray-900 font-bold leading-none">Live session</p>
-                            <p className="text-[14px] text-[#5a5a5a] leading-relaxed">We build a cross-platform mobile app using Replit. You'll run it on both iOS and Android using Expo.</p>
+                            <p className="text-[15px] text-gray-900 font-bold leading-none">Build a mobile app without learning mobile development from scratch.</p>
                           </div>
                         </div>
+                        <div className="space-y-3 pl-[46px]">
+                          <p className="text-[14px] text-[#5a5a5a] leading-relaxed flex items-start gap-2">
+                            <span className="text-[#E895C9] mt-1.5 shrink-0">•</span>
+                            How mobile apps are structured (screens, navigation, actions)
+                          </p>
+                          <p className="text-[14px] text-[#5a5a5a] leading-relaxed flex items-start gap-2">
+                            <span className="text-[#E895C9] mt-1.5 shrink-0">•</span>
+                            Using Replit to build apps for both iOS and Android
+                          </p>
+                          <p className="text-[14px] text-[#5a5a5a] leading-relaxed flex items-start gap-2">
+                            <span className="text-[#E895C9] mt-1.5 shrink-0">•</span>
+                            Creating multiple screens and basic user flows
+                          </p>
+                          <p className="text-[14px] text-[#5a5a5a] leading-relaxed flex items-start gap-2">
+                            <span className="text-[#E895C9] mt-1.5 shrink-0">•</span>
+                            Fixing errors and bugs using AI (live and practical)
+                          </p>
+                          <p className="text-[14px] text-[#5a5a5a] font-bold text-gray-900 pt-2 italic">
+                            Result: You’ll have a working mobile app running on iOS & Android.
+                          </p>
+                        </div>
+                      </div>
+                    </div>
+                  </div>
+
+                  {/* Day 3 */}
+                  <div className="relative pl-12 group">
+                    <div className="absolute left-0 top-0 w-[35px] h-[35px] rounded-full bg-[#B48EAD] flex items-center justify-center text-black font-mono font-bold text-[10px] z-10">D3</div>
+                    <div className="space-y-4">
+                      <div>
+                        <h3 className="text-[17px] font-bold text-gray-900 tracking-tight uppercase">Backend, Data & Shipping</h3>
+                        <p className="text-[11px] text-gray-400 font-mono uppercase tracking-widest font-bold mt-1">Day 3</p>
+                      </div>
+                      <div className="space-y-4">
                         <div className="flex gap-6">
                           <div className="flex flex-col items-center">
-                            <span className="text-[10px] font-black font-mono text-black bg-[#E895C9] px-2 py-1 rounded flex items-center justify-center shrink-0">09</span>
-                            <div className="w-[1.5px] h-full bg-black/5 mt-2"></div>
+                            <span className="text-[10px] font-black font-mono text-black bg-[#B48EAD] px-2 py-1 rounded flex items-center justify-center shrink-0">GOAL</span>
                           </div>
                           <div className="space-y-1 pb-4">
-                            <p className="text-[15px] text-gray-900 font-bold leading-none">Backend & debugging</p>
-                            <p className="text-[14px] text-[#5a5a5a] leading-relaxed">We connect your mobile app to Supabase. You'll learn how to store data, handle auth, and debug real issues.</p>
+                            <p className="text-[15px] text-gray-900 font-bold leading-none">Make your app real by adding backend and learning how to ship.</p>
                           </div>
                         </div>
-                        <div className="flex gap-6">
-                          <div className="flex flex-col items-center">
-                            <span className="text-[10px] font-black font-mono text-black bg-[#E895C9] px-2 py-1 rounded flex items-center justify-center shrink-0">10–14</span>
-                          </div>
-                          <div className="space-y-1">
-                            <p className="text-[15px] text-gray-900 font-bold leading-none">Build & refine</p>
-                            <p className="text-[14px] text-[#5a5a5a] leading-relaxed">Daily assignments focused on building a complete mobile app. You'll design habit flows, streaks, and nudges — and end with a fully working app.</p>
-                          </div>
+                        <div className="space-y-3 pl-[46px]">
+                          <p className="text-[14px] text-[#5a5a5a] leading-relaxed flex items-start gap-2">
+                            <span className="text-[#B48EAD] mt-1.5 shrink-0">•</span>
+                            What a backend actually does (auth, data, logic)
+                          </p>
+                          <p className="text-[14px] text-[#5a5a5a] leading-relaxed flex items-start gap-2">
+                            <span className="text-[#B48EAD] mt-1.5 shrink-0">•</span>
+                            Setting up Supabase as your backend
+                          </p>
+                          <p className="text-[14px] text-[#5a5a5a] leading-relaxed flex items-start gap-2">
+                            <span className="text-[#B48EAD] mt-1.5 shrink-0">•</span>
+                            Creating a database and storing real user data
+                          </p>
+                          <p className="text-[14px] text-[#5a5a5a] leading-relaxed flex items-start gap-2">
+                            <span className="text-[#B48EAD] mt-1.5 shrink-0">•</span>
+                            How to think about shipping instead of over-polishing
+                          </p>
+                          <p className="text-[14px] text-[#5a5a5a] font-bold text-gray-900 pt-2 italic">
+                            Result: You’ll have a full working product — frontend + mobile + backend.
+                          </p>
                         </div>
                       </div>
                     </div>
@@ -681,7 +735,7 @@ export default function Home() {
                     </motion.div>
                   </div>
                   <p className="text-[14px] text-gray-400 italic font-inter pt-2">
-                    Two real-world products. Two weeks. No excuses.
+                    Three intense days. Two real-world products. No excuses.
                   </p>
                 </div>
               </ScrollReveal>
@@ -718,28 +772,28 @@ export default function Home() {
                 <p className="text-[20px] font-medium text-gray-900 font-inter tracking-tight">January 18th, 2026</p>
               </div>
 
-              <div className="grid grid-cols-2 gap-6 relative z-10">
-                <div className="space-y-1">
-                  <p className="text-[10px] font-bold font-mono text-gray-400 uppercase tracking-widest">Availability</p>
-                  <p className="text-[15px] font-semibold text-gray-800 font-inter">13 / 20 Seats</p>
+                <div className="grid grid-cols-2 gap-6 relative z-10">
+                  <div className="space-y-1">
+                    <p className="text-[10px] font-bold font-mono text-gray-400 uppercase tracking-widest">Availability</p>
+                    <p className="text-[15px] font-semibold text-gray-800 font-inter">13 / 20 Seats</p>
+                  </div>
+                  <div className="space-y-1">
+                    <p className="text-[10px] font-bold font-mono text-gray-400 uppercase tracking-widest">Cost</p>
+                    <p className="text-[15px] font-semibold text-gray-800 font-inter">₹6,999</p>
+                  </div>
+                  <div className="space-y-1">
+                    <p className="text-[10px] font-bold font-mono text-gray-400 uppercase tracking-widest">Duration</p>
+                    <p className="text-[15px] font-semibold text-gray-800 font-inter">3 Days</p>
+                  </div>
+                  <div className="space-y-1">
+                    <p className="text-[10px] font-bold font-mono text-gray-400 uppercase tracking-widest">Sessions</p>
+                    <p className="text-[15px] font-semibold text-gray-800 font-inter">x3 Live</p>
+                  </div>
+                  <div className="space-y-1 col-span-2">
+                    <p className="text-[10px] font-bold font-mono text-gray-400 uppercase tracking-widest">Daily missions</p>
+                    <p className="text-[15px] font-semibold text-gray-800 font-inter">3 core projects</p>
+                  </div>
                 </div>
-                <div className="space-y-1">
-                  <p className="text-[10px] font-bold font-mono text-gray-400 uppercase tracking-widest">Cost</p>
-                  <p className="text-[15px] font-semibold text-gray-800 font-inter">₹6,999</p>
-                </div>
-                <div className="space-y-1">
-                  <p className="text-[10px] font-bold font-mono text-gray-400 uppercase tracking-widest">Duration</p>
-                  <p className="text-[15px] font-semibold text-gray-800 font-inter">2 Weeks</p>
-                </div>
-                <div className="space-y-1">
-                  <p className="text-[10px] font-bold font-mono text-gray-400 uppercase tracking-widest">Sessions</p>
-                  <p className="text-[15px] font-semibold text-gray-800 font-inter">x4 Live</p>
-                </div>
-                <div className="space-y-1 col-span-2">
-                  <p className="text-[10px] font-bold font-mono text-gray-400 uppercase tracking-widest">Daily missions</p>
-                  <p className="text-[15px] font-semibold text-gray-800 font-inter">14 tasks ( {"<"} 1 hr/day )</p>
-                </div>
-              </div>
 
               <div className="space-y-3 relative z-10">
                 {!hasSubmitted ? (
