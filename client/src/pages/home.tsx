@@ -558,38 +558,42 @@ export default function Home() {
                     <div className="absolute left-0 top-0 w-[35px] h-[35px] rounded-full bg-[#D4E845] flex items-center justify-center text-black font-mono font-bold text-[10px] z-10">D1</div>
                     <div className="space-y-4">
                       <div>
-                        <h3 className="text-[17px] font-bold text-gray-900 tracking-tight uppercase">Vibe Coding + AI Web App</h3>
+                        <h3 className="text-[17px] font-bold text-gray-900 tracking-tight uppercase">Build Your First AI Web App</h3>
                         <p className="text-[11px] text-gray-400 font-mono uppercase tracking-widest font-bold mt-1">Day 1</p>
                       </div>
                       <div className="space-y-4">
                         <div className="flex gap-6">
                           <div className="flex flex-col items-center">
-                            <span className="text-[10px] font-black font-mono text-black bg-[#D4E845] px-2 py-1 rounded flex items-center justify-center shrink-0">GOAL</span>
+                            <span className="text-[10px] font-black font-mono text-black bg-[#D4E845] px-2 py-1 rounded flex items-center justify-center shrink-0">01</span>
                             <div className="w-[1.5px] h-full bg-black/5 mt-2"></div>
                           </div>
                           <div className="space-y-1 pb-4">
-                            <p className="text-[15px] text-gray-900 font-bold leading-none">Understand vibe coding and build your first real AI-powered web app.</p>
+                            <p className="text-[15px] text-gray-900 font-bold leading-none">What happens on this day:</p>
                           </div>
                         </div>
                         <div className="space-y-3 pl-[46px]">
                           <p className="text-[14px] text-[#5a5a5a] leading-relaxed flex items-start gap-2">
                             <span className="text-[#D4E845] mt-1.5 shrink-0">•</span>
-                            What vibe coding actually means (no theory, just builders)
+                            What vibe coding means (in very simple terms)
                           </p>
                           <p className="text-[14px] text-[#5a5a5a] leading-relaxed flex items-start gap-2">
                             <span className="text-[#D4E845] mt-1.5 shrink-0">•</span>
-                            How Lovable helps you go from idea → working UI
+                            Using Lovable to turn an idea into a working screen
                           </p>
                           <p className="text-[14px] text-[#5a5a5a] leading-relaxed flex items-start gap-2">
                             <span className="text-[#D4E845] mt-1.5 shrink-0">•</span>
-                            Writing simple, effective prompts for real product screens
+                            Connecting Gemini AI to your app
                           </p>
                           <p className="text-[14px] text-[#5a5a5a] leading-relaxed flex items-start gap-2">
                             <span className="text-[#D4E845] mt-1.5 shrink-0">•</span>
-                            Connecting Gemini AI to your app (input → AI → output)
+                            Sending user input to AI and showing results on screen
+                          </p>
+                          <p className="text-[14px] text-[#5a5a5a] leading-relaxed flex items-start gap-2">
+                            <span className="text-[#D4E845] mt-1.5 shrink-0">•</span>
+                            Running and testing your web app live
                           </p>
                           <p className="text-[14px] text-[#5a5a5a] font-bold text-gray-900 pt-2 italic">
-                            Result: You’ll have a working AI-powered web app that you can open, test, and improve.
+                            By the end of Day 1: You’ll have a working AI-powered web app.
                           </p>
                         </div>
                       </div>
@@ -601,38 +605,42 @@ export default function Home() {
                     <div className="absolute left-0 top-0 w-[35px] h-[35px] rounded-full bg-[#E895C9] flex items-center justify-center text-black font-mono font-bold text-[10px] z-10">D2</div>
                     <div className="space-y-4">
                       <div>
-                        <h3 className="text-[17px] font-bold text-gray-900 tracking-tight uppercase">Mobile App Building (iOS & Android)</h3>
+                        <h3 className="text-[17px] font-bold text-gray-900 tracking-tight uppercase">Build a Mobile App (iOS & Android)</h3>
                         <p className="text-[11px] text-gray-400 font-mono uppercase tracking-widest font-bold mt-1">Day 2</p>
                       </div>
                       <div className="space-y-4">
                         <div className="flex gap-6">
                           <div className="flex flex-col items-center">
-                            <span className="text-[10px] font-black font-mono text-black bg-[#E895C9] px-2 py-1 rounded flex items-center justify-center shrink-0">GOAL</span>
+                            <span className="text-[10px] font-black font-mono text-black bg-[#E895C9] px-2 py-1 rounded flex items-center justify-center shrink-0">02</span>
                             <div className="w-[1.5px] h-full bg-black/5 mt-2"></div>
                           </div>
                           <div className="space-y-1 pb-4">
-                            <p className="text-[15px] text-gray-900 font-bold leading-none">Build a mobile app without learning mobile development from scratch.</p>
+                            <p className="text-[15px] text-gray-900 font-bold leading-none">What happens on this day:</p>
                           </div>
                         </div>
                         <div className="space-y-3 pl-[46px]">
                           <p className="text-[14px] text-[#5a5a5a] leading-relaxed flex items-start gap-2">
                             <span className="text-[#E895C9] mt-1.5 shrink-0">•</span>
-                            How mobile apps are structured (screens, navigation, actions)
+                            How mobile apps work (screens, buttons, flows — explained simply)
                           </p>
                           <p className="text-[14px] text-[#5a5a5a] leading-relaxed flex items-start gap-2">
                             <span className="text-[#E895C9] mt-1.5 shrink-0">•</span>
-                            Using Replit to build apps for both iOS and Android
+                            Using Replit to build mobile apps
                           </p>
                           <p className="text-[14px] text-[#5a5a5a] leading-relaxed flex items-start gap-2">
                             <span className="text-[#E895C9] mt-1.5 shrink-0">•</span>
-                            Creating multiple screens and basic user flows
+                            Creating multiple screens and navigation
                           </p>
                           <p className="text-[14px] text-[#5a5a5a] leading-relaxed flex items-start gap-2">
                             <span className="text-[#E895C9] mt-1.5 shrink-0">•</span>
-                            Fixing errors and bugs using AI (live and practical)
+                            Handling user actions like taps and inputs
+                          </p>
+                          <p className="text-[14px] text-[#5a5a5a] leading-relaxed flex items-start gap-2">
+                            <span className="text-[#E895C9] mt-1.5 shrink-0">•</span>
+                            Fixing errors with AI when things break
                           </p>
                           <p className="text-[14px] text-[#5a5a5a] font-bold text-gray-900 pt-2 italic">
-                            Result: You’ll have a working mobile app running on iOS & Android.
+                            By the end of Day 2: You’ll have a mobile app running on iOS and Android.
                           </p>
                         </div>
                       </div>
@@ -644,37 +652,41 @@ export default function Home() {
                     <div className="absolute left-0 top-0 w-[35px] h-[35px] rounded-full bg-[#A5B4FC] flex items-center justify-center text-black font-mono font-bold text-[10px] z-10">D3</div>
                     <div className="space-y-4">
                       <div>
-                        <h3 className="text-[17px] font-bold text-gray-900 tracking-tight uppercase">Backend, Data & Shipping</h3>
+                        <h3 className="text-[17px] font-bold text-gray-900 tracking-tight uppercase">Add Backend & Make It Real</h3>
                         <p className="text-[11px] text-gray-400 font-mono uppercase tracking-widest font-bold mt-1">Day 3</p>
                       </div>
                       <div className="space-y-4">
                         <div className="flex gap-6">
                           <div className="flex flex-col items-center">
-                            <span className="text-[10px] font-black font-mono text-black bg-[#A5B4FC] px-2 py-1 rounded flex items-center justify-center shrink-0">GOAL</span>
+                            <span className="text-[10px] font-black font-mono text-black bg-[#A5B4FC] px-2 py-1 rounded flex items-center justify-center shrink-0">03</span>
                           </div>
                           <div className="space-y-1 pb-4">
-                            <p className="text-[15px] text-gray-900 font-bold leading-none">Make your app real by adding backend and learning how to ship.</p>
+                            <p className="text-[15px] text-gray-900 font-bold leading-none">What happens on this day:</p>
                           </div>
                         </div>
                         <div className="space-y-3 pl-[46px]">
                           <p className="text-[14px] text-[#5a5a5a] leading-relaxed flex items-start gap-2">
                             <span className="text-[#A5B4FC] mt-1.5 shrink-0">•</span>
-                            What a backend actually does (auth, data, logic)
+                            What backend actually means (no jargon)
                           </p>
                           <p className="text-[14px] text-[#5a5a5a] leading-relaxed flex items-start gap-2">
                             <span className="text-[#A5B4FC] mt-1.5 shrink-0">•</span>
-                            Setting up Supabase as your backend
+                            Using Supabase to store real data
                           </p>
                           <p className="text-[14px] text-[#5a5a5a] leading-relaxed flex items-start gap-2">
                             <span className="text-[#A5B4FC] mt-1.5 shrink-0">•</span>
-                            Creating a database and storing real user data
+                            Login, signup, and saving user information
                           </p>
                           <p className="text-[14px] text-[#5a5a5a] leading-relaxed flex items-start gap-2">
                             <span className="text-[#A5B4FC] mt-1.5 shrink-0">•</span>
-                            How to think about shipping instead of over-polishing
+                            Connecting your web app and mobile app to the backend
+                          </p>
+                          <p className="text-[14px] text-[#5a5a5a] leading-relaxed flex items-start gap-2">
+                            <span className="text-[#A5B4FC] mt-1.5 shrink-0">•</span>
+                            Debugging and understanding what to fix before shipping
                           </p>
                           <p className="text-[14px] text-[#5a5a5a] font-bold text-gray-900 pt-2 italic">
-                            Result: You’ll have a full working product — frontend + mobile + backend.
+                            By the end of Day 3: You’ll have a real, usable product — not a demo.
                           </p>
                         </div>
                       </div>
