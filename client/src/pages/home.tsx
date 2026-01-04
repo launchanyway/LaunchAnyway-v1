@@ -815,6 +815,10 @@ export default function Home() {
                     <p className="text-[10px] font-bold font-mono text-gray-400 uppercase tracking-widest">Duration</p>
                     <p className="text-[15px] font-semibold text-gray-800 font-inter">3 Days</p>
                   </div>
+                  <div className="space-y-1">
+                    <p className="text-[10px] font-bold font-mono text-gray-400 uppercase tracking-widest">Timing</p>
+                    <p className="text-[15px] font-semibold text-gray-800 font-inter">8:00PM IST</p>
+                  </div>
                 </div>
 
               <div className="space-y-3 relative z-10">
