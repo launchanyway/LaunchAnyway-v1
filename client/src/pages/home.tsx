@@ -489,7 +489,6 @@ export default function Home() {
           </span>
         </div>
       </header>
-
       <main className="max-w-[1200px] mx-auto px-6 md:px-12 pt-28 md:pt-36 pb-32">
         <div className="flex flex-col lg:flex-row gap-16 lg:gap-24 items-start relative">
           
@@ -551,7 +550,7 @@ export default function Home() {
               {/* Curriculum / Journey */}
               <ScrollReveal>
                 <div id="journey" className="space-y-8 max-w-xl scroll-mt-32">
-                  <h2 className="text-[13px] font-bold font-mono text-gray-500 uppercase tracking-[0.3em]">The Journey</h2>
+                  <h2 className="text-[13px] font-bold font-mono text-gray-500 uppercase tracking-[0.3em]">The Journey — 3-Day Live Workshop</h2>
 
                   <div className="space-y-10 relative before:absolute before:left-[17px] before:top-2 before:bottom-2 before:w-[1.5px] before:bg-black/5">
                   {/* Week 1 */}
@@ -771,7 +770,6 @@ export default function Home() {
 
         </div>
       </main>
-
       {/* Footer */}
       <footer className="fixed bottom-0 left-0 right-0 p-6 md:p-8 flex justify-between items-end text-[11px] font-bold font-mono text-gray-400 pointer-events-none bg-gradient-to-t from-[#FAF9F2] via-[#FAF9F2] via-60% to-transparent h-24 z-40">
         <div className="pointer-events-auto">
