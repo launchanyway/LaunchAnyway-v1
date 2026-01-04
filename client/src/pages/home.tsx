@@ -478,7 +478,7 @@ export default function Home() {
                   <div className="w-6 h-6 rounded-full bg-blue-600 flex items-center justify-center">
                     <Zap className="w-3 h-3 text-white fill-current" />
                   </div>
-                  <span className="text-[10px] font-bold font-mono text-gray-900 tracking-[0.2em] uppercase">LIVE COURSE</span>
+                  <span className="text-[10px] font-bold font-mono text-gray-900 tracking-[0.2em] uppercase">3-DAYS LIVE COURSE</span>
                 </div>
               </div>
             </ScrollReveal>
