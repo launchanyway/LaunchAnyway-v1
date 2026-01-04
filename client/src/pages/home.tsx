@@ -50,8 +50,7 @@ const EnrollmentModal = ({ isOpen, onClose, onSuccess }: { isOpen: boolean, onCl
 
   const roles = ["Designer", "Developer", "Product Manager", "Founder / Solo Builder", "Student", "Other"];
   const goals = ["Mobile app (iOS / Android)", "SaaS / Web app", "Internal tool / Automation", "I’m still exploring"];
-  const reasons = ["I want to ship my first real product", "I’ve ideas but never launched", "I want to learn vibe coding properly", "I want accountability & momentum"];
-  const commitments = ["I can give 5–7 hrs/week", "I can give 8–10 hrs/week", "I’m all-in for 2 weeks"];
+  const reasons = ["I want to ship my first real product", "I’ve ideas but never launched"];
 
   const validateEmail = (email: string) => {
     return /^[^\s@]+@[^\s@]+\.[^\s@]+$/.test(email);
@@ -87,8 +86,7 @@ const EnrollmentModal = ({ isOpen, onClose, onSuccess }: { isOpen: boolean, onCl
             phone: formData.phone,
             role: formData.role,
             goal: formData.goal,
-            reason: formData.reason,
-            commitment: formData.commitment
+            reason: formData.reason
           }
         ]);
 
@@ -125,10 +123,6 @@ const EnrollmentModal = ({ isOpen, onClose, onSuccess }: { isOpen: boolean, onCl
         reason: "",
         commitment: ""
       });
-
-      onSuccess();
-      onClose();
-    } catch (error: any) {
       toast.custom((t) => (
         <motion.div
           initial={{ opacity: 0, y: -20, scale: 0.95 }}
@@ -142,7 +136,7 @@ const EnrollmentModal = ({ isOpen, onClose, onSuccess }: { isOpen: boolean, onCl
           <div className="flex flex-col">
             <span className="font-bold text-[14px] tracking-tight">Submission Failed</span>
             <p className="text-gray-500 text-[12px] font-medium leading-none mt-0.5">
-              {error.message || "Please try again"}
+              Please try again
             </p>
           </div>
         </motion.div>
@@ -292,9 +286,9 @@ const EnrollmentModal = ({ isOpen, onClose, onSuccess }: { isOpen: boolean, onCl
                   </div>
                 </div>
 
-                {/* Section 3: Motivation & Commitment */}
+                {/* Section 3: Motivation */}
                 <div className="space-y-6">
-                  <h3 className="text-[11px] font-bold font-mono text-gray-400 uppercase tracking-widest border-b border-black/5 pb-2">Commitment</h3>
+                  <h3 className="text-[11px] font-bold font-mono text-gray-400 uppercase tracking-widest border-b border-black/5 pb-2">Why apply</h3>
                   
                   <div className="space-y-4">
                     <label className="text-[14px] font-bold text-gray-800 ml-1">Why are you applying right now?</label>
@@ -315,32 +309,12 @@ const EnrollmentModal = ({ isOpen, onClose, onSuccess }: { isOpen: boolean, onCl
                       ))}
                     </div>
                   </div>
-
-                  <div className="space-y-4">
-                    <label className="text-[14px] font-bold text-gray-800 ml-1">Your current commitment level</label>
-                    <div className="space-y-2">
-                      {commitments.map((commitment) => (
-                        <button
-                          key={commitment}
-                          type="button"
-                          onClick={() => setFormData({...formData, commitment})}
-                          className={`w-full px-4 py-3 rounded-xl text-[12px] font-bold text-left transition-all border ${
-                            formData.commitment === commitment 
-                            ? "bg-black text-[#D4E845] border-black" 
-                            : "bg-white border-black/10 text-gray-600 hover:border-black/30"
-                          }`}
-                        >
-                          {commitment}
-                        </button>
-                      ))}
-                    </div>
-                  </div>
                 </div>
 
                 <div className="pt-4 pb-2">
                   <StardustButton
                     type="submit"
-                    disabled={!formData.fullName || !formData.email || !formData.phone || !formData.role || !formData.goal || !formData.reason || !formData.commitment || isSubmitting}
+                    disabled={!formData.fullName || !formData.email || !formData.phone || !formData.role || !formData.goal || !formData.reason || isSubmitting}
                   >
                     {isSubmitting ? "Submitting..." : "Submit Application"}
                   </StardustButton>
