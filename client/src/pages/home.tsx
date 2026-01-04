@@ -776,10 +776,6 @@ export default function Home() {
 
                 <div className="grid grid-cols-2 gap-6 relative z-10">
                   <div className="space-y-1">
-                    <p className="text-[10px] font-bold font-mono text-gray-400 uppercase tracking-widest">Availability</p>
-                    <p className="text-[15px] font-semibold text-gray-800 font-inter">13 / 20 Seats</p>
-                  </div>
-                  <div className="space-y-1">
                     <p className="text-[10px] font-bold font-mono text-gray-400 uppercase tracking-widest">Cost</p>
                     <p className="text-[15px] font-semibold text-gray-800 font-inter">₹4,200</p>
                   </div>
@@ -804,7 +800,7 @@ export default function Home() {
                       Secure Your Spot
                     </StardustButton>
                     <p className="text-[11px] text-center text-blue-600 font-bold font-mono uppercase tracking-wider">
-                      Price increases to ₹8,999 next month
+                      Price increases to ₹5,999 next batch
                     </p>
                   </>
                 ) : (
