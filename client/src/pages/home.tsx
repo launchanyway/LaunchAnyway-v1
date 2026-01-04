@@ -41,8 +41,7 @@ const EnrollmentModal = ({ isOpen, onClose, onSuccess }: { isOpen: boolean, onCl
     phone: "",
     role: "",
     goal: "",
-    reason: "",
-    commitment: ""
+    reason: ""
   });
   const [errors, setErrors] = useState<Record<string, string>>({});
   const [isSubmitting, setIsSubmitting] = useState(false);
@@ -120,9 +119,12 @@ const EnrollmentModal = ({ isOpen, onClose, onSuccess }: { isOpen: boolean, onCl
         phone: "",
         role: "",
         goal: "",
-        reason: "",
-        commitment: ""
+        reason: ""
       });
+
+      onSuccess();
+      onClose();
+    } catch (error: any) {
       toast.custom((t) => (
         <motion.div
           initial={{ opacity: 0, y: -20, scale: 0.95 }}
