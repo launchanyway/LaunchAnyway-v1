@@ -801,10 +801,6 @@ export default function Home() {
                     <p className="text-[10px] font-bold font-mono text-gray-400 uppercase tracking-widest">Sessions</p>
                     <p className="text-[15px] font-semibold text-gray-800 font-inter">x3 Live</p>
                   </div>
-                  <div className="space-y-1 col-span-2">
-                    <p className="text-[10px] font-bold font-mono text-gray-400 uppercase tracking-widest">Daily missions</p>
-                    <p className="text-[15px] font-semibold text-gray-800 font-inter">3 core projects</p>
-                  </div>
                 </div>
 
               <div className="space-y-3 relative z-10">
