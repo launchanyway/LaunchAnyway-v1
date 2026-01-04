@@ -805,15 +805,15 @@ export default function Home() {
                   </div>
                   <div className="space-y-1">
                     <p className="text-[10px] font-bold font-mono text-gray-400 uppercase tracking-widest">Cost</p>
-                    <p className="text-[15px] font-semibold text-gray-800 font-inter">₹6,999</p>
+                    <p className="text-[15px] font-semibold text-gray-800 font-inter">₹4,200</p>
+                  </div>
+                  <div className="space-y-1">
+                    <p className="text-[10px] font-bold font-mono text-gray-400 uppercase tracking-widest">What you'll get</p>
+                    <p className="text-[15px] font-semibold text-gray-800 font-inter leading-tight">Live workshop + recordings</p>
                   </div>
                   <div className="space-y-1">
                     <p className="text-[10px] font-bold font-mono text-gray-400 uppercase tracking-widest">Duration</p>
                     <p className="text-[15px] font-semibold text-gray-800 font-inter">3 Days</p>
-                  </div>
-                  <div className="space-y-1">
-                    <p className="text-[10px] font-bold font-mono text-gray-400 uppercase tracking-widest">Sessions</p>
-                    <p className="text-[15px] font-semibold text-gray-800 font-inter">x3 Live</p>
                   </div>
                 </div>
 
