@@ -729,8 +729,15 @@ export default function Home() {
                       <div className="w-8 h-8 rounded-lg bg-black/5 flex items-center justify-center mb-3">
                         <Globe className="w-4 h-4 text-gray-600" />
                       </div>
-                      <h3 className="text-[15px] font-bold text-gray-900 mb-1">SaaS Web App</h3>
-                      <p className="text-[13px] text-gray-500 leading-relaxed">A fully functional, responsive web application ready for users.</p>
+                      <h3 className="text-[15px] font-bold text-gray-900 mb-2 underline underline-offset-4 decoration-[#D4E845] decoration-2">1. An AI Web App</h3>
+                      <ul className="space-y-1.5">
+                        {["A web app that uses AI (Gemini)", "Takes user input and shows results", "Runs in the browser", "Actually works"].map((item, i) => (
+                          <li key={i} className="text-[13px] text-gray-500 leading-tight flex items-start gap-2">
+                            <span className="text-[#D4E845] font-bold mt-0.5">•</span>
+                            {item}
+                          </li>
+                        ))}
+                      </ul>
                     </motion.div>
                     <motion.div
                       initial={{ opacity: 0, y: 20, filter: "blur(6px)" }}
@@ -742,8 +749,15 @@ export default function Home() {
                       <div className="w-8 h-8 rounded-lg bg-black/5 flex items-center justify-center mb-3">
                         <Zap className="w-4 h-4 text-gray-600" />
                       </div>
-                      <h3 className="text-[15px] font-bold text-gray-900 mb-1">Mobile Application</h3>
-                      <p className="text-[13px] text-gray-500 leading-relaxed">A native-feel mobile experience optimized for modern devices.</p>
+                      <h3 className="text-[15px] font-bold text-gray-900 mb-2 underline underline-offset-4 decoration-[#E895C9] decoration-2">2. A Habit-Tracking Mobile App</h3>
+                      <ul className="space-y-1.5">
+                        {["A mobile app for iOS & Android", "Track daily habits and streaks", "Multiple screens and flows", "Runs like a real app"].map((item, i) => (
+                          <li key={i} className="text-[13px] text-gray-500 leading-tight flex items-start gap-2">
+                            <span className="text-[#E895C9] font-bold mt-0.5">•</span>
+                            {item}
+                          </li>
+                        ))}
+                      </ul>
                     </motion.div>
                   </div>
                   <p className="text-[14px] text-gray-400 italic font-inter pt-2">
