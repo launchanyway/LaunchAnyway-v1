@@ -641,7 +641,7 @@ export default function Home() {
 
                   {/* Day 3 */}
                   <div className="relative pl-12 group">
-                    <div className="absolute left-0 top-0 w-[35px] h-[35px] rounded-full bg-[#B48EAD] flex items-center justify-center text-black font-mono font-bold text-[10px] z-10">D3</div>
+                    <div className="absolute left-0 top-0 w-[35px] h-[35px] rounded-full bg-[#A5B4FC] flex items-center justify-center text-black font-mono font-bold text-[10px] z-10">D3</div>
                     <div className="space-y-4">
                       <div>
                         <h3 className="text-[17px] font-bold text-gray-900 tracking-tight uppercase">Backend, Data & Shipping</h3>
@@ -650,7 +650,7 @@ export default function Home() {
                       <div className="space-y-4">
                         <div className="flex gap-6">
                           <div className="flex flex-col items-center">
-                            <span className="text-[10px] font-black font-mono text-black bg-[#B48EAD] px-2 py-1 rounded flex items-center justify-center shrink-0">GOAL</span>
+                            <span className="text-[10px] font-black font-mono text-black bg-[#A5B4FC] px-2 py-1 rounded flex items-center justify-center shrink-0">GOAL</span>
                           </div>
                           <div className="space-y-1 pb-4">
                             <p className="text-[15px] text-gray-900 font-bold leading-none">Make your app real by adding backend and learning how to ship.</p>
@@ -658,19 +658,19 @@ export default function Home() {
                         </div>
                         <div className="space-y-3 pl-[46px]">
                           <p className="text-[14px] text-[#5a5a5a] leading-relaxed flex items-start gap-2">
-                            <span className="text-[#B48EAD] mt-1.5 shrink-0">•</span>
+                            <span className="text-[#A5B4FC] mt-1.5 shrink-0">•</span>
                             What a backend actually does (auth, data, logic)
                           </p>
                           <p className="text-[14px] text-[#5a5a5a] leading-relaxed flex items-start gap-2">
-                            <span className="text-[#B48EAD] mt-1.5 shrink-0">•</span>
+                            <span className="text-[#A5B4FC] mt-1.5 shrink-0">•</span>
                             Setting up Supabase as your backend
                           </p>
                           <p className="text-[14px] text-[#5a5a5a] leading-relaxed flex items-start gap-2">
-                            <span className="text-[#B48EAD] mt-1.5 shrink-0">•</span>
+                            <span className="text-[#A5B4FC] mt-1.5 shrink-0">•</span>
                             Creating a database and storing real user data
                           </p>
                           <p className="text-[14px] text-[#5a5a5a] leading-relaxed flex items-start gap-2">
-                            <span className="text-[#B48EAD] mt-1.5 shrink-0">•</span>
+                            <span className="text-[#A5B4FC] mt-1.5 shrink-0">•</span>
                             How to think about shipping instead of over-polishing
                           </p>
                           <p className="text-[14px] text-[#5a5a5a] font-bold text-gray-900 pt-2 italic">
