@@ -25,13 +25,7 @@ export const StardustButton: React.FC<StardustButtonProps> = ({
     transition: 'all 0.2s ease',
     width: '100%',
     opacity: disabled ? 0.5 : 1,
-    boxShadow: disabled ? 'none' : `
-      inset 0 0.3rem 0.9rem rgba(212, 232, 69, 0.2),
-      inset 0 -0.1rem 0.3rem rgba(0, 0, 0, 0.7),
-      inset 0 -0.4rem 0.9rem rgba(212, 232, 69, 0.3),
-      0 3rem 3rem rgba(0, 0, 0, 0.1),
-      0 1rem 1rem -0.6rem rgba(0, 0, 0, 0.4)
-    `,
+    boxShadow: 'none',
   };
 
   const wrapStyle = {
