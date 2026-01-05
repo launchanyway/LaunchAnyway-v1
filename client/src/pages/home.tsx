@@ -781,7 +781,7 @@ export default function Home() {
                   </div>
                   <div className="space-y-1">
                     <p className="text-[10px] font-bold font-mono text-gray-400 uppercase tracking-widest">What you'll get</p>
-                    <p className="text-[15px] font-semibold text-gray-800 font-inter leading-tight">Live workshop + recordings</p>
+                    <p className="text-[15px] font-semibold text-gray-800 font-inter leading-tight">Live workshop (recordings included)</p>
                   </div>
                   <div className="space-y-1">
                     <p className="text-[10px] font-bold font-mono text-gray-400 uppercase tracking-widest">Duration</p>
