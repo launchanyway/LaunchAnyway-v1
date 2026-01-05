@@ -13,15 +13,15 @@ export const StardustButton: React.FC<StardustButtonProps> = ({
   ...props 
 }) => {
   const buttonStyle = {
-    '--lime': '#D4E845',
-    '--bg': disabled ? '#2a2a2a' : '#000000',
+    '--accent': '#60A5FA',
+    '--bg': disabled ? '#2a2a2a' : '#1e3a8a',
     '--radius': '16px',
     outline: 'none',
     cursor: disabled ? 'not-allowed' : 'pointer',
     border: disabled ? '1px solid rgba(0,0,0,0.1)' : 0,
     position: 'relative',
     borderRadius: 'var(--radius)',
-    backgroundColor: 'var(--bg)',
+    background: disabled ? 'var(--bg)' : 'linear-gradient(135deg, #1e40af 0%, #1e3a8a 100%)',
     transition: 'all 0.2s ease',
     width: '100%',
     opacity: disabled ? 0.5 : 1,
@@ -31,7 +31,7 @@ export const StardustButton: React.FC<StardustButtonProps> = ({
   const wrapStyle = {
     fontSize: '13px',
     fontWeight: 700,
-    color: disabled ? '#888888' : '#D4E845',
+    color: disabled ? '#888888' : '#ffffff',
     padding: '12px 20px',
     borderRadius: 'inherit',
     position: 'relative',
@@ -57,41 +57,41 @@ export const StardustButton: React.FC<StardustButtonProps> = ({
       position: absolute;
       transition: all 0.3s ease;
     }
-    
+
     .stardust-btn .wrap::before {
       left: -15%;
       right: -15%;
       bottom: 25%;
       top: -100%;
       border-radius: 50%;
-      background-color: rgba(212, 232, 69, 0.1);
+      background-color: rgba(96, 165, 250, 0.15);
     }
-    
+
     .stardust-btn .wrap::after {
       left: 6%;
       right: 6%;
       top: 12%;
       bottom: 40%;
       border-radius: 12px 12px 0 0;
-      box-shadow: inset 0 10px 8px -10px rgba(212, 232, 69, 0.4);
+      box-shadow: inset 0 10px 8px -10px rgba(147, 197, 253, 0.5);
       background: linear-gradient(
         180deg,
-        rgba(212, 232, 69, 0.15) 0%,
-        rgba(0, 0, 0, 0) 50%,
-        rgba(0, 0, 0, 0) 100%
+        rgba(147, 197, 253, 0.2) 0%,
+        rgba(30, 58, 138, 0) 50%,
+        rgba(30, 58, 138, 0) 100%
       );
     }
-    
+
     .stardust-btn:not(:disabled):hover {
       box-shadow:
-        inset 0 0.3rem 0.5rem rgba(212, 232, 69, 0.3),
-        inset 0 -0.1rem 0.3rem rgba(0, 0, 0, 0.7),
-        inset 0 -0.4rem 0.9rem rgba(212, 232, 69, 0.4),
-        0 3rem 3rem rgba(0, 0, 0, 0.1),
-        0 1rem 1rem -0.6rem rgba(0, 0, 0, 0.4);
+        inset 0 0.3rem 0.5rem rgba(96, 165, 250, 0.4),
+        inset 0 -0.1rem 0.3rem rgba(30, 58, 138, 0.7),
+        inset 0 -0.4rem 0.9rem rgba(96, 165, 250, 0.5),
+        0 3rem 3rem rgba(30, 64, 175, 0.2),
+        0 1rem 1rem -0.6rem rgba(30, 64, 175, 0.5);
       transform: scale(1.02);
     }
-    
+
     .stardust-btn:not(:disabled):active {
       transform: translateY(2px) scale(0.98);
     }
@@ -99,7 +99,7 @@ export const StardustButton: React.FC<StardustButtonProps> = ({
     .stardust-btn:not(:disabled):hover .wrap::before {
       transform: translateY(-5%);
     }
-    
+
     .stardust-btn:not(:disabled):hover .wrap::after {
       opacity: 0.4;
       transform: translateY(5%);
