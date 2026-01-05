@@ -784,12 +784,8 @@ export default function Home() {
                     <p className="text-[15px] font-semibold text-gray-800 font-inter leading-tight">Live workshop (recordings included)</p>
                   </div>
                   <div className="space-y-1">
-                    <p className="text-[10px] font-bold font-mono text-gray-400 uppercase tracking-widest">Duration</p>
-                    <p className="text-[15px] font-semibold text-gray-800 font-inter">3 Days</p>
-                  </div>
-                  <div className="space-y-1">
-                    <p className="text-[10px] font-bold font-mono text-gray-400 uppercase tracking-widest">Timing</p>
-                    <p className="text-[15px] font-semibold text-gray-800 font-inter">8:00PM IST</p>
+                    <p className="text-[10px] font-bold font-mono text-gray-400 uppercase tracking-widest">Duration · Time</p>
+                    <p className="text-[15px] font-semibold text-gray-800 font-inter">3 days · 8:00 PM IST</p>
                   </div>
                 </div>
 
