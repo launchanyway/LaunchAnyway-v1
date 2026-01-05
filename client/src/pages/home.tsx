@@ -174,16 +174,16 @@ const EnrollmentModal = ({ isOpen, onClose, onSuccess }: { isOpen: boolean, onCl
             className="relative w-full h-full md:h-auto md:max-w-xl bg-[#FAF9F2] md:rounded-3xl overflow-hidden shadow-2xl border-none pointer-events-auto"
           >
             {/* Header */}
-            <div className="bg-[#D4E845] p-6 md:p-8 pb-10 relative overflow-hidden shrink-0">
-              <button 
+            <div className="bg-black p-6 md:p-8 pb-10 relative overflow-hidden shrink-0">
+              <button
                 onClick={onClose}
-                className="absolute top-4 md:top-6 right-4 md:right-6 w-8 md:w-10 h-8 md:h-10 rounded-full bg-black/10 hover:bg-black/20 flex items-center justify-center transition-colors z-20"
+                className="absolute top-4 md:top-6 right-4 md:right-6 w-8 md:w-10 h-8 md:h-10 rounded-full bg-white/10 hover:bg-white/20 flex items-center justify-center transition-colors z-20"
               >
-                <X className="w-4 md:w-5 h-4 md:h-5 text-black" />
+                <X className="w-4 md:w-5 h-4 md:h-5 text-white" />
               </button>
               <div className="relative z-10">
-                <h2 className="text-2xl md:text-3xl font-medium font-instrument text-black mb-1 md:mb-2">Apply for LaunchAnyway</h2>
-                <p className="text-black/60 text-[12px] md:text-sm font-medium">Batch starts Jan 18th • 13 seats left</p>
+                <h2 className="text-2xl md:text-3xl font-medium font-instrument text-white mb-1 md:mb-2">Apply for LaunchAnyway</h2>
+                <p className="text-white/60 text-[12px] md:text-sm font-medium">Batch starts Jan 18th • 13 seats left</p>
               </div>
             </div>
 
