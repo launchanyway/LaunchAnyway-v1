@@ -5,12 +5,12 @@ interface StardustButtonProps extends React.ButtonHTMLAttributes<HTMLButtonEleme
   children?: React.ReactNode;
 }
 
-export const StardustButton: React.FC<StardustButtonProps> = ({ 
-  children = "Secure Your Spot", 
-  onClick, 
+export const StardustButton: React.FC<StardustButtonProps> = ({
+  children = "Apply Now",
+  onClick,
   className = "",
   disabled,
-  ...props 
+  ...props
 }) => {
   const buttonStyle = {
     '--accent': '#60A5FA',

@@ -793,7 +793,7 @@ export default function Home() {
                 {!hasSubmitted ? (
                   <>
                     <StardustButton onClick={() => setIsModalOpen(true)}>
-                      Secure Your Spot
+                      Apply Now
                     </StardustButton>
                     <p className="text-[11px] text-center text-blue-600 font-bold font-mono uppercase tracking-wider">
                       Next cohort pricing: ₹5,999
