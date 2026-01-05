@@ -796,7 +796,7 @@ export default function Home() {
                       Secure Your Spot
                     </StardustButton>
                     <p className="text-[11px] text-center text-blue-600 font-bold font-mono uppercase tracking-wider">
-                      Price increases to ₹5,999 next batch
+                      Next cohort pricing: ₹5,999
                     </p>
                   </>
                 ) : (
