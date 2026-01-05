@@ -538,9 +538,6 @@ export default function Home() {
                         <p className="text-[11px] text-gray-400 font-mono uppercase tracking-widest font-bold mt-1">Day 1</p>
                       </div>
                       <div className="space-y-4">
-                        <div className="pb-4">
-                          <p className="text-[15px] text-gray-900 font-bold leading-none">What happens on this day:</p>
-                        </div>
                         <div className="space-y-3">
                           <p className="text-[14px] text-[#5a5a5a] leading-relaxed flex items-start gap-2">
                             <span className="text-[#D4E845] mt-1.5 shrink-0">•</span>
@@ -579,9 +576,6 @@ export default function Home() {
                         <p className="text-[11px] text-gray-400 font-mono uppercase tracking-widest font-bold mt-1">Day 2</p>
                       </div>
                       <div className="space-y-4">
-                        <div className="pb-4">
-                          <p className="text-[15px] text-gray-900 font-bold leading-none">What happens on this day:</p>
-                        </div>
                         <div className="space-y-3">
                           <p className="text-[14px] text-[#5a5a5a] leading-relaxed flex items-start gap-2">
                             <span className="text-[#E895C9] mt-1.5 shrink-0">•</span>
@@ -620,9 +614,6 @@ export default function Home() {
                         <p className="text-[11px] text-gray-400 font-mono uppercase tracking-widest font-bold mt-1">Day 3</p>
                       </div>
                       <div className="space-y-4">
-                        <div className="pb-4">
-                          <p className="text-[15px] text-gray-900 font-bold leading-none">What happens on this day:</p>
-                        </div>
                         <div className="space-y-3">
                           <p className="text-[14px] text-[#5a5a5a] leading-relaxed flex items-start gap-2">
                             <span className="text-[#A5B4FC] mt-1.5 shrink-0">•</span>
