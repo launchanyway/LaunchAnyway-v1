@@ -777,7 +777,7 @@ export default function Home() {
                 <div className="grid grid-cols-2 gap-6 relative z-10">
                   <div className="space-y-1">
                     <p className="text-[10px] font-bold font-mono text-gray-400 uppercase tracking-widest">Cost</p>
-                    <p className="text-[15px] font-semibold text-gray-800 font-inter">₹4,200</p>
+                    <p className="text-[15px] font-semibold text-gray-800 font-inter">₹4,200 (India) / $50 (Global)</p>
                   </div>
                   <div className="space-y-1">
                     <p className="text-[10px] font-bold font-mono text-gray-400 uppercase tracking-widest">What you'll get</p>
