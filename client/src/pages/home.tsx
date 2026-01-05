@@ -770,7 +770,7 @@ export default function Home() {
               />
 
               <div className="space-y-1 relative z-10">
-                <p className="text-[11px] font-bold font-mono text-blue-600 uppercase tracking-widest">Upcoming Batch</p>
+                <p className="text-[11px] font-bold font-mono text-gray-400 uppercase tracking-widest">Upcoming Batch</p>
                 <p className="text-[20px] font-medium text-gray-900 font-inter tracking-tight">January 18th, 2026</p>
               </div>
 
