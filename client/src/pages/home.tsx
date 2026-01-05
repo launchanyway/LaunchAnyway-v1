@@ -538,16 +538,10 @@ export default function Home() {
                         <p className="text-[11px] text-gray-400 font-mono uppercase tracking-widest font-bold mt-1">Day 1</p>
                       </div>
                       <div className="space-y-4">
-                        <div className="flex gap-6">
-                          <div className="flex flex-col items-center">
-                            <span className="text-[10px] font-black font-mono text-black bg-[#D4E845] px-2 py-1 rounded flex items-center justify-center shrink-0">01</span>
-                            <div className="w-[1.5px] h-full bg-black/5 mt-2"></div>
-                          </div>
-                          <div className="space-y-1 pb-4">
-                            <p className="text-[15px] text-gray-900 font-bold leading-none">What happens on this day:</p>
-                          </div>
+                        <div className="pb-4">
+                          <p className="text-[15px] text-gray-900 font-bold leading-none">What happens on this day:</p>
                         </div>
-                        <div className="space-y-3 pl-[46px]">
+                        <div className="space-y-3">
                           <p className="text-[14px] text-[#5a5a5a] leading-relaxed flex items-start gap-2">
                             <span className="text-[#D4E845] mt-1.5 shrink-0">•</span>
                             What vibe coding means (in very simple terms)
@@ -585,16 +579,10 @@ export default function Home() {
                         <p className="text-[11px] text-gray-400 font-mono uppercase tracking-widest font-bold mt-1">Day 2</p>
                       </div>
                       <div className="space-y-4">
-                        <div className="flex gap-6">
-                          <div className="flex flex-col items-center">
-                            <span className="text-[10px] font-black font-mono text-black bg-[#E895C9] px-2 py-1 rounded flex items-center justify-center shrink-0">02</span>
-                            <div className="w-[1.5px] h-full bg-black/5 mt-2"></div>
-                          </div>
-                          <div className="space-y-1 pb-4">
-                            <p className="text-[15px] text-gray-900 font-bold leading-none">What happens on this day:</p>
-                          </div>
+                        <div className="pb-4">
+                          <p className="text-[15px] text-gray-900 font-bold leading-none">What happens on this day:</p>
                         </div>
-                        <div className="space-y-3 pl-[46px]">
+                        <div className="space-y-3">
                           <p className="text-[14px] text-[#5a5a5a] leading-relaxed flex items-start gap-2">
                             <span className="text-[#E895C9] mt-1.5 shrink-0">•</span>
                             How mobile apps work (screens, buttons, flows — explained simply)
@@ -632,15 +620,10 @@ export default function Home() {
                         <p className="text-[11px] text-gray-400 font-mono uppercase tracking-widest font-bold mt-1">Day 3</p>
                       </div>
                       <div className="space-y-4">
-                        <div className="flex gap-6">
-                          <div className="flex flex-col items-center">
-                            <span className="text-[10px] font-black font-mono text-black bg-[#A5B4FC] px-2 py-1 rounded flex items-center justify-center shrink-0">03</span>
-                          </div>
-                          <div className="space-y-1 pb-4">
-                            <p className="text-[15px] text-gray-900 font-bold leading-none">What happens on this day:</p>
-                          </div>
+                        <div className="pb-4">
+                          <p className="text-[15px] text-gray-900 font-bold leading-none">What happens on this day:</p>
                         </div>
-                        <div className="space-y-3 pl-[46px]">
+                        <div className="space-y-3">
                           <p className="text-[14px] text-[#5a5a5a] leading-relaxed flex items-start gap-2">
                             <span className="text-[#A5B4FC] mt-1.5 shrink-0">•</span>
                             What backend actually means (no jargon)
