@@ -748,6 +748,32 @@ export default function Home() {
                 <p className="text-[20px] font-medium text-gray-900 font-inter tracking-tight">January 18th, 2026</p>
               </div>
 
+              <div className="space-y-2 relative z-10">
+                <div className="flex items-center justify-between">
+                  <p className="text-[10px] font-bold font-mono text-gray-400 uppercase tracking-widest">Seats Available</p>
+                  <p className="text-[11px] font-bold font-mono text-orange-600 uppercase tracking-wider flex items-center gap-1.5">
+                    <span className="relative flex h-2 w-2">
+                      <span className="animate-ping absolute inline-flex h-full w-full rounded-full bg-orange-400 opacity-75"></span>
+                      <span className="relative inline-flex rounded-full h-2 w-2 bg-orange-500"></span>
+                    </span>
+                    Filling Fast
+                  </p>
+                </div>
+                <div className="relative">
+                  <div className="h-2 bg-black/5 rounded-full overflow-hidden">
+                    <motion.div
+                      initial={{ width: 0 }}
+                      animate={{ width: "43%" }}
+                      transition={{ duration: 1, ease: "easeOut", delay: 0.3 }}
+                      className="h-full bg-gradient-to-r from-orange-500 to-red-500 rounded-full"
+                    />
+                  </div>
+                  <p className="text-[11px] font-semibold text-gray-700 mt-1.5">
+                    13 of 30 seats remaining
+                  </p>
+                </div>
+              </div>
+
                 <div className="grid grid-cols-2 gap-6 relative z-10">
                   <div className="space-y-1">
                     <p className="text-[10px] font-bold font-mono text-gray-400 uppercase tracking-widest">Cost</p>
