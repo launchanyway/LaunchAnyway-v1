@@ -183,7 +183,7 @@ const EnrollmentModal = ({ isOpen, onClose, onSuccess }: { isOpen: boolean, onCl
               </button>
               <div className="relative z-10 -mt-1">
                 <h2 className="text-xl md:text-2xl font-medium font-inter text-white mb-1 md:mb-2">Apply now</h2>
-                <p className="text-white/60 text-[12px] md:text-sm font-medium">Batch starts Jan 18th • 13 seats left</p>
+                <p className="text-white/60 text-[12px] md:text-sm font-medium">Batch starts Jan 18th • 3 seats left</p>
               </div>
             </div>
 
@@ -763,13 +763,13 @@ export default function Home() {
                   <div className="h-2 bg-black/5 rounded-full overflow-hidden">
                     <motion.div
                       initial={{ width: 0 }}
-                      animate={{ width: "43%" }}
+                      animate={{ width: "90%" }}
                       transition={{ duration: 1, ease: "easeOut", delay: 0.3 }}
                       className="h-full bg-gradient-to-r from-orange-500 to-red-500 rounded-full"
                     />
                   </div>
                   <p className="text-[11px] font-semibold text-gray-700 mt-1.5">
-                    13 of 30 seats remaining
+                    3 of 30 seats remaining
                   </p>
                 </div>
               </div>
