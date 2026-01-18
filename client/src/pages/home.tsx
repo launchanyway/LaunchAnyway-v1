@@ -183,7 +183,7 @@ const EnrollmentModal = ({ isOpen, onClose, onSuccess }: { isOpen: boolean, onCl
               </button>
               <div className="relative z-10 -mt-1">
                 <h2 className="text-xl md:text-2xl font-medium font-inter text-white mb-1 md:mb-2">Apply now</h2>
-                <p className="text-white/60 text-[12px] md:text-sm font-medium">Batch starts Jan 18th • 3 seats left</p>
+                <p className="text-white/60 text-[12px] md:text-sm font-medium">Batch starts Feb 15th • 19 seats left</p>
               </div>
             </div>
 
@@ -745,7 +745,7 @@ export default function Home() {
 
               <div className="space-y-1 relative z-10">
                 <p className="text-[11px] font-bold font-mono text-gray-400 uppercase tracking-widest">Upcoming Batch</p>
-                <p className="text-[20px] font-medium text-gray-900 font-inter tracking-tight">January 18th, 2026</p>
+                <p className="text-[20px] font-medium text-gray-900 font-inter tracking-tight">Feb 15th, 2026</p>
               </div>
 
               <div className="space-y-2 relative z-10">
@@ -763,13 +763,13 @@ export default function Home() {
                   <div className="h-2 bg-black/5 rounded-full overflow-hidden">
                     <motion.div
                       initial={{ width: 0 }}
-                      animate={{ width: "90%" }}
+                      animate={{ width: "37%" }}
                       transition={{ duration: 1, ease: "easeOut", delay: 0.3 }}
                       className="h-full bg-gradient-to-r from-orange-500 to-red-500 rounded-full"
                     />
                   </div>
                   <p className="text-[11px] font-semibold text-gray-700 mt-1.5">
-                    3 of 30 seats remaining
+                    19 of 30 seats remaining
                   </p>
                 </div>
               </div>
@@ -777,7 +777,7 @@ export default function Home() {
                 <div className="grid grid-cols-2 gap-6 relative z-10">
                   <div className="space-y-1">
                     <p className="text-[10px] font-bold font-mono text-gray-400 uppercase tracking-widest">Cost</p>
-                    <p className="text-[15px] font-semibold text-gray-800 font-inter">₹4,200 (India) / $50 (Global)</p>
+                    <p className="text-[15px] font-semibold text-gray-800 font-inter">₹4,499 (India) / $50 (Global)</p>
                   </div>
                   <div className="space-y-1">
                     <p className="text-[10px] font-bold font-mono text-gray-400 uppercase tracking-widest">What you'll get</p>
